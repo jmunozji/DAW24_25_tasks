@@ -1,4 +1,4 @@
-# CheatSheet Github DARIUS GABRIEL DOBRE (UD1 - 1.5 a 1.10)
+# CheatSheet Github DARIUS GABRIEL DOBRE
 
 ## 1.2 Configuración Inicial
 ```bash
@@ -14,7 +14,7 @@ git init
 git clone <url_del_repositorio>
 ```
 
-## 1.4 Trabajar con Cambios
+### Trabajar con Cambios
 Para consultar el estado de los archivos
 
 ```bash
