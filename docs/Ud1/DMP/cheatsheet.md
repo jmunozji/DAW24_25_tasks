@@ -184,4 +184,3 @@
 | `git help <comando>`   | Ver la ayuda detallada de un comando específico |
 | `git --version`        | Ver la versión de Git instalada                 |
 
-> **Tip:** ¡Recuerda siempre hacer `git pull` antes de comenzar a trabajar en un proyecto para evitar conflictos!
