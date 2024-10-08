@@ -2,6 +2,8 @@
 title: 'Git Cheatsheet - Andreu Beltran Miralles'
 ---
 
+# Git Cheatsheet - Andreu Beltran Miralles
+
 ## Instalación y configuraciones globales
 
 - **Instalar Git:**
