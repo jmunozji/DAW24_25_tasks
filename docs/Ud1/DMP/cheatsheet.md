@@ -17,7 +17,7 @@ title: 'Cheatsheet 1'
 | **🪟  Windows**                   |                                             |
 | [https://gitforwindows.org/](URL) | URL de descarga de git                      |
 | **🍏 MacOS**                      |                                             |
-| `brew install git`                | Instalación de gitpara MacOS                |
+| `brew install git`                | Instalación de git para MacOS                |
 
 ---
 
