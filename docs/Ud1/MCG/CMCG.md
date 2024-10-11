@@ -85,5 +85,17 @@ Para fusionar los cambios de una rama a la otra usaremos:
 ```
 git merge MAIN
 ```
->Mucho ojo, pues con la instrución anterir le decimos a git que queremos aplicar los cambios de la rama actual en la que estamos trabajando a la rama main.
+
+Tambien podemos hacer un *rebase*, que nos permite cambiar la base de los commits hechos en la rama.
+
+```
+git rebase MAIN
+```
+>Mucho ojo, pues con las dos instruciónes anteriores le decimos a git que queremos aplicar los cambios de la rama actual en la que estamos trabajando a la rama main.
 > Repito, rama actual ----> MAIN.
+
+## GitHub o repos en linea.
+Para poder clonar un repositorio existente ya sea en Github o derivados podemos hacerlo con el siguiente comando.
+```
+git clone "url"
+```
