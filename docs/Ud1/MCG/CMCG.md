@@ -14,7 +14,7 @@ git config --global user.email abc@email.com
 ```
 
  
-## Manejo básico de repos
+## Manejo de repos.
 Para crear un repositorio local y consultar su estado usaremos:
 
 ```
@@ -48,7 +48,14 @@ Podemos añadir etiquetas al estado actual usando:
 ```
 git tag nombre
 ```
+Si quisieramos ver las diferencias entre commits, archivos e incluso ramas podemos usar el siguiente comando:
 
+```
+git diff "a" "b"
+```
+>Por defecto este comando, compara los cambios del último commit con los actuales. Tambien podemos hacer uso de tags a la hora de comparar.
+***
+### Historial de cambios.
 Para poder ver el historico de todas nuestras ediciones a lo largo del tiempo usaríamos el siguiente comando:
 
 ```
@@ -73,7 +80,7 @@ git checkout "hash"
 
 Tambien cabe añadir que si no hacemos un `git switch -` para volver al commit más reciente o cambiamos de rama, podemos liarla pardísima. Y hablando de ramas.
 
-## Manejo de ramas
+## Manejo de ramas.
 
 Para crear una nueva rama de desarrollo en nuestro repositorio y situarnos dentro de ella usaremos los siguientes comandos:
 
@@ -98,4 +105,22 @@ git rebase MAIN
 Para poder clonar un repositorio existente ya sea en Github o derivados podemos hacerlo con el siguiente comando.
 ```
 git clone "url"
+```
+
+Si quisieramos sincronizar un repositorio local a uno en linea utilizariamos la siguiente instrucción:
+```
+git remote add origin "ssh"
+```
+***
+Mientras trabajamos en local junto a un repo en linea, no es raro que a la hora de hacer commits haya problemas, especialmente porque hay que verificar que no estamos sobreescribiendo el trabajo de nadie.
+
+Para guardar nuestro trabajo local temporalmente podemos hacer:
+```
+git stash save
+```
+
+Nos bajamos los últimos cambios con los comando anteriormente vistos y restauramos nuestra sesión con: 
+
+```
+git stash pop
 ```
