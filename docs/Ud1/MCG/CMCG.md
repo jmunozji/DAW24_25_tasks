@@ -1,3 +1,6 @@
+---
+title: 'cheatsheet de git - mauricio'
+---
 # CheatSheet de Git - mauricio
 ## Setup inicial
 Antes de poder utilizar git, necesitamos **git**. En la amplia mayoría de sistemas GNU/Linux usaremos este comando:
