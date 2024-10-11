@@ -1,3 +1,6 @@
+---
+title: 'CheatSheet Darius Gabriel Dobre'
+---
 # CheatSheet Github DARIUS GABRIEL DOBRE
 
 ## 1.2 Configuración Inicial
