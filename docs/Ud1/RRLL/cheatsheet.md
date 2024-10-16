@@ -1,4 +1,8 @@
-# Cheatsheet GIT
+---
+title: 'Cheatsheet 1'
+---
+
+# Cheatsheet GIT de Rommel
 
 ## Configurar GIT
 
