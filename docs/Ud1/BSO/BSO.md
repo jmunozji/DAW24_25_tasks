@@ -1,20 +1,21 @@
 ---
-title: 'Cheatsheet 1: Git Bryan Oyola'
+title: 'CH1 - Bryan Oyola'
 ---
 
 ## ÍNDICE
 
-- [Instalación de Git](#instalación-de-git)
+- [ÍNDICE](#índice)
+- [INSTALACIÓN DE GIT](#instalación-de-git)
   - [Windows](#windows)
   - [Linux](#linux)
-- [Configuración de Git con GitHub](#configuración-de-git-con-github)
-  - [Crear un repositorio](#crear-un-repositorio)
+- [CONFIGURACIÓN DE GIT CON GITHUB](#configuración-de-git-con-github)
+  - [Crear un repositorio en GitHub](#crear-un-repositorio-en-github)
   - [Crear un gitignore de forma global](#crear-un-gitignore-de-forma-global)
-- [Resumen de comandos principales de Git](#resumen-de-comandos-principales-de-git)
+- [RESUMEN DE COMANDOS PRINCIPALES DE GIT](#resumen-de-comandos-principales-de-git)
   - [Comandos básicos](#comandos-básicos)
   - [Comandos avanzados](#comandos-avanzados)
-- [Trabajando con ramas](#trabajando-con-ramas)
-- [Guardando cambios en stash](#guardando-cambios-en-stash)
+- [TRABAJANDO CON RAMAS](#trabajando-con-ramas)
+- [GUARDANDO CAMBIOS EN STASH](#guardando-cambios-en-stash)
 
 ## INSTALACIÓN DE GIT
 

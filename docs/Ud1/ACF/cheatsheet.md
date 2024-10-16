@@ -1,5 +1,5 @@
 ---
-title: 'Cheatsheet 1'
+title: 'CH1 - Alexandru Claudiu Fatu'
 ---
 
 # GitHub Cheatsheet

@@ -1,5 +1,5 @@
 ---
-title: 'Cheatsheet 1'
+title: 'CH1 - Rommel Romero Llumiquinga'
 ---
 
 # Cheatsheet GIT de Rommel

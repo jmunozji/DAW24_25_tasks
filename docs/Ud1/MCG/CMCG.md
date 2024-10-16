@@ -1,5 +1,5 @@
 ---
-title: 'cheatsheet de git - mauricio'
+title: 'CH1 - Mauricio Chamorro Gallego'
 ---
 # CheatSheet de Git - mauricio
 ## Setup inicial

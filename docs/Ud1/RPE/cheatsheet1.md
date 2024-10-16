@@ -1,5 +1,5 @@
 ---
-title: 'Cheatsheet 1'
+title: 'CH1 - Roberto Percuto Escrig'
 ---
 
 # Cheatsheet de comandos Git

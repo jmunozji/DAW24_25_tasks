@@ -1,6 +1,6 @@
 ---
 
-title: 'Cheatsheet 1'
+title: 'CH1 - David Maratrat Pons'
 
 ---
 # 📝 UD1 - Git Cheatsheet

@@ -1,5 +1,5 @@
 ---
-title: 'Git Cheatsheet - Andreu Beltran Miralles'
+title: 'CH1 - Andreu Beltran Miralles'
 ---
 
 # Git Cheatsheet - Andreu Beltran Miralles

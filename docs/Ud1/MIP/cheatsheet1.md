@@ -1,3 +1,7 @@
+---
+title: 'CH1 - Marc Ibáñez Puchol'
+---
+
 # Cheatsheet git Marc Ibáñez
 
 ## Uso básico de git

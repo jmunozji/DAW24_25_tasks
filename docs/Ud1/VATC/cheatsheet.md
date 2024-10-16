@@ -1,6 +1,6 @@
 ---
 
-title: 'Cheatsheet 1'
+title: 'CH1 - Victor Alexandru Teleanu Covaci'
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: 'Cheasheet 1'
+title: 'CH1 - Marcel Mañas Calafí'
 ---
 
 # Cheatsheet 1 de Marcel Mañas

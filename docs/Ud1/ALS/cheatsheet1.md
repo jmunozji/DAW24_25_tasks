@@ -1,3 +1,7 @@
+---
+title: 'CH1 - Adrian Leonard Stan'
+---
+
 # 🛠️ Git Cheatsheet Completo
 
 ## 📅 Configuración Inicial
