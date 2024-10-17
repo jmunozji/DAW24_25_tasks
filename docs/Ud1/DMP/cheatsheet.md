@@ -15,7 +15,7 @@ title: 'CH1 - David Maratrat Pons'
 | `apt-get install git`             | Instalación de git en distribuciones Debian |
 | `yum install git-core`            | Instalación de git por instalador binario   |
 | **🪟  Windows**                   |                                             |
-| [https://gitforwindows.org/](URL) | URL de descarga de git                      |
+| [https://gitforwindows.org/](https://gitforwindows.org/) | URL de descarga de git                      |
 | **🍏 MacOS**                      |                                             |
 | `brew install git`                | Instalación de git para MacOS                |
 
