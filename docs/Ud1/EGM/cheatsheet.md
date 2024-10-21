@@ -1,5 +1,5 @@
 ---
-title: 'Ud1 Control de Versiones'
+title: CH1 - Eduard Gabriel Mirea
 ---
 
 # **1 Instalación y configuración de Git**
