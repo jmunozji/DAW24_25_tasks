@@ -1,7 +1,5 @@
 ---
-
-title: 'CH2 - David Maratrat Pons'
-
+title: 'Cheatsheet 2'
 ---
 # 📝 UD2 - Docker Cheatsheet
 
