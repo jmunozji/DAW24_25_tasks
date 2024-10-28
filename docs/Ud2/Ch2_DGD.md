@@ -27,28 +27,28 @@ sudo usermod -aG docker $USER
 
 - Borrar todas las imágenes:
 
-    ```bash
-    docker rmi $(docker images -q)
-    ```
+ ```bash
+docker rmi $(docker images -q)
+```
 
 
 - Crear imagen a partir de contenedor
 
-    ```bash
-    docker commit servernginx nginx
-    ```
+ ```bash
+docker commit servernginx nginx
+```
 
 - Exportar imagen
 
-    ```bash
-    docker save -o copiaseguridad.tar darius/ubuntunano
-    ```
+ ```bash
+docker save -o copiaseguridad.tar darius/ubuntunano
+```
 
 - Importar imagen
 
-    ```bash
-    docker load -i copiaseguridad.tar
-    ```
+```bash
+docker load -i copiaseguridad.tar
+```
 
 
 
@@ -68,27 +68,27 @@ sudo usermod -aG docker $USER
 
 - Crear un contenedor interactivo:
 
-    ```bash
-    docker run -it ubuntu bash
-    ```
+```bash
+docker run -it ubuntu bash
+```
 
 - Contenedor en segundo plano:
 
-    ```bash
-    docker run -d nginx
-    ```
+```bash
+docker run -d nginx
+```
 
 - Ejecutar comandos en contenedor en ejecucion:
     
-    ```bash
-    docker exec -it ubuntu bash
-    ```
+```bash
+docker exec -it ubuntu bash
+```
 
 - Detener todos los contenedores en ejecucion:
 
-    ```bash
-    docker stop $(docker ps -q)
-    ```
+```bash
+docker stop $(docker ps -q)
+```
 
 ## 🗄️ Comandos para Volúmenes
 
@@ -107,33 +107,33 @@ sudo usermod -aG docker $USER
 
 - Crear un volumen:
 
-    ```bash
-    docker volume create mi_volumen
-    ```
+```bash
+docker volume create mi_volumen
+```
 
 - Montar un volumen en un contenedor:
 
-    ```bash
-    docker run -d -v mi_volumen:/data nginx
-    ```
+```bash
+docker run -d -v mi_volumen:/data nginx
+```
 
 - Inspeccionar un volumen:
 
-    ```bash
-    docker volume inspect mi_volumen
-    ```
+```bash
+docker volume inspect mi_volumen
+```
 
 - Borrar un volumen:
 
-    ```bash
-    docker volume rm mi_volumen
-    ```
+```bash
+docker volume rm mi_volumen
+```
 
 - Eliminar todos los volúmenes no utilizados:
 
-    ```bash
-    docker volume prune
-    ```
+```bash
+docker volume prune
+```
 
 
 ## ⚙️ Otras opciones
