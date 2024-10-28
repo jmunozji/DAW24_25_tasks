@@ -2,7 +2,7 @@
 title: CH2 - Eduard Gabriel Mirea
 ---
 
-# 🚢 Unidad 2 - Docker Cheatsheet
+# Unidad 2 - Docker Cheatsheet
 
 ## 🐋 Instalación de docker
 
