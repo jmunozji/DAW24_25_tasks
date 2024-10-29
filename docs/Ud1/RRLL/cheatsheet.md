@@ -1,7 +1,6 @@
 ---
-title: 'Cheatsheet 1'
+title: 'CH1 - Rommel Romero Llumiquinga'
 ---
-
 # Cheatsheet GIT de Rommel
 
 ## Configurar GIT
@@ -275,13 +274,13 @@ Los dos comandos sirven para fusionar ramas, la principal diferencia es que **me
 ### fast-forward y Squash
 
 ```bash
-git merge --no-ff nombre_rama 
+git merge --no-ff nombre_rama
 ```
 
 Por defecto es fast-forward, esto lo que signifca es que no deja rastro de la fusión, por ello es recomendable usar el parametro **--no-ff** para que quede constancia de que una rama se ha fusionado con otra.
 
 ```bash
-git merge --squash nombre_rama 
+git merge --squash nombre_rama
 ```
 
 Básicamente lo que hace es combinar todos los commits de la rama fusionada en un solo commit. Después de eso tenemos que hacer un commit manualmente.
@@ -359,13 +358,13 @@ git merge origin/master
 #### Pull
 
 ```bash
-git pull 
+git pull
 ```
 
 Por defecto **git pull** lo que hace es un **git merge**, si queremos hacer **git rebase** deberemos especificarlos con el parámetro **-r** o **--rebase**.
 
 ```bash
-git pull --rebase 
+git pull --rebase
 ```
 
 ### Guardar los cambios no confirmados temporalmente
