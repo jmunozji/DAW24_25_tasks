@@ -4,200 +4,98 @@ title: 'Cheatsheet 2'
 
 # **Cheatsheet Contenedores Docker** 🐋
 
-## 1. **Instalación**
+## 1. **Instalación** 🔧
 
 ### **Instalación en Linux**
 
-1. ##### Incluir el repositorio
-
-Actualizar los paquetes con el comando:
-
-```bash
-sudo apt update
-```
-
-Instalar las dependencias:
-
-```bash
-sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-```
-
-Descargar la clave GPG e incluirla:
-
-```bash
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-```
-
-Añadir el repositorio:
-
-```bash
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-```
-
-2. #### Instalar Docker engine CE
-
-Actualizar los paquetes del sistema otra vez e instalar Docker engine:
-
-```bash
-sudo apt-get install docker-ce docker-ce-cli containerd.io
-```
-
-Instalar la herramienta Docker Compose:
-
-```bash
-sudo apt install docker-compose
-```
-
-3. #### Permitir a los usuarios utilizar Docker sin privilegios
-
-Añadir al usuario deseado al grupo llamado docker 
-
-```bash
-sudo usermod -aG docker $USER
-```
-
-4. #### Desinstalación
-
-Desinstalar Docker utilizaremos:
-
-```bash
-sudo apt-get purge docker-ce docker-ce-cli containerd.io
-```
-
-## **Contenedores**
-
-Ejecutar un nuevo contenedor:
-
-```bash
-docker run <nombre_imagen>
-```
-
-Ejecutar un nuevo contenedor en segundo plano:
-
-```bash
-docker run -d <nombre_imagen>
-```
-
-Listar contenedores en ejecución:
-
-```bash
-docker ps
-```
-
-Listar todos los contenedores (incluidos los detenidos):
-
-```bash
-docker ps -a
-```
-
-Detener un contenedor:
-
-```bash
-docker stop <nombre_contenedor>
-```
-
-Eliminar un contenedor:
-
-```bash
-
-```
-
-Ejecutar un comando en un contenedor en ejecución:
-
-```bash
-docker exec -it <nombre_contenedor> <comando>
-```
-
-Reiniciar un contenedor:
-
-```bash
-docker restart <nombre_contenedor>
-```
-
-## **Imágenes**
-
-Listar imágenes:
-
-```bash
-docker images
-```
-
-Descargar una image:
-
-```bash
-docker pull <nombre_imagen>
-```
-
-Eliminar une imagen:
-
-```bash
-docker rmi <nombre_imagen>
-```
-
-Crear una imagen a partir de un Dockerfile:
-
-```bash
-docker build -t <nombre_imagen>:<tag> <directorio_dockerfile>
-```
-
-## Docker Compose
-
-Iniciar servicios de docker-compose.yml:
-
-```bash
-docker-compose up
-```
-
-Detener servicios:
-
-```bash
-docker-compose down
-```
-
-Ver log de los servicios:
-
-```bash
-docker-compose logs
-```
-
-Construir imágenes antes de iniciar los servicios:
-
-```bash
-docker-compose up --build
-```
-
-
-
-```bash
-
-```
-
-
-
-```bash
-
-```
-
-
-
-```bash
-
-```
-
-
-
-```bash
-
-```
-
-
-
-```bash
-
-```
-
-
-
-```bash
-
-```
+| 🛠️ Paso                           | 📜 Comando                                                                                                          |
+|------------------------------------|---------------------------------------------------------------------------------------------------------------------|
+| 📥 Incluir el repositorio          | ```sudo apt update```                                                                                               |
+| ➡️ Instalar dependencias           | ```sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common```          |
+| 🔑 Descargar clave GPG e incluirla | ```curl -fsSL https://download.docker.com/linux/ubuntu/gpg / sudo apt-key add -```                                  |
+| ➕ Añadir el repositorio            | ```sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"``` |
+| 🐋 Instalar Docker Engine CE       | ```sudo apt-get install docker-ce docker-ce-cli containerd.io```                                                    |
+| 🐋 Instalar Docker Compose         | ```sudo apt install docker-compose```                                                                               |
+| 👤 Uso sin privilegios             | ```sudo usermod -aG docker $USER```                                                                                 |
+| 🗑️ Desinstalar Docker             | ```sudo apt-get purge docker-ce docker-ce-cli containerd.io```                                                      |
+
+---
+
+## 2. **Imágenes** 🖼️
+
+| Acción                  | Comando                                         |
+|-------------------------|-------------------------------------------------|
+| 📜 Listar imágenes      | ```docker images```                            |
+| 📥 Descargar imagen     | ```docker pull <nombre_imagen>```              |
+| 🗑️ Eliminar imagen      | ```docker rmi <nombre_imagen>```               |
+| 🏗️ Crear imagen         | ```docker build -t <nombre_imagen>:<tag> <directorio_dockerfile>``` |
+
+---
+
+## 3. **Contenedores** 📦
+
+| Acción                               | Comando                                                      |
+|--------------------------------------|--------------------------------------------------------------|
+| ▶️ Ejecutar contenedor nuevo         | ```docker run <nombre_imagen>```                             |
+| ▶️ Ejecutar en segundo plano         | ```docker run -d <nombre_imagen>```                          |
+| 🖥️ Modo interactivo                  | ```docker run -it <nombre_imagen>```                         |
+| 🔌 Asignar puerto                    | ```docker run -p <puerto_local>:<puerto_contenedor> <nombre_imagen>``` |
+| 📜 Listar contenedores activos       | ```docker ps```                                              |
+| 📜 Listar todos los contenedores     | ```docker ps -a```                                         |
+| 🕵️ Inspeccionar contenedor           | ```docker inspect <id_contenedor>```                        |
+| 📝 Mostrar logs                      | ```docker logs <id_contenedor>```                           |
+| 🔄 Iniciar contenedor detenido       | ```docker start <nombre_contenedor>```                      |
+| ⏹️ Detener contenedor                | ```docker stop <nombre_contenedor>```                       |
+| 🗑️ Eliminar contenedor               | ```docker rm <id_contenedor>```                             |
+| ⌨️ Ejecutar comando en contenedor    | ```docker exec -it <nombre_contenedor> <comando>```        |
+| 🔄 Reiniciar contenedor              | ```docker restart <nombre_contenedor>```                   |
+
+---
+
+## 4. **Volúmenes** 📂
+
+| Acción                              | Comando                                                      |
+|-------------------------------------|--------------------------------------------------------------|
+| ➕ Crear volumen                     | ```docker volume create <nombre_volumen>```                  |
+| 📂 Montar volumen                   | ```docker run -v <nombre_volumen>:<directorio_contenedor> <nombre_imagen>``` |
+| 📜 Listar volúmenes                 | ```docker volume ls```                                       |
+| 🔍 Inspeccionar volumen             | ```docker volume inspect <nombre_volumen>```                |
+| 🗑️ Eliminar volumen                 | ```docker volume rm <nombre_volumen>```                     |
+
+---
+
+## 5. **Redes en Docker** 🌐
+
+| Acción                               | Comando                                            |
+|--------------------------------------|----------------------------------------------------|
+| 📜 Listar redes                      | ```docker network ls```                            |
+| ➕ Crear red                          | ```docker network create <nombre_red>```          |
+| 🗑️ Eliminar red                      | ```docker network rm <nombre_red>```               |
+| 🔌 Conectar contenedor a red         | ```docker run --network <nombre_red> <nombre_imagen>``` |
+
+---
+
+## 6. **Docker Compose** 📋
+
+| Acción                                    | Comando                                 |
+|-------------------------------------------|-----------------------------------------|
+| ▶️ Iniciar servicios                      | ```docker-compose up```                 |
+| ▶️ Iniciar en segundo plano               | ```docker-compose up -d```              |
+| 🔄 Reconstruir y reiniciar servicios      | ```docker-compose up --build```         |
+| ⏹️ Detener servicios                     | ```docker-compose stop```                |
+| 🗑️ Eliminar servicios                    | ```docker-compose down```                |
+| 🗑️ Eliminar servicios y volúmenes        | ```docker-compose down -v```            |
+| 📜 Ver logs de servicios                  | ```docker-compose logs```                |
+
+---
+
+## 7. **Limpieza** 🧹
+
+| Acción                             | Comando                       |
+|------------------------------------|-------------------------------|
+| 🗑️ Eliminar objetos sin uso       | ```docker system prune```     |
+| 🗑️ Eliminar contenedores parados  | ```docker container prune```  |
+| 🗑️ Eliminar imágenes no usadas    | ```docker image prune```      |
+| 🗑️ Eliminar volúmenes no usados   | ```docker volume prune```     |
+
+---
