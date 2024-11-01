@@ -1,3 +1,10 @@
+---
+
+title: 'CH1 - Eduard Varga'
+
+---
+
+
 `git config --global user.name "John Doe"` -> establecer nombre de usuario 
 `git config --global user.email johndoe@example.com` -> establecer dirección de correo electrónico
 
