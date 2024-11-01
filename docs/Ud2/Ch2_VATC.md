@@ -1,6 +1,6 @@
 ---
 
-title: 'CH2 - Victor Alexandru Teleanu Covaci'
+title: 'CH2 - VATC'
 
 ---
 
