@@ -1,5 +1,5 @@
 ---
-title: 'CheatSheet 2 - Bryan Oyola'
+title: 'Ch2 - BO'
 ---
 
 # 🚢 Unidad 2 - Docker Cheatsheet
