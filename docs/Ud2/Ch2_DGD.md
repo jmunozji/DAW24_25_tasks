@@ -1,5 +1,5 @@
 ---
-title: 'Cheatsheet 2'
+title: 'Ch2 - DGD'
 ---
 
 # Cheatsheet 2 Docker Darius Gabriel Dobre
