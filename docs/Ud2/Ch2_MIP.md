@@ -1,3 +1,7 @@
+---
+title: 'Ch2 - MIP'
+---
+
 # Docker Cheatsheet
 
 ## Instalación y Configuración Básica
