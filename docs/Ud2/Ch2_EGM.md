@@ -1,5 +1,5 @@
 ---
-title: CH2 - Eduard Gabriel Mirea
+title: CH2 - EGM
 ---
 
 # Unidad 2 - Docker Cheatsheet
