@@ -1,5 +1,5 @@
 ---
-title: 'cheatsheet 2 - docker'
+title: 'CH2 - MCG'
 ---
 
 # Cheatsheet de Docker
