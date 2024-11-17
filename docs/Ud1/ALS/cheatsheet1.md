@@ -1,6 +1,6 @@
----
-title: 'CH1 - Adrian Leonard Stan'
----
+    ---
+    title: 'CH1 - Adrian Leonard Stan'
+    ---
 
 # 🛠️ Git Cheatsheet Completo
 
