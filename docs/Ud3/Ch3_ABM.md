@@ -4,8 +4,6 @@ title: 'CH3 - ABM'
 
 # 🌐 Cheatsheet de Servidores Web: **Apache y Nginx**
 
-Guía práctica con pasos claros y comandos esenciales para trabajar con servidores web.
-
 ---
 
 ## 🚀 **Instalación y Configuración Básica**
