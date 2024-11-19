@@ -85,6 +85,8 @@ sudo systemctl status nginx
    sudo systemctl reload nginx
    ```
 
+
+
 ---
 
 ## 🔐 Autenticación Básica
