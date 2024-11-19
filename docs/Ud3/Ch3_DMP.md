@@ -15,7 +15,46 @@ title: 'Ch3 - DMP'
 | `systemctl -s reload`     | `Recarga la configuración del servidor web nginx` |
 | `systemctl -t`            | `Prueba la configuración del servidor web nginx`  |
 
-### Ejemplo de nginx.conf
+### 🌐 Sitios Virtuales en Nginx
+Los sitios virtuales en Nginx se configuran a través de bloques server. 
+Cada bloque puede representar un sitio web independiente, configurando directivas como el puerto de escucha,
+el nombre del servidor (server_name) y la ruta del contenido (root).
+```
+server {
+    listen 80;
+    server_name example.com;
+    root /var/www/example;
+
+    location / {
+        index index.html;
+    }
+
+    error_log /var/log/nginx/error.log;
+    access_log /var/log/nginx/access.log;
+}
+```
+
+### 🔒 Configuración SSL en Nginx
+
+Para habilitar SSL en Nginx, debes asegurarte de que el servidor escuche en el puerto 443
+y configurar las directivas ssl_certificate y ssl_certificate_key con la ruta de tus certificados.
+
+```
+server {
+    listen 443 ssl;
+    server_name example.com;
+
+    ssl_certificate /etc/ssl/certs/server.crt;
+    ssl_certificate_key /etc/ssl/private/server.key;
+
+    location / {
+        root /usr/share/nginx/html;
+        index index.html;
+    }
+}
+```
+
+### 📑 Ejemplo completo de nginx.conf
 ```
 worker_processes auto;
 
@@ -52,7 +91,47 @@ http {
 | `systemctl reload apache2`  |                                                                    |
 | `apachectl configtest`      |                                                                    |
 
-### Ejemplo de apache2.conf
+### 🌐 Sitios Virtuales en Apache
+
+En Apache, los sitios virtuales se configuran usando el bloque <VirtualHost>,
+que permite especificar configuraciones específicas por cada dominio o dirección IP.
+Puedes configurar múltiples sitios en un solo servidor, cada uno con su propio archivo de configuración
+o mediante el uso de archivos de configuración dentro del directorio sites-available y sites-enabled.
+
+```
+<VirtualHost *:80>
+    ServerName example.com
+    DocumentRoot /var/www/example
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+
+### 🔒 Configuración SSL en Apache
+
+En Apache, para habilitar SSL debes activar el módulo ssl y configurar el bloque <VirtualHost>
+para usar el puerto 443 junto con las directivas de SSL SSLCertificateFile y SSLCertificateKeyFile.
+
+```
+<VirtualHost *:443>
+    ServerName example.com
+
+    SSLEngine on
+    SSLCertificateFile /etc/ssl/certs/server.crt
+    SSLCertificateKeyFile /etc/ssl/private/server.key
+
+    DocumentRoot /var/www/html
+    <Directory /var/www/html>
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+
+### 📑 Ejemplo completo de apache2.conf
 ```
 <VirtualHost *:80>
     ServerName example.com
@@ -65,7 +144,7 @@ http {
 
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
-<\/VirtualHost>
+</VirtualHost>
 
 <VirtualHost *:443>
     ServerName example.com
