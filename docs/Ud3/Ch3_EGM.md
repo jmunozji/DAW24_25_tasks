@@ -374,32 +374,6 @@ server {
 
 ---
 
-###  Docker Compose 🐳➕⚙️
-
->Para configurar una pila LAMP usando Docker Compose :
-
-```yaml
-   version: '3'
-   services:
-     apache:
-       image: httpd:latest
-       ports:
-         - "80:80"
-       volumes:
-         - ./website:/usr/local/apache2/htdocs/
-     php:
-       image: php:7.4-apache
-     mysql:
-       image: mysql:5.7
-       environment:
-         MYSQL_ROOT_PASSWORD: secret
-         MYSQL_DATABASE: mydb
-         MYSQL_USER: user
-         MYSQL_PASSWORD: password
-   volumes:
-     mysql-data:
-```
-
 ## phpMyAdmin 🐘📊
 
 📦 **Instalación :**
