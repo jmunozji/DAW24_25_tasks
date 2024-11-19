@@ -15,9 +15,8 @@ title: 'Ch3 - DMP'
 | `systemctl -s reload`     | `Recarga la configuración del servidor web nginx` |
 | `systemctl -t`            | `Prueba la configuración del servidor web nginx`  |
 
-<details>
-<summary>Ver ejemplo de nginx.conf</summary>
-<pre>
+### Ejemplo de nginx.conf
+```
 worker_processes auto;
 
 events {
@@ -39,8 +38,7 @@ http {
         }
     }
 }
-</pre>
-</details>
+```
 
 ---
 
@@ -54,9 +52,8 @@ http {
 | `systemctl reload apache2`  |                                                                    |
 | `apachectl configtest`      |                                                                    |
 
-<details>
-<summary>Ver ejemplo de apache2.conf</summary>
-<pre>
+### Ejemplo de apache2.conf
+```
 <VirtualHost *:80>
     ServerName example.com
     DocumentRoot /var/www/html
@@ -86,8 +83,7 @@ http {
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
-</pre>
-</details>
+```
 
 ---
 
@@ -95,9 +91,7 @@ http {
 
 Define la imagen de un contenedor, incluyendo el sistema base, configuraciones y archivos necesarios.
 
-<details>
-<summary>Ver ejemplo de Dockerfile</summary>
-<pre>
+```
 # Dockerfile para un servidor Nginx
 FROM nginx:latest
 
@@ -112,8 +106,7 @@ EXPOSE 80
 
 # Iniciar el servidor
 CMD \["nginx", "-g", "daemon off;"]
-</pre>
-</details>
+```
 
 ---
 
@@ -121,9 +114,7 @@ CMD \["nginx", "-g", "daemon off;"]
 
 Configura y orquesta múltiples contenedores, estableciendo servicios, redes y volúmenes.
 
-<details>
-<summary>Ver ejemplo de docker-compose.yml</summary>
-<pre>
+```
 version: '3.9'
 services:
   web:
@@ -153,5 +144,4 @@ networks:
     driver: bridge
 volumes:
   db_data:
-</pre>
-</details>
+```
