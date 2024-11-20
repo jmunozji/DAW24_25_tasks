@@ -9,11 +9,11 @@ title: 'Ch3 - DMP'
 
 | Comando                   | Descripción                                       |
 |---------------------------|---------------------------------------------------|
-| `systemctl start nginx`   | `Arranca el servidor web nginx`                   |
-| `systemctl stop nginx`    | `Para el servidor web nginx`                      |
+| `systemctl start nginx`   | `Inicia el servidor web nginx`                    |
+| `systemctl stop nginx`    | `Detiene el servidor web nginx`                   |
 | `systemctl restart nginx` | `Reinicia el servidor web nginx`                  |
-| `systemctl -s reload`     | `Recarga la configuración del servidor web nginx` |
-| `systemctl -t`            | `Prueba la configuración del servidor web nginx`  |
+| `systemctl reload nginx`  | `Recarga la configuración del servidor web nginx` |
+| `nginx -t`                | `Prueba la configuración del servidor web nginx`  |
 
 ### 🌐 Sitios Virtuales en Nginx
 Los sitios virtuales en Nginx se configuran a través de bloques server. 
@@ -63,33 +63,69 @@ events {
 }
 
 http {
+    # Habilitar compatibilidad con HTTPS
     server {
         listen 80;
         server_name example.com;
+        return 301 https://$host$request_uri; # Redirección a HTTPS
+    }
+
+    server {
+        listen 443 ssl;
+        server_name example.com;
+
+        root /var/www/example_com;
+        index index.html;
+
+        ssl_certificate /etc/ssl/certs/example_com.crt;
+        ssl_certificate_key /etc/ssl/private/example_com.key;
+
+        error_log /var/log/nginx/example_com_error.log;
+        access_log /var/log/nginx/example_com_access.log;
+
         location / {
-            root /usr/share/nginx/html;
             index index.html;
         }
-        location /api/ {
-            proxy_pass http://backend:5000;
-            proxy_set_header Host $host;
-            proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    server {
+        listen 80;
+        server_name example.org;
+        return 301 https://$host$request_uri; # Redirección a HTTPS
+    }
+
+    server {
+        listen 443 ssl;
+        server_name example.org;
+
+        root /var/www/example_org;
+        index index.html;
+
+        ssl_certificate /etc/ssl/certs/example_org.crt;
+        ssl_certificate_key /etc/ssl/private/example_org.key;
+
+        error_log /var/log/nginx/example_org_error.log;
+        access_log /var/log/nginx/example_org_access.log;
+
+        location /app {
+            index index.html;
         }
     }
 }
+
 ```
 
 ---
 
 ## 🧑‍💻 Comandos Apache2
 
-| Comando                     | Descripción                                                        |
-|-----------------------------|--------------------------------------------------------------------|
-| `systemctl start apache2`   |                                                                    |
-| `systemctl stop apache2`    |                                                                    |
-| `systemctl restart apache2` |                                                                    |
-| `systemctl reload apache2`  |                                                                    |
-| `apachectl configtest`      |                                                                    |
+| Comando                     | Descripción                                                    |
+|-----------------------------|----------------------------------------------------------------|
+| `systemctl start apache2`   | `Inicia el servicio Apache2.`                                  |
+| `systemctl stop apache2`    | `Detiene el servicio Apache2.`                                 |
+| `systemctl restart apache2` | `Reinicia el servicio Apache2.`                                |
+| `systemctl reload apache2`  | `Recarga la configuración de Apache2 sin detener el servicio.` |
+| `apachectl configtest`      | `Prueba la configuración de Apache2.`                          |
 
 ### 🌐 Sitios Virtuales en Apache
 
@@ -133,14 +169,18 @@ para usar el puerto 443 junto con las directivas de SSL SSLCertificateFile y SSL
 
 ### 📑 Ejemplo completo de apache2.conf
 ```
+# Sitio Virtual 1 - example.com
 <VirtualHost *:80>
     ServerName example.com
     DocumentRoot /var/www/html
 
-    <Directory \/var/www/html>
+    <Directory /var/www/html>
         AllowOverride All
         Require all granted
     </Directory>
+
+    # Redirección a HTTPS
+    Redirect permanent / https://example.com/
 
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
@@ -161,6 +201,40 @@ para usar el puerto 443 junto con las directivas de SSL SSLCertificateFile y SSL
 
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+# Sitio Virtual 2 - example.org
+<VirtualHost *:80>
+    ServerName example.org
+    DocumentRoot /var/www/example
+
+    <Directory /var/www/example>
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    # Redirección a HTTPS
+    Redirect permanent / https://example.org/
+
+    ErrorLog ${APACHE_LOG_DIR}/example_error.log
+    CustomLog ${APACHE_LOG_DIR}/example_access.log combined
+</VirtualHost>
+
+<VirtualHost *:443>
+    ServerName example.org
+
+    SSLEngine on
+    SSLCertificateFile /etc/ssl/certs/example_org.crt
+    SSLCertificateKeyFile /etc/ssl/private/example_org.key
+
+    DocumentRoot /var/www/example
+    <Directory /var/www/example>
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/example_error.log
+    CustomLog ${APACHE_LOG_DIR}/example_access.log combined
 </VirtualHost>
 ```
 
