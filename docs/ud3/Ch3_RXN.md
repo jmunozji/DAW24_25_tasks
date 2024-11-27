@@ -27,7 +27,6 @@ Los servidores web, son utilizados para realizar una conexión mediante cliente 
 | `bash docker run -d --name=miservernginx \ --mount type=bind,source=/home/admin/web,target=/var/www/html \ -p 80:80 \ servernginx` | Lanzar nuevamente docker run, con nuevos parámetros |
 | `docker run -d --name=miservernginx2 \-v /home/admin/web:/usr/share/nginx/html:ro \-p 80:80 \nginx:latest` | Lanzar nuevamente, pero desde la imagen oficial |
 
-
 ## Creación de un sitio virtual 🖥️
 
 | Comandos 🛡️ | Explicación 🗨️ |
@@ -48,7 +47,6 @@ Los servidores web, son utilizados para realizar una conexión mediante cliente 
 | `google-chrome --host-resolver-rules="MAP midominio.com 123.45.67.89, MAP otrodominio.com 98.76.54.32" --ignore-certificate-errors` | Si no tuvieramos permisos en la máquina host, habría que aplicar este comando |
 | `google-chrome --host-resolver-rules="MAP sitio1 IPSERVER" --ignore-certificate-error` | Hay que sustituir IP server por la de AWS |
 
-
 ## Autenticación ✅
 
 | Comandos 🛡️ | Explicación 🗨️ |
@@ -59,7 +57,6 @@ Los servidores web, son utilizados para realizar una conexión mediante cliente 
 | `sudo htpasswd /etc/nginx/.htpasswd otro_usuario` | Mismo paso para usuarios sin la -c |
 | `tail -n 3 /var/log/nginx/access.log` | Obtención IP peticiones  |
 | `sudo htpasswd -c /etc/apache2/.htpasswd profe` | Creación de archivo oculto apache2 |
-
 
 ## Activación HTTPS ♻️
 
@@ -87,7 +84,6 @@ Los servidores web, son utilizados para realizar una conexión mediante cliente 
 | `sudo systemctl restart apache2` | Reinicio del servicio de apache2 |
 | `sudo apt-get install phpmyadmin` | Instalación de phpMyAdmin |
 | `sudo ln -s /usr/share/phpmyadmin/ /var/www/html/phpmyadmin` | Enlace símbolico por si no se pudiera acceder a phpMyAdmin |
-
 
 ## Instalación de pila LAMP dockerizada 🔋📦
 
