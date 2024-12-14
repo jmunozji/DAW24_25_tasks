@@ -8,6 +8,10 @@ title: "CH4 - BSO"
 
 ### Herramientas útiles para gestionar DNS
 
+```bash
+sudo apt-get install dnsutils  #Instalar estas herramientas en Debian
+```
+
 - `nslookup`: Se utiliza para saber si un servidor DNS resuelve correctamente los nombres DNS y las direcciones IP.
 
     - nslookup cisco.com
@@ -89,3 +93,10 @@ Domain Name: CISCO.COM
    URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
 >>> Last update of whois database: 2024-12-14T15:42:34Z <<<
 ```
+
+### Instalación de un servidor DNS
+
+```bash
+sudo apt-get install bind9 bind9utils bind9-doc 
+```
+
