@@ -68,7 +68,7 @@ title: 'Ch4 - DMP'
     practicaservicios.davidmaratrat.local. IN A 127.0.0.1
     ldap.davidmaratrat.local.              IN CNAME practicaservicios.davidmaratrat.local.
     ```
-- #### db.127.local
+- #### db.127
   ```
   $TTL 1d
   $ORIGIN 0.0.127.IN-ADDR.ARPA.
