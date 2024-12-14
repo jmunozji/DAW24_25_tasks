@@ -113,7 +113,7 @@ DNS=127.0.0.1
 
 - `/etc/bind/named.conf`: Archivo de configuración principal
 
-    - sirve simplemente para aglutinar o agrupar a los archivos de configuración que usaremos.
+    - Sirve simplemente para aglutinar o agrupar a los archivos de configuración que usaremos.
 
 ```named.conf
 // This is the primary configuration file for the BIND DNS server named.
@@ -134,4 +134,91 @@ include "/etc/bind/named.conf.default-zones";
 - `named.conf.local`: En este archivo configuraremos aspectos relativos a nuestras zonas.
 
 - `named.conf.default-zones`: Se encarga de definir las zonas predeterminadas.
+
+### Creación de un archivo de zona
+
+`sudo nano named.conf.local`
+
+```named.conf.local
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "deaw.es" {
+        type master;
+        file "/etc/bind/db.deaw.es";  //Ruta donde ubicamos nuestro archivo de zona
+};
+```
+
+`sudo nano /etc/bind/db.deaw.es`
+
+```/etc/bind/db.deaw.es
+$TTL 1d
+$ORIGIN deaw.es. ; base domain-name
+@   IN  SOA     ns1.deaw.es. admin.deaw.es. (
+                  2023112301  ; Serial
+                  8H          ; Refresh
+                  2H          ; Retry
+                  4W          ; Expire
+                  1D )        ; Minimum TTL
+; Name Servers
+    IN  NS      ns1.deaw.es.
+; A records
+ns1 IN  A       3.85.104.173
+www IN  A       3.85.104.173
+```
+
+- `$TTL`: Tiempo de vida predeterminado para los registros de la zona.
+
+- `SOA (Start of Authority)`: Indica información sobre la zona, como el nombre del servidor primario, el contacto del administrador y detalles de tiempo.
+
+- `NS`: Registra los servidores de nombres autoritativos para la zona.
+
+- `A`: Registra la dirección IP asociada con un nombre de host específico.
+
+#### Comprobaciones importantes de la configuración
+
+- `named-checkconf`: Se utiliza para comprobar que no hay errores en la configuración.
+
+- `named-checkzone deaw.es /etc/bind/db.deaw.es`: Comprueba si la zona configurada es correcta.
+
+```bash
+$ sudo named-checkzone deaw.es /etc/bind/db.deaw.es
+zone deaw.es/IN: loaded serial 2023112301
+OK
+```
+
+- `sudo systemctl restart systemd-resolved`: Si todo va correctamente, se reinicia el servicio.
+
+### Zona de resolución inversa
+
+```conf
+# /etc/bind/named.conf.local
+zone "104.85.3.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db.3.85.104";  # Ruta al archivo de zona inversa
+};
+```
+
+```conf
+# /etc/bind/db.3.85.104
+$TTL 1d
+$ORIGIN 104.85.3.IN-ADDR.ARPA.
+@   IN  SOA     ns1.deaw.es. admin.deaw.es. (
+                  2023112301  ; Serial
+                  8H          ; Refresh
+                  2H          ; Retry
+                  4W          ; Expire
+                  1D )        ; Minimum TTL
+
+; Name Servers
+    IN  NS      ns1.deaw.es.
+
+; PTR record
+173 IN  PTR     ns1.deaw.es. ; fully qualified domain name (FQDN)
+```
 
