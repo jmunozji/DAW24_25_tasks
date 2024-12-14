@@ -4,9 +4,9 @@ title: "CH4 - BSO"
 
 # Cheatshet 4 - Servicios de red DNS y LDAP
 
-## Servicio DNS (Domain Name System)
+## 📄 Servicio DNS (Domain Name System)
 
-### Herramientas útiles para gestionar DNS
+### 🔧Herramientas útiles para gestionar DNS
 
 ```bash
 sudo apt-get install dnsutils  #Instalar estas herramientas en Debian
@@ -94,7 +94,7 @@ Domain Name: CISCO.COM
 >>> Last update of whois database: 2024-12-14T15:42:34Z <<<
 ```
 
-### Instalación de un servidor DNS
+### 💾Instalación de un servidor DNS
 
 ```bash
 sudo apt-get install bind9 bind9utils bind9-doc 
@@ -109,7 +109,7 @@ DNS=127.0.0.1
 
 `sudo systemctl restart systemd-resolved`: Aplica la configuración
 
-### Configuración de un servidor DNS
+### ✏️Configuración de un servidor DNS
 
 - `/etc/bind/named.conf`: Archivo de configuración principal
 
@@ -135,7 +135,7 @@ include "/etc/bind/named.conf.default-zones";
 
 - `named.conf.default-zones`: Se encarga de definir las zonas predeterminadas.
 
-### Creación de un archivo de zona
+### 📄Creación de un archivo de zona
 
 `sudo nano named.conf.local`
 
@@ -180,7 +180,7 @@ www IN  A       3.85.104.173
 
 - `A`: Registra la dirección IP asociada con un nombre de host específico.
 
-#### Comprobaciones importantes de la configuración
+#### 🔎Comprobaciones importantes de la configuración
 
 - `named-checkconf`: Se utiliza para comprobar que no hay errores en la configuración.
 
@@ -194,7 +194,7 @@ OK
 
 - `sudo systemctl restart systemd-resolved`: Si todo va correctamente, se reinicia el servicio.
 
-### Zona de resolución inversa
+### 📃Zona de resolución inversa
 
 ```conf
 # /etc/bind/named.conf.local
@@ -222,15 +222,15 @@ $ORIGIN 104.85.3.IN-ADDR.ARPA.
 173 IN  PTR     ns1.deaw.es. ; fully qualified domain name (FQDN)
 ```
 
-## Servicio de directorio LDAP (Lightweight Directory Access Protocol)
+## 🔐Servicio de directorio LDAP (Lightweight Directory Access Protocol)
 
-### Instalación del servidor LDAP
+### 💾Instalación del servidor LDAP
 
 - `sudo apt install slapd ldap-utils`: Instala el servidor LDAP
 
 - `sudo dpkg-reconfigure slapd`: Te permite configurar desde cero el servidor LDAP o reconfigurarlo si ya lo tenías.
 
-### Administración del servidor LDAP
+### 📋Administración del servidor LDAP
 
 - `sudo slapcat`: Te permite ver la información actual que tienes configurada en LDAP.
 
@@ -246,7 +246,7 @@ $ORIGIN 104.85.3.IN-ADDR.ARPA.
 + $servers->setValue('login','bind_id','cn=admin,dc=daw,dc=ieselcaminas');
 ```
 
-### Configuración del servidor LDAP
+### ✏️Configuración del servidor LDAP
 
 - `/etc/ldap/ldap.conf`: Configuración del cliente LDAP.
 - `/etc/slapd/slapd.conf`: Configuración del servidor LDAP.
@@ -320,3 +320,34 @@ userPassword: 123456
 
 - `ldapadd -x -D cn=admin,dc=proyecto-empresa,dc=local -w ieselcaminas -f profesores.ldif`: Incorporar usuarios
 
+#### ➿Explicación del comando
+
+- `ldapadd -x -D "cn=admin,dc=proyecto-empresa,dc=local" -w ieselcaminas -f estructura_basica.ldif`
+
+    - `x`: Realiza la autenticación en modo simple.
+    - `D`: Indica el usuario administrador de LDAP (nombre distinguido o DN).
+    - `w`: Proporciona la contraseña del usuario LDAP.
+    - `f`: Define el archivo LDIF que se utilizará para la importación.
+
+#### 🔩Modificación de objetos
+
+```ldif
+# cambiar_usuario.ldif
+
+# Cambiar contraseña Usuario
+dn: uid=alu01,ou=usuarios,dc=proyecto-empresa,dc=local
+changetype: modify
+replace: userPassword
+userPassword: 654321
+```
+
+- `ldapmodify -x -D cn=admin,dc=proyecto-empresa,dc=local -w ieselcaminas -f cambiar_usuario.ldif`
+
+#### 🔍Búsqueda
+
+- `ldapsearch -x -b dc=proyecto-empresa,dc=local "(uid=*profe*)"`: Buscar todos los profesores usando el uid
+- `ldapsearch -x -b dc=proyecto-empresa,dc=local "(uidNumber=1002)"`: Buscar usando el uidNumber
+
+#### 🔨Eliminación
+
+- `ldapdelete -x -D cn=admin,dc=proyecto-empresa,dc=local -w ieselcaminas uid=alu02,ou=usuarios,dc=proyecto-empresa,dc=local`: Eliminamos el usuario alu02
