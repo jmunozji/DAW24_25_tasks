@@ -100,3 +100,38 @@ Domain Name: CISCO.COM
 sudo apt-get install bind9 bind9utils bind9-doc 
 ```
 
+`sudo nano /etc/systemd/resolved.conf`: cambiar el DNS al que consulta nuestro servidor.
+
+```resolved.conf
+[Resolve]
+DNS=127.0.0.1
+```
+
+`sudo systemctl restart systemd-resolved`: Aplica la configuración
+
+### Configuración de un servidor DNS
+
+- `/etc/bind/named.conf`: Archivo de configuración principal
+
+    - sirve simplemente para aglutinar o agrupar a los archivos de configuración que usaremos.
+
+```named.conf
+// This is the primary configuration file for the BIND DNS server named.
+//
+// Please read /usr/share/doc/bind9/README.Debian for information on the
+// structure of BIND configuration files in Debian, *BEFORE* you customize
+// this configuration file.
+//
+// If you are just adding zones, please do that in /etc/bind/named.conf.local
+
+include "/etc/bind/named.conf.options";
+include "/etc/bind/named.conf.local";
+include "/etc/bind/named.conf.default-zones";
+```
+
+- `named.conf.options`: Se encarga de contener las configuraciones globales.
+
+- `named.conf.local`: En este archivo configuraremos aspectos relativos a nuestras zonas.
+
+- `named.conf.default-zones`: Se encarga de definir las zonas predeterminadas.
+
