@@ -228,4 +228,4 @@ $ ldapdelete -x -D cn=admin,dc=proyecto-empresa,dc=local -w ieselcaminas uid=alu
 - `-D`: Especifica el DN del usuario con permisos.
 - `-w`: Proporciona la contraseña del usuario.
 - `-f`: Indica el archivo LDIF con los datos a agregar/modificar.
-- `-b`: Define la base de búsqueda en el árbol LDAP.  
+- `-b`: Define la base de búsqueda en el árbol LDAP.
