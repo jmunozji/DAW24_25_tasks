@@ -134,35 +134,36 @@ userPassword: {SSHA}contraseñaEncriptada
 
 - Filtros comunes:
 
-    - Buscar usuarios con "profe" en su UID:
-    ```bash
-    ldapsearch -x -b dc=example,dc=com "(uid=*profe*)"
-    ```
+- Buscar usuarios con "profe" en su UID:
 
-    - Buscar usuarios con GID 10001:
+```bash
+ldapsearch -x -b dc=example,dc=com "(uid=*profe*)"
+```
 
-    ```bash
-    ldapsearch -x -b dc=example,dc=com "(gidNumber=10001)"
-    ```
+- Buscar usuarios con GID 10001:
+
+```bash
+ldapsearch -x -b dc=example,dc=com "(gidNumber=10001)"
+```
 
 ## 📜 Modificaciones
 
 - Cambiar contraseña de un usuario:
 
-    - Archivo LDIF:
+- Archivo LDIF:
 
-    ```plaintext
-    dn: uid=profe01,ou=usuarios,dc=example,dc=com
-    changetype: modify
-    replace: userPassword
-    userPassword: nuevaContraseña
-    ```
+```plaintext
+dn: uid=profe01,ou=usuarios,dc=example,dc=com
+changetype: modify
+replace: userPassword
+userPassword: nuevaContraseña
+```
 
-    - Comando:
+- Comando:
 
-    ```bash
-    ldapmodify -x -D cn=admin,dc=example,dc=com -w adminPassword -f modificar.ldif
-    ```
+```bash
+ldapmodify -x -D cn=admin,dc=example,dc=com -w adminPassword -f modificar.ldif
+```
 
 ## 🔒 Autenticación con LDAP en Apache
 
@@ -205,38 +206,38 @@ userPassword: {SSHA}contraseñaEncriptada
     ```
 2. **Configurar los archivos necesarios:**
 
-    - Modificamos nginx.conf:
+- Modificamos nginx.conf:
 
-    ```plaintext
-    http {
-        ldap_server mi_servidor_ldap {
-            url ldap://IPSERVIDOR/ou=usuarios,dc=daw,dc=ieselcaminas?uid?sub;
-            binddn "cn=admin,dc=daw,dc=ieselcaminas";
-            binddn_passwd "ieselcaminas";
-            group_attribute member;
-            group_attribute_is_dn on;
+```plaintext
+http {
+    ldap_server mi_servidor_ldap {
+        url ldap://IPSERVIDOR/ou=usuarios,dc=daw,dc=ieselcaminas?uid?sub;
+        binddn "cn=admin,dc=daw,dc=ieselcaminas";
+        binddn_passwd "ieselcaminas";
+        group_attribute member;
+        group_attribute_is_dn on;
 
-            require valid_user;
-        }
-
-        include /etc/nginx/sites-enabled/*;
+        require valid_user;
     }
-    ```
 
-    - Añadimos la configuración al sitio:
+    include /etc/nginx/sites-enabled/*;
+}
+```
 
-    ```plaintext
-    server {
-        listen 80;
-        server_name sitioldap;
-        root /var/www/sitioldap;
-        index index.html;
+- Añadimos la configuración al sitio:
 
-        # Configuración LDAP
-        location / {
-            try_files $uri $uri/ =404;
-            auth_ldap "Protected Area";
-            auth_ldap_servers mi_servidor_ldap;
-        }
+```plaintext
+server {
+    listen 80;
+    server_name sitioldap;
+    root /var/www/sitioldap;
+    index index.html;
+
+    # Configuración LDAP
+    location / {
+        try_files $uri $uri/ =404;
+        auth_ldap "Protected Area";
+        auth_ldap_servers mi_servidor_ldap;
     }
-    ```
+}
+```
