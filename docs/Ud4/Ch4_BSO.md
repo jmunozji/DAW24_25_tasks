@@ -238,12 +238,85 @@ $ORIGIN 104.85.3.IN-ADDR.ARPA.
 
 ```diff
 #/etc/phpldapadmin/config.php --> Cambiamos el DIT (Directory Information Tree)
--   $servers->;setValue('server','base',array('dc=example,dc=com'));
--   $servers->setValue('login','bind_id','cn=admin,dc=example,dc=com');
 
-+   $servers->setValue('server','base',array('dc=daw,dc=ieselcaminas'));
-+   $servers->setValue('login','bind_id','cn=admin,dc=daw,dc=ieselcaminas');
+- $servers->;setValue('server','base',array('dc=example,dc=com'));
+- $servers->setValue('login','bind_id','cn=admin,dc=example,dc=com');
+
++ $servers->setValue('server','base',array('dc=daw,dc=ieselcaminas'));
++ $servers->setValue('login','bind_id','cn=admin,dc=daw,dc=ieselcaminas');
 ```
 
 ### Configuración del servidor LDAP
+
+- `/etc/ldap/ldap.conf`: Configuración del cliente LDAP.
+- `/etc/slapd/slapd.conf`: Configuración del servidor LDAP.
+- `archivo.ldif`: Aquí va la configuración de la estructura organizativa que queremos añadir en nuestro servidor LDAP, o definir grupos o usuarios.
+
+```ldif
+# estructura_basica.ldif --> Estructura organizativa básica LDAP
+
+# Usuarios
+dn: ou=usuarios,dc=proyecto-empresa,dc=local
+objectClass: organizationalUnit
+ou: usuarios
+
+# Grupos
+dn: ou=grupos,dc=proyecto-empresa,dc=local
+objectClass: organizationalUnit
+ou: grupos
+```
+
+- `ldapadd -x -D cn=admin,dc=proyecto-empresa,dc=local -w ieselcaminas -f estructura_basica.ldif`: Incorporar los cambios
+
+```ldif
+# grupos.ldif --> Creación de grupos
+
+#Grupo profesores
+dn: cn=profesores,ou=grupos,dc=proyecto-empresa,dc=local
+objectClass: posixGroup
+cn: profesores
+gidNumber: 10000
+
+#Grupo alumnos
+dn: cn=alumnos,ou=grupos,dc=proyecto-empresa,dc=local
+objectClass: posixGroup
+cn: alumnos   
+gidNumber: 10001
+```
+
+- `ldapadd -x -D cn=admin,dc=proyecto-empresa,dc=local -w ieselcaminas -f grupos.ldif`: Incorporar grupos
+
+```ldif
+# profesores.ldif --> Creación de usuarios
+
+# Profe01
+dn: uid=profe01,ou=usuarios,dc=proyecto-empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+uid: profe01
+cn: profe01
+sn: DAW
+loginShell: /bin/bash
+uidNumber: 1001
+gidNumber: 10000
+homeDirectory: /home/profe01
+gecos: Profe01 DAW
+userPassword: 123456
+
+# Profe02
+dn: uid=profe02,ou=usuarios,dc=proyecto-empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+uid: profe02
+cn: profe02
+sn: DAW
+loginShell: /bin/bash
+uidNumber: 1002
+gidNumber: 10000
+homeDirectory: /home/profe02
+gecos: Profe02 DAW
+userPassword: 123456
+```
+
+- `ldapadd -x -D cn=admin,dc=proyecto-empresa,dc=local -w ieselcaminas -f profesores.ldif`: Incorporar usuarios
 
