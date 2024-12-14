@@ -222,3 +222,28 @@ $ORIGIN 104.85.3.IN-ADDR.ARPA.
 173 IN  PTR     ns1.deaw.es. ; fully qualified domain name (FQDN)
 ```
 
+## Servicio de directorio LDAP (Lightweight Directory Access Protocol)
+
+### Instalación del servidor LDAP
+
+- `sudo apt install slapd ldap-utils`: Instala el servidor LDAP
+
+- `sudo dpkg-reconfigure slapd`: Te permite configurar desde cero el servidor LDAP o reconfigurarlo si ya lo tenías.
+
+### Administración del servidor LDAP
+
+- `sudo slapcat`: Te permite ver la información actual que tienes configurada en LDAP.
+
+- `sudo apt-get install phpldapadmin`: Instala phpldapadmin, con lo que podemos configurar nuestro servidor ldap desde una interfaz gráfica desde un navegador.
+
+```diff
+#/etc/phpldapadmin/config.php --> Cambiamos el DIT (Directory Information Tree)
+-   $servers->;setValue('server','base',array('dc=example,dc=com'));
+-   $servers->setValue('login','bind_id','cn=admin,dc=example,dc=com');
+
++   $servers->setValue('server','base',array('dc=daw,dc=ieselcaminas'));
++   $servers->setValue('login','bind_id','cn=admin,dc=daw,dc=ieselcaminas');
+```
+
+### Configuración del servidor LDAP
+
