@@ -183,9 +183,16 @@ title: 'Ch4 - DMP'
 
  - ### 📜 000-default.conf
     ```
-    <Directory "/var/www/html/test"> 
+    <VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/html
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+        <Directory "/var/www/html/test"> 
         AllowOverride All
-    </Directory>
+        </Directory>
+    </VirtualHost>
     ```
  - ### 📜 .htacces
     ```
