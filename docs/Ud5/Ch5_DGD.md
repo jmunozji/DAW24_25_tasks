@@ -117,3 +117,18 @@ pasv_min_port=1027 # Puerto mínimo de conexión
 pasv_max_port=1030 # Puerto máximo de conexión
 pasv_address=X.X.X.X # Dirección IP pública
 ```
+
+## CONEXIÓN SFTP
+
+Podemos tener la configuración por defecto
+
+```bash
+sudo cp /etc/vsftpd.conf /etc/vsftpd.conf.ftps
+sudo cp /etc/vsftpd.conf.backup2 /etc/vsftpd.conf
+```
+
+Simplemente tenemos que tener un par de claves creadas, con eso hecho ejecutamos el siguiente comando:
+
+```bash
+ssh -i clave user@ipsever
+```
