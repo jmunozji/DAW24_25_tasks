@@ -4,45 +4,45 @@ title: 'CH5 - VATC'
 
 ---
 
-# �� Servicios de Red FTP
+# 🌟 Servicios de Red FTP
 
 > ✍️ **Victor Alexandru Teleanu Covaci**
 
-## ��️ **1. Comandos Básicos FTP**
+## 🛠️ **1. Comandos Básicos FTP**
 
-### �� **Conexión al Servidor FTP**
+### 🌐 **Conexión al Servidor FTP**
 
-| **�� Comando**                        | **�� Descripción**                                                  |
+| **🔧 Comando**                        | **📝 Descripción**                                                  |
 |----------------------------------------|---------------------------------------------------------------------|
 | `open` o `open [hostname]`             | 🔗 Establece una conexión con un servidor FTP.                     |
 | `user [nombre de usuario] [contraseña]`| 👤 Inicia sesión en el servidor FTP.                               |
 | `ftp <DIRECCIÓN_IP>`                   | 🔗 Conecta al servidor FTP mediante la dirección IP proporcionada. |
 | `sftp sftpuser@<DIRECCIÓN_IP>`         | 🔑 Establece una conexión SFTP con el servidor.                    |
 
-### �� **Transferencia de Archivos**
+### 📤 **Transferencia de Archivos**
 
-| **�� Comando**                        | **�� Descripción**                                         |
+| **🔧 Comando**                        | **📝 Descripción**                                         |
 |---------------------------------------|---------------------------------------------------------------|
 | `get [archivo remoto] [archivo local]`| ⬇️ Descarga un archivo desde el servidor FTP al equipo local. |
 | `put [archivo local] [archivo remoto]`| ⬆️ Sube un archivo desde el equipo local al servidor FTP.     |
 
-### �� **Modo Activo y Pasivo**
+### 🔄 **Modo Activo y Pasivo**
 
-| **�� Comando**                | **�� Descripción**                                                                      |
+| **🔧 Comando**                | **📝 Descripción**                                                                      |
 |-------------------------------|--------------------------------------------------------------------------------------------|
 | `PASV`                        | 🔒 El cliente solicita al servidor FTP cambiar a modo pasivo y abrir un puerto para datos. |
 | `PORT`                        | 🔓 En modo activo, el cliente usa PORT para indicar el puerto de la conexión de datos.    |
 
-### �� **Ayuda y salida**
+### 🔍 **Ayuda y salida**
 
-| **�� Comando**                | **�� Descripción**                             |
+| **🔧 Comando**                | **📝 Descripción**                             |
 |-------------------------------|---------------------------------------------------|
 | `help`                        | ❔ Muestra la lista de comandos FTP disponibles. |
 | `quit`                        | 🚪 Cierra la sesión FTP y sale del cliente.      |
 
 ---
 
-## �� **2. Instalación y Configuración de vsFTPd**
+## ✨ **2. Instalación y Configuración de vsFTPd**
 
 ### **✅ Instalación en Debian**
 
@@ -55,13 +55,13 @@ sudo apt-get install vsftpd
 
 2. `systemctl status vsftpd` verifica que el servicio está activo.
 
-### **�� Crear un usuario para FTP**
+### **👤 Crear un usuario para FTP**
 
 ```bash
 sudo adduser ftpuser
 ```
 
-### **��️ Configuración de vsFTPD**
+### **⚙️ Configuración de vsFTPD**
 
 1. Crea un copia de seguridad del archivo de configuración con `sudo cp /etc/vsftpd.conf /etc/vsftpd.conf.backup`.
 
@@ -98,7 +98,7 @@ userlist_deny=NO
 
 4. Reinicia el servicio con `sudo systemctl restart vsftpd`.
 
-## �� **3. Configuración de FTPS (FTP Seguro con SSL/TLS)**
+## 🔑 **3. Configuración de FTPS (FTP Seguro con SSL/TLS)**
 
 1. Genera un certificado SSL:
 ```bash
@@ -147,7 +147,7 @@ dress=<DIRECCIÓN_IP>
 
 4. Reinicia el servicio con `sudo systemctl restart vsftpd`.
 
-## �� **4. Conexión SFTPS**
+## 🔗 **4. Conexión SFTPS**
 
 ```bash
 ssh -i clave user2@ipserver
