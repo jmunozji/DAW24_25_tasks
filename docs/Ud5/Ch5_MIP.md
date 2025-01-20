@@ -1,3 +1,7 @@
+---
+title: 'Ch5 - MIP'
+---
+
 # Practica 1 - Acceso a servidor FTP
 
 ## **Acceso Modo Comando**
