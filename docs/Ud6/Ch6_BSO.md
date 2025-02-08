@@ -112,3 +112,56 @@ Si reiniciamos tomcat con `sudo systemctl restart tomcat10`, e ingresamos a `htt
     ```
 1. `mvn tomcat7:deploy`: Desplegar proyecto
 
+## Node.js y Express para desplegar aplicaciones JavasCript
+
+![Imagen Node con express](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Finternet-israel.com%2Fwp-content%2Fuploads%2F2016%2F04%2Fexpress.jpg&f=1&nofb=1&ipt=43d5483fbf6c897147a4c97f3ec181f7f5d353d98d50aed9450941728447a179&ipo=images)
+
+### Instalación de Node.js
+
+```bash
+#Añadir repositorio de Node en Debian
+sudo apt-get update
+sudo apt-get install -y ca-certificates curl gnupg
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+
+#Indicamos que versión de Node instalar
+NODE_MAJOR=20
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sour
+ces.list.d/nodesource.list
+
+#Instalación de Node
+sudo apt-get update
+sudo apt-get install nodejs -y
+```
+
+### Instalación de Express
+
+```sh
+sudo npm install -g express #Instalación de express de manera global
+node app.js #Ejecutar Aplicación con Node
+```
+
+### Despliegue de un proyecto con Express
+
+1. Consigues el proyecto que quieres desplegar, ya sea mediante git o uno que ya tengas en tu PC.
+1. `cd proyecto`: Entras a la carpeta del proyecto.
+1. `npm install`: Instalas las dependencias necesarias.
+1. `package.json`: Consultas cómo desplegar aplicación.
+    ```json
+    "scripts": {
+    "start:watch": "nodemon ./bin/www --ignore public/",
+    "start:dev": "node ./bin/www",
+    "debug": "node debug ./bin/www",
+    "start": "NODE_ENV=production node ./bin/www",
+    },
+    ```
+1. `npm run start`: Inicias la aplicación.
+1. Acceder a la ruta que te da, `http://IP_PUBLICA:3000`
+
+### Clusterizar una aplicación mediante Node
+
+```bash 
+npm install cluster #Instalamos cluster
+```
+
