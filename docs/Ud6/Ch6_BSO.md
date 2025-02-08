@@ -4,7 +4,7 @@ title: 'CH6 - BSO'
 
 # **T6: Servidores de aplicaciones**
 
-## APACHE TOMCAT
+## Apache Tomcat para desplegar Aplicaciones Java
 ![Imagen Apache Tomcat](https://itdconsulting.com/wp-content/uploads/2022/04/banner-pestana-apache-tomcat.jpg)
 
 ### Instalación de Tomcat
@@ -72,8 +72,43 @@ Si reiniciamos tomcat con `sudo systemctl restart tomcat10`, e ingresamos a `htt
 
 #### Mediante Maven
 
-- `sudo apt-get install maven`: Instalación de maven
-- 
-
-
+1. `sudo apt-get install maven`: Instalación de maven
+1. `mvn --v`: Comprobar si está correctamente instalada
+1. Indicar a Maven el servidor que vamos a desplegar(Tomcat)
+    1. `/etc/tomcat10/tomcat-users.xml`
+        ```xml
+        <role rolename="admin-gui"/>
+        <role rolename="manager-gui"/>
+        <role rolename="manager-script"/>
+        <user username="admin" password="ieselcaminas" roles="admin-gui,manager-gui"/>
+        <user username="despliegues" password="ieselcaminas" roles="manager-script"/>
+        ```
+    1. `sudo systemctl restart tomcat10.service`: Reiniciar tomcat
+    1. `/etc/maven/settings.xml`
+        ```xml
+        <server>
+            <id>DesplieguesTomcat</id>
+            <username>despliegues</username>
+            <password>ieselcaminas</password>
+        </server>
+        ```
+1. `pom.xml`: Este archivo está en el proyecto que queremos desplegar
+    ```diff
+    <build>
+        <finalName>roshambo</finalName> #
+    +    <plugins> 
+    +        <plugin>
+    +            <groupId>org.apache.tomcat.maven</groupId>
+    +            <artifactId>tomcat7-maven-plugin</artifactId>
+    +            <version>2.2</version>
+    +            <configuration>
+    +                <url>http://localhost:8080/manager/text</url> #
+    +                <server>DesplieguesTomcat</server> #
+    +                <path>/rps</path> #
+    +            </configuration>
+    +        </plugin>
+        </plugins>
+    </build>
+    ```
+1. `mvn tomcat7:deploy`: Desplegar proyecto
 
