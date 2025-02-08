@@ -1,3 +1,7 @@
+---
+title: 'Ch4 - MIP'
+---
+
 ### Cheatsheet: Configuración de un Servidor DNS en Debian
 
 #### 1. **Preparación del Entorno**
