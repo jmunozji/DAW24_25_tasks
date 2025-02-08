@@ -159,7 +159,7 @@ node app.js #Ejecutar Aplicación con Node
 1. `npm run start`: Inicias la aplicación.
 1. Acceder a la ruta que te da, `http://IP_PUBLICA:3000`
 
-### Clusterizar una aplicación mediante Node
+### Clusterizar una aplicación mediante JS con Node y Express
 
 ```bash 
 npm install cluster #Instalamos cluster
@@ -207,4 +207,12 @@ pm2 start nombre_aplicacion_sin_cluster.js -i 0
 ## Desplegar aplicación mediante Netlify
 
 ![Imágen de Netlify](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.hawksworx.com%2Fimages%2Fnetlify-banner.png&f=1&nofb=1&ipt=7595170fc39e20526396b8a663481ed5d7bd19db81ca7f4c609c89d1bebd8f3c&ipo=images)
+
+1. `sudo npm install netlify-cli -g`: Instalar globalmente Netlify.
+1. `netlify login`: Iniciar sesión en Netlify.
+1. `netlify deploy`: Desplegamos el proyecto, nos preguntará.
+    1. ruta: por ejemplo dist o el directorio necesario dependiendo del proyecto.
+1. `netlify deploy --prod`: Desplegará el proyecto en producción.
+
+## Desplegar aplicación mediante Python y Flask
 
