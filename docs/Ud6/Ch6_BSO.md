@@ -165,3 +165,46 @@ node app.js #Ejecutar Aplicación con Node
 npm install cluster #Instalamos cluster
 ```
 
+Clusterizamos la aplicación mediante JS con Node y Express
+
+```js
+const express = require("express");
+const port = 3000;
+const cluster = require("cluster");
+const totalCPUs = require("os").cpus().length;
+
+if (cluster.isMaster) {
+ console.log(`Number of CPUs is ${totalCPUs}`);
+ console.log(`Master ${process.pid} is running`);
+
+ // Fork workers.
+ for (let i = 0; i < totalCPUs; i++) {
+ cluster.fork();
+ }
+
+ cluster.on("exit", (worker, code, signal) => {
+ console.log(`worker ${worker.process.pid} died`);
+ console.log("Let's fork another worker!");
+ cluster.fork();
+ });
+}
+```
+
+### Clusterizar una aplicación mediante PM2 sin modificar el programa
+
+```bash
+sudo npm install pm2 -g #Instalamos pm2 de forma global
+```
+
+Ejecutamos el programa sin clusters programados.
+
+```bash
+pm2 start nombre_aplicacion_sin_cluster.js -i 0
+```
+
+- `-i`: Indicará a PM2 que inicie la aplicación en cluster_mode.
+
+## Desplegar aplicación mediante Netlify
+
+![Imágen de Netlify](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.hawksworx.com%2Fimages%2Fnetlify-banner.png&f=1&nofb=1&ipt=7595170fc39e20526396b8a663481ed5d7bd19db81ca7f4c609c89d1bebd8f3c&ipo=images)
+
