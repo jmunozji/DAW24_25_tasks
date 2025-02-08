@@ -216,3 +216,117 @@ pm2 start nombre_aplicacion_sin_cluster.js -i 0
 
 ## Desplegar aplicación mediante Python y Flask
 
+![Imágen de python y Flask](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbizflyportal.mediacdn.vn%2Fthumb_wm%2F1000%2C100%2Fbizflyportal%2Fimages%2Ffla16172661186968.jpg&f=1&nofb=1&ipt=911d28a915a151cc4651f9e156d7f765f1792685ed320573c9390c493055e698&ipo=images)
+
+### Instalación
+
+```bash
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install python3-pip #Instalamos python y pip(gestor de paquetes)
+
+#Instalamos pipenv para gestionar los entornos virtuales
+sudo apt-get install pipenv
+pipenv --version #Versión instalada
+```
+
+### Creación y despligue de aplicación Flask
+
+1. Accedemos al proyecto de python
+1. `touch .env`: Contendrá las variables de entorno necesarias
+    1. Editamos el archivo
+    ```.env
+    FLASK_APP=wsgi.py
+    FLASK_ENV=production
+    ```
+1. `pipenv shell`: Iniciamos el entorno virtual para cargar las variables de entorno
+1. `pipenv install flask gunicorn`: instalamos dependencias
+1. `touch application.py wsgi.py`: Creamos archivos para aplicación de Flask
+    1. `application.py`
+        ```py
+        from flask import Flask
+        app=Flask(__name__)
+        @app.route('/')
+        def index():
+                '''Index page route'''
+                return '<h1>Aplicacion desplegada<h1>'
+        ```
+    1. `wsgy.py`
+        ```py
+        from application import app
+            if __name__=='__main__':
+            app.run(debug=false)
+        ```
+1. `flask run --host '0.0.0.0'`: Ejecutamos la aplicación
+    1. `http://IP-maq-virtual:5000`: Accedemos al servidor
+
+### Desplegar aplicación usando NGINX
+
+#### Instalación de NGINX
+```bash
+sudo apt-get install nginx #Instalar nginx
+```
+
+Iniciar servicio de nginx
+
+```bash
+sudo systemctl start nginx
+sudo systemctl status nginx
+sudo systemctl enable nginx #Ejecutar siempre al iniciar PC
+```
+
+#### Crear servicio para la aplicación
+
+Crear archivo `/etc/systemd/system/flask_app.service` para correr Gunicorn
+
+```bash
+[Unit]
+Description=flask_app.service
+After=network.target
+
+[Service]
+User=admin
+Group=www-data
+Environment="PATH=/home/admin/.local/share/virtualenvs/practica_flask-gV07D8Rz/bin:$PATH"
+WorkingDirectory=/var/www/practica_flask/
+ExecStart=/home/admin/.local/share/virtualenvs/practica_flask-gV07D8Rz/bin/gunicorn --workers 2 --bind unix:/var/www/practica_flask/flask_app.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Iniciar y habilitar servicio
+
+```bash
+systemctl enable flask_app
+systemctl start flask_app
+```
+
+#### Configurar Nginx para correr el servicio
+
+Creamos el archivo `/etc/nginx/sites-available/practica_flask`
+```sh
+server {
+    listen 80;
+    server_name practica_flask www.practica_flask; #
+
+    access_log /var/log/nginx/practica_flask.access.log; #
+    error_log /var/log/nginx/practica_flask.error.log;
+
+    location / { 
+            include proxy_params;
+            proxy_pass http://unix:/var/www/practica_flask/flask_app.sock; #
+    }
+}
+```
+
+Creamos enlace simbólico
+
+`sudo ln -s /etc/nginx/sites-available/practica_flask /etc/nginx/sites-enabled/`
+
+Desplegar aplicación mediante Nginx
+
+```bash
+sudo nginx -t
+sudo systemctl restart nginx
+sudo systemctl status nginx
+```
