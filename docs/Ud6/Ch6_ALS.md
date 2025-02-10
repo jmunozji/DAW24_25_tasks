@@ -6,7 +6,7 @@ title: 'CH6 - ALS'
 
 ---
 
-## 🐱 **Apache Tomcat **
+## 🐱 **Apache Tomcat**
 
 ### 🔧 **Instalación en Linux (Ubuntu/Debian)**  
 1. **Actualizar repositorios:**  
