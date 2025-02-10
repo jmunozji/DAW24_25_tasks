@@ -1,0 +1,3594 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jmunozji.github.io/DAW24_25_tasks/Ud3/Ch3_DGD/">
+      
+      
+        <link rel="prev" href="../Ch3_BSO/">
+      
+      
+        <link rel="next" href="../Ch3_DMP/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>CH3-DGD - DAW24_25_tasks</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-3NX5MD5C8H"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-3NX5MD5C8H",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-3NX5MD5C8H",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuracion-servidores-web" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="DAW24_25_tasks" class="md-header__button md-logo" aria-label="DAW24_25_tasks" data-md-component="logo">
+      
+  <img src="../../assets/logocaminas.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAW24_25_tasks
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CH3-DGD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="green"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DAW24_25_tasks" class="md-nav__button md-logo" aria-label="DAW24_25_tasks" data-md-component="logo">
+      
+  <img src="../../assets/logocaminas.png" alt="logo">
+
+    </a>
+    DAW24_25_tasks
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tareas de DAW 24/25
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Ud1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/ABM/CABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Andreu Beltran Miralles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/ACF/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Alexandru Claudiu Fatu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/AEM/CHEATSHEET/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Alex Eduard Musat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/ALS/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cheatsheet1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/BSO/BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Bryan Oyola
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/DGD/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Darius Gabriel Dobre
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/DMP/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - David Maratrat Pons
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/EGM/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Eduard Gabriel Mirea
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/EV/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Eduard Varga
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/MCG/CMCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Mauricio Chamorro Gallego
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/MIP/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Marc Ibáñez Puchol
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/MMC/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Marcel Mañas Calafí
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/PPE/CPPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Pere Josep Prior España
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/RPE/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Roberto Percuto Escrig
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/RRLL/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Rommel Romero Llumiquinga
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/RSN/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Raul Simarro Navarro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/VATC/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Victor Alexandru Teleanu Covaci
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ud2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_BO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - BO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_MIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - MIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_RRLL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - RRLL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_RSN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud3
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ud3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch3_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch3_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch3_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch3_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch3_BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - BSO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    CH3-DGD
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    CH3-DGD
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      NGINX
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NGINX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-de-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Instalación de Nginx
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorios-de-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      📁 Directorios de configuración
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📁 Directorios de configuración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-el-directorio-de-la-web-y-el-indexhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      💪 Crear el directorio de la web y el index.html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Configuración de permisos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-el-archivo-de-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      💪 Crear el archivo de configuración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-del-sitio-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración del sitio web
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#habilitar-el-sitio-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Habilitar el sitio web
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reiniciar-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reiniciar Nginx
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autenticacion-de-usuarios-con-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Autenticación de usuarios con Nginx
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Autenticación de usuarios con Nginx">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-autenticacion-en-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Configuración de autenticación en Nginx
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autenticacion-por-ip-con-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Autenticación por IP con Nginx
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activacion-de-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activación de https
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Activación de https">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-del-certificado" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Creacion del certificado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-del-sitio-para-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuracion del sitio para https
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redireccion-de-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redireccion de https
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache2" class="md-nav__link">
+    <span class="md-ellipsis">
+      APACHE2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APACHE2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-de-apache2" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Instalación de Apache2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorios-de-configuracion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📁 Directorios de configuración
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📁 Directorios de configuración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-el-directorio-de-la-web-y-el-indexhtml_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      💪 Crear el directorio de la web y el index.html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-permisos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Configuración de permisos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-el-archivo-de-configuracion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      💪 Crear el archivo de configuración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-del-sitio-web_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración del sitio web
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#habilitar-el-sitio-web_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Habilitar el sitio web
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autenticacion-de-usuarios-con-apache2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Autenticación de usuarios con Apache2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Autenticación de usuarios con Apache2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-autenticacion-en-apache2" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Configuración de autenticación en Apache2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reiniciar-apache2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reiniciar Apache2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autenticacion-por-ip-con-apache2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Autenticación por IP con Apache2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activacion-de-https_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activación de HTTPS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Activación de HTTPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-del-certificado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Creación del certificado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-del-sitio-para-https_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración del sitio para HTTPS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redireccion-de-http-a-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirección de HTTP a HTTPS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#habilitar-modulos-necesarios-y-reiniciar-apache2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Habilitar módulos necesarios y reiniciar Apache2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-pila-lamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación Pila LAMP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalación Pila LAMP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-mariadb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración de MariaDB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-de-phpmyadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación de PHPMyAdmin
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch3_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch3_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch3_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 - EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch3_JMJ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - JMJ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch3_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch3_MIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - MIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch3_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch3_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch3_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch3_RRL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - RRL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch3_RXN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch3_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud4
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ud4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/CH4_RSN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch4 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_ACV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - ACV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - BSO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch4 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_MIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch4 - MIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_RRL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - RRL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/ch4_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud5
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ud5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch5 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - BSO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_MIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch5 - MIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_RRL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - RRL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_RSN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud6
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Ud6
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch6 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - BSO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_MIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - MIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_RRL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - RRL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_RSN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ud6_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="configuracion-servidores-web">CONFIGURACION SERVIDORES WEB</h1>
+<h2 id="nginx">NGINX</h2>
+<h3 id="instalacion-de-nginx">📝 Instalación de Nginx</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>nginx
+</code></pre></div>
+<h3 id="directorios-de-configuracion">📁 Directorios de configuración</h3>
+<table>
+<thead>
+<tr>
+<th>Directorio</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/etc/nginx</td>
+<td>Configuración de Nginx</td>
+</tr>
+<tr>
+<td>/etc/nginx/sites-available</td>
+<td>Configuración de sitios web</td>
+</tr>
+<tr>
+<td>/etc/nginx/sites-enabled</td>
+<td>Sitios web habilitados</td>
+</tr>
+<tr>
+<td>/var/www/html</td>
+<td>Contenido de los sitios web</td>
+</tr>
+<tr>
+<td>/var/log/nginx</td>
+<td>Registros de Nginx</td>
+</tr>
+</tbody>
+</table>
+<h4 id="crear-el-directorio-de-la-web-y-el-indexhtml">💪 Crear el directorio de la web y el index.html</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>/var/www/sitio1
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>touch<span class="w"> </span>/var/www/sitio1/index.html
+</code></pre></div>
+<h4 id="configuracion-de-permisos">⚙️ Configuración de permisos</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/sitio1
+</code></pre></div>
+<h4 id="crear-el-archivo-de-configuracion">💪 Crear el archivo de configuración</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>/etc/nginx/sites-available
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>sitio1
+</code></pre></div>
+<h4 id="configuracion-del-sitio-web">Configuración del sitio web</h4>
+<div class="highlight"><pre><span></span><code>server {
+    listen 80;
+    listen [::]:80;
+    root /var/www/sitio1;
+    index index.html index.htm index.nginx-debian.html;
+    server_name sitio1;
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+</code></pre></div>
+<h4 id="habilitar-el-sitio-web">Habilitar el sitio web</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span><span class="w"> </span>/etc/nginx/sites-enabled
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/etc/nginx/sites-available/sitio1<span class="w"> </span>sitio1
+</code></pre></div>
+<h4 id="reiniciar-nginx">Reiniciar Nginx</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>nginx
+</code></pre></div>
+<h3 id="autenticacion-de-usuarios-con-nginx">✅ Autenticación de usuarios con Nginx</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apache2-utils
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>htpasswd<span class="w"> </span>-c<span class="w"> </span>/etc/nginx/.htpasswd<span class="w"> </span>usuario
+</code></pre></div>
+<h4 id="configuracion-de-autenticacion-en-nginx">💡 Configuración de autenticación en Nginx</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>/var/www/sitio1/secret
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>server {
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w"> </span>   listen 80;
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w"> </span>   listen [::]:80;
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w"> </span>   root /var/www/sitio1;
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w"> </span>   index index.html index.htm index.nginx-debian.html;
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w"> </span>   server_name sitio1;
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w"> </span>   location / {
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w"> </span>       try_files $uri $uri/ =404;
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w"> </span>   }
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="gi">+   location /secret {</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="gi">+       auth_basic &quot;Restricted&quot;;</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="gi">+       auth_basic_user_file /etc/nginx/.htpasswd;</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="gi">+       root /var/www/sitio1;</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="gi">+   }</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>}
+</code></pre></div>
+<h3 id="autenticacion-por-ip-con-nginx">✅ Autenticación por IP con Nginx</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>server {
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w"> </span>   listen 80;
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w"> </span>   listen [::]:80;
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w"> </span>   root /var/www/sitio1;
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w"> </span>   index index.html index.htm index.nginx-debian.html;
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w"> </span>   server_name sitio1;
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w"> </span>   location / {
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w"> </span>       try_files $uri $uri/ =404;
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w"> </span>   }
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w"> </span>   location /secret {
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="gi">+       satisfy any;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="gi">+       allow 192.168.1.0/24;</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="gi">+       deny all;</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w"> </span>       auth_basic &quot;Restricted&quot;;
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w"> </span>       auth_basic_user_file /etc/nginx/.htpasswd;
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w"> </span>       root /var/www/sitio1;
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="w"> </span>   }
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>}
+</code></pre></div>
+<h3 id="activacion-de-https">Activación de https</h3>
+<h4 id="creacion-del-certificado">💡 Creacion del certificado</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>/etc/nginx/ssl
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>sudo<span class="w"> </span>openssl<span class="w"> </span>req<span class="w"> </span>-x509<span class="w"> </span>-nodes<span class="w"> </span>-days<span class="w"> </span><span class="m">365</span><span class="w"> </span>-newkey<span class="w"> </span>rsa:2048<span class="w"> </span>-keyout<span class="w"> </span>/etc/nginx/ssl/nginx.key<span class="w"> </span>-out<span class="w"> </span>/etc/nginx/ssl/nginx.crt
+</code></pre></div>
+<h4 id="configuracion-del-sitio-para-https">Configuracion del sitio para https</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>server {
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="gd">-    listen 80;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="gd">-    listen [::]:80;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="gi">+    listen 443 ssl;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="gi">+    ssl_certificate /etc/nginx/ssl/nginx.crt;</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="gi">+    ssl_certificate_key /etc/nginx/ssl/nginx.key;</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="gi">+    ssl_ciphers &#39;TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-CHACHA20-POLY1305-SHA256:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384&#39;;</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="gi">+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w"> </span>   root /var/www/sitio1;
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w"> </span>   index index.html index.htm index.nginx-debian.html;
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="w"> </span>   server_name sitio1;
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w"> </span>   location / {
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w"> </span>       try_files $uri $uri/ =404;
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w"> </span>   }
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="w"> </span>   location /secret {
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="w"> </span>       satisfy any;
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="w"> </span>       allow 192.168.1.0/24;
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="w"> </span>       deny all;
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="w"> </span>       auth_basic &quot;Restricted&quot;;
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="w"> </span>       auth_basic_user_file /etc/nginx/.htpasswd;
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="w"> </span>       root /var/www/sitio1;
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="w"> </span>   }
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>}
+</code></pre></div>
+<h4 id="redireccion-de-https">Redireccion de https</h4>
+<div class="highlight"><pre><span></span><code>server {
+    listen 80;
+    listen [::]:80;
+    server_name sitio1;
+    return 301 https://$host$request_uri;
+}
+</code></pre></div>
+<h2 id="apache2">APACHE2</h2>
+<h3 id="instalacion-de-apache2">📝 Instalación de Apache2</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apache2
+</code></pre></div>
+<h3 id="directorios-de-configuracion_1">📁 Directorios de configuración</h3>
+<table>
+<thead>
+<tr>
+<th>Directorio</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/etc/apache2</td>
+<td>Configuración de Apache2</td>
+</tr>
+<tr>
+<td>/etc/apache2/sites-available</td>
+<td>Configuración de sitios web</td>
+</tr>
+<tr>
+<td>/etc/apache2/sites-enabled</td>
+<td>Sitios web habilitados</td>
+</tr>
+<tr>
+<td>/var/www/html</td>
+<td>Contenido de los sitios web</td>
+</tr>
+<tr>
+<td>/var/log/apache2</td>
+<td>Registros de Apache2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="crear-el-directorio-de-la-web-y-el-indexhtml_1">💪 Crear el directorio de la web y el index.html</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>/var/www/sitio1
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>sudo<span class="w"> </span>touch<span class="w"> </span>/var/www/sitio1/index.html
+</code></pre></div>
+<h4 id="configuracion-de-permisos_1">⚙️ Configuración de permisos</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/sitio1
+</code></pre></div>
+<h4 id="crear-el-archivo-de-configuracion_1">💪 Crear el archivo de configuración</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nb">cd</span><span class="w"> </span>/etc/apache2/sites-available
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>sitio1.conf
+</code></pre></div>
+<h4 id="configuracion-del-sitio-web_1">Configuración del sitio web</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="err">*:80</span><span class="nt">&gt;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span>DocumentRoot<span class="w"> </span>/var/www/sitio1
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span>ServerName<span class="w"> </span>sitio1
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">    </span><span class="nt">&lt;Directory</span><span class="w"> </span><span class="err">/var/www/sitio1</span><span class="nt">&gt;</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">        </span>Options<span class="w"> </span>Indexes<span class="w"> </span>FollowSymLinks
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">        </span>AllowOverride<span class="w"> </span>All
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">        </span>Require<span class="w"> </span>all<span class="w"> </span>granted
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">    </span><span class="nt">&lt;/Directory&gt;</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">    </span>ErrorLog<span class="w"> </span>${APACHE_LOG_DIR}/sitio1_error.log
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">    </span>CustomLog<span class="w"> </span>${APACHE_LOG_DIR}/sitio1_access.log<span class="w"> </span>combined
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="nt">&lt;/VirtualHost&gt;</span>
+</code></pre></div>
+<h4 id="habilitar-el-sitio-web_1">Habilitar el sitio web</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>sudo<span class="w"> </span>a2ensite<span class="w"> </span>sitio1.conf
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>apache2
+</code></pre></div>
+<h3 id="autenticacion-de-usuarios-con-apache2">✅ Autenticación de usuarios con Apache2</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apache2-utils
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>htpasswd<span class="w"> </span>-c<span class="w"> </span>/etc/apache2/.htpasswd<span class="w"> </span>usuario
+</code></pre></div>
+<h4 id="configuracion-de-autenticacion-en-apache2">💡 Configuración de autenticación en Apache2</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>/var/www/sitio1/secret
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>&lt;Directory /var/www/sitio1/secret&gt;
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="gi">+   AuthType Basic</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="gi">+   AuthName &quot;Restricted Access&quot;</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="gi">+   AuthUserFile /etc/apache2/.htpasswd</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="gi">+   Require valid-user</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>&lt;/Directory&gt;
+</code></pre></div>
+<h4 id="reiniciar-apache2">Reiniciar Apache2</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>apache2
+</code></pre></div>
+<h3 id="autenticacion-por-ip-con-apache2">✅ Autenticación por IP con Apache2</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>&lt;Directory /var/www/sitio1/secret&gt;
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w"> </span>   AuthType Basic
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w"> </span>   AuthName &quot;Restricted Access&quot;
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="w"> </span>   AuthUserFile /etc/apache2/.htpasswd
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="w"> </span>   Require valid-user
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="gi">+   Require ip 192.168.1.0/24</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="gi">+   Require all denied</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>&lt;/Directory&gt;
+</code></pre></div>
+<h3 id="activacion-de-https_1">Activación de HTTPS</h3>
+<h4 id="creacion-del-certificado_1">💡 Creación del certificado</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>/etc/apache2/ssl
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>sudo<span class="w"> </span>openssl<span class="w"> </span>req<span class="w"> </span>-x509<span class="w"> </span>-nodes<span class="w"> </span>-days<span class="w"> </span><span class="m">365</span><span class="w"> </span>-newkey<span class="w"> </span>rsa:2048<span class="w"> </span>-keyout<span class="w"> </span>/etc/apache2/ssl/apache.key<span class="w"> </span>-out<span class="w"> </span>/etc/apache2/ssl/apache.crt
+</code></pre></div>
+<h4 id="configuracion-del-sitio-para-https_1">Configuración del sitio para HTTPS</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>&lt;VirtualHost *:443&gt;
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="gi">+   SSLEngine on</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="gi">+   SSLCertificateFile /etc/apache2/ssl/apache.crt</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="gi">+   SSLCertificateKeyFile /etc/apache2/ssl/apache.key</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="w"> </span>   DocumentRoot /var/www/sitio1
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="w"> </span>   ServerName sitio1
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="w"> </span>   &lt;Directory /var/www/sitio1&gt;
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a><span class="w"> </span>       Options Indexes FollowSymLinks
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a><span class="w"> </span>       AllowOverride All
+<a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a><span class="w"> </span>       Require all granted
+<a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a><span class="w"> </span>   &lt;/Directory&gt;
+<a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a><span class="w"> </span>   ErrorLog ${APACHE_LOG_DIR}/sitio1_ssl_error.log
+<a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a><span class="w"> </span>   CustomLog ${APACHE_LOG_DIR}/sitio1_ssl_access.log combined
+<a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a>&lt;/VirtualHost&gt;
+</code></pre></div>
+<h4 id="redireccion-de-http-a-https">Redirección de HTTP a HTTPS</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>&lt;VirtualHost *:80&gt;
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="gi">+   Redirect &quot;/&quot; &quot;https://sitio1/&quot;</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>&lt;/VirtualHost&gt;
+</code></pre></div>
+<h4 id="habilitar-modulos-necesarios-y-reiniciar-apache2">Habilitar módulos necesarios y reiniciar Apache2</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>sudo<span class="w"> </span>a2enmod<span class="w"> </span>ssl
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>sudo<span class="w"> </span>a2enmod<span class="w"> </span>rewrite
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div>
+<h2 id="instalacion-pila-lamp">Instalación Pila LAMP</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apache2<span class="w"> </span>php<span class="w"> </span>libapache2-mod-php<span class="w"> </span>php-mysql
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>mariadb-server
+</code></pre></div>
+<h3 id="configuracion-de-mariadb">Configuración de MariaDB</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>sudo<span class="w"> </span>mysql_secure_installation
+</code></pre></div>
+<h3 id="instalacion-de-phpmyadmin">Instalación de PHPMyAdmin</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>phpmyadmin
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "toc.integrate", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

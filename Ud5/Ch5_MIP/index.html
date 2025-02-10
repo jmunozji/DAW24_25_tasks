@@ -1,0 +1,3233 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jmunozji.github.io/DAW24_25_tasks/Ud5/Ch5_MIP/">
+      
+      
+        <link rel="prev" href="../Ch5_MCG/">
+      
+      
+        <link rel="next" href="../Ch5_MMC/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Ch5 - MIP - DAW24_25_tasks</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-3NX5MD5C8H"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-3NX5MD5C8H",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-3NX5MD5C8H",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practica-1-acceso-a-servidor-ftp" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="DAW24_25_tasks" class="md-header__button md-logo" aria-label="DAW24_25_tasks" data-md-component="logo">
+      
+  <img src="../../assets/logocaminas.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAW24_25_tasks
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ch5 - MIP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="green"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DAW24_25_tasks" class="md-nav__button md-logo" aria-label="DAW24_25_tasks" data-md-component="logo">
+      
+  <img src="../../assets/logocaminas.png" alt="logo">
+
+    </a>
+    DAW24_25_tasks
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tareas de DAW 24/25
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Ud1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/ABM/CABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Andreu Beltran Miralles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/ACF/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Alexandru Claudiu Fatu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/AEM/CHEATSHEET/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Alex Eduard Musat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/ALS/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cheatsheet1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/BSO/BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Bryan Oyola
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/DGD/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Darius Gabriel Dobre
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/DMP/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - David Maratrat Pons
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/EGM/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Eduard Gabriel Mirea
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/EV/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Eduard Varga
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/MCG/CMCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Mauricio Chamorro Gallego
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/MIP/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Marc Ibáñez Puchol
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/MMC/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Marcel Mañas Calafí
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/PPE/CPPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Pere Josep Prior España
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/RPE/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Roberto Percuto Escrig
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/RRLL/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Rommel Romero Llumiquinga
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/RSN/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Raul Simarro Navarro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/VATC/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Victor Alexandru Teleanu Covaci
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ud2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_BO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - BO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_MIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - MIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_RRLL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - RRLL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_RSN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud3
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ud3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - BSO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3-DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 - EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_JMJ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - JMJ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_MIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - MIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_RRL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - RRL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_RXN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud4
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ud4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/CH4_RSN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch4 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_ACV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - ACV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - BSO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch4 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_MIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch4 - MIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_RRL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - RRL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/ch4_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud5
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ud5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch5_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch5_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch5 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch5_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch5_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch5_BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - BSO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch5_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch5_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch5_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch5_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch5_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Ch5 - MIP
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Ch5 - MIP
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#acceso-modo-comando" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceso Modo Comando
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceso-con-filezilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceso con FileZilla
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch5_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch5_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch5_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch5_RRL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - RRL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch5_RSN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch5_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud6
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Ud6
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch6 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - BSO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_MIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - MIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_RRL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - RRL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_RSN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ud6_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="practica-1-acceso-a-servidor-ftp">Practica 1 - Acceso a servidor FTP</h1>
+<h2 id="acceso-modo-comando"><strong>Acceso Modo Comando</strong></h2>
+<ol>
+<li><strong>Abrir terminal y ejecutar:</strong>
+   ```bash
+    ftp help</li>
+<li><strong>Conectar al servidor:</strong>
+   ```bash
+    open ftp.rediris.es</li>
+<li><strong>Navegar y descargar archivo:</strong>
+   ```bash
+    cd /debian/doc
+    get constitution.txt</li>
+<li><strong>Verificar y salir:</strong>
+   ```bash
+    quit</li>
+</ol>
+<h2 id="acceso-con-filezilla"><strong>Acceso con FileZilla</strong></h2>
+<ol>
+<li><strong>Conectar sin cifrado:</strong></li>
+<li><strong>Servidor:</strong> ftp.rediris.es</li>
+<li><strong>Usuario:</strong> anonymous</li>
+<li>
+<p><strong>Cifrado:</strong> Ninguno</p>
+</li>
+<li>
+<p><strong>Descargar archivo:</strong></p>
+</li>
+<li>
+<p>Navegar a <code>/debian/doc</code>, seleccionar <code>constitution.txt</code> y descargarlo.</p>
+</li>
+<li>
+<p><strong>Desconectar:</strong></p>
+</li>
+<li>Clicar en el icono de desconectar.</li>
+</ol>
+<h1 id="practica-2-instalar-y-configurar-el-servidor-vsftpd-sin-cifrado">Práctica 2 - Instalar y Configurar el servidor vsFTPd sin cifrado</h1>
+<h2 id="introduccion">Introducción</h2>
+<p>En esta práctica instalaremos y configuraremos el servidor FTP vsFTPd en una máquina virtual Debian, sin cifrado (FTP inseguro, solo para fines didácticos).</p>
+<h2 id="instalacion-y-configuracion">Instalación y Configuración</h2>
+<h3 id="paso-1-instalacion-del-servidor-vsftpd">Paso 1: Instalación del servidor vsFTPd</h3>
+<ol>
+<li>Actualizamos y luego instalamos vsFTPd:
+   ```bash
+   sudo apt-get update &amp;&amp; sudo apt-get upgrade
+   sudo apt-get install vsftpd</li>
+<li>Verificamos si el servicio está en ejecución:
+systemctl status vsftpd</li>
+</ol>
+<h3 id="paso-2-crear-un-usuario-de-prueba">Paso 2: Crear un Usuario de Prueba</h3>
+<ol>
+<li>Creamos un usuario para pruebas, llamado userftp:
+   ```bash
+    sudo adduser userftp</li>
+</ol>
+<h3 id="paso-3-configuracion-del-servidor-vsftpd">Paso 3: Configuración del servidor vsFTPd</h3>
+<ol>
+<li>Hacemos una copia de seguridad del archivo de configuración:
+   ```bash
+    sudo cp /etc/vsftpd.conf /etc/vsftpd.conf.backup</li>
+<li>Editamos el archivo de configuración:</li>
+</ol>
+<p>```bash
+    sudo nano /etc/vsftpd.conf
+Configuraciones clave:</p>
+<ul>
+<li>anonymous_enable=NO: Deshabilitar acceso anónimo.</li>
+<li>
+<p>local_enable=YES: Habilitar acceso a usuarios locales.</p>
+</li>
+<li>
+<p>Reiniciamos el servicio:</p>
+</li>
+</ul>
+<p>```bash
+    sudo systemctl restart vsftpd</p>
+<h3 id="paso-4-habilitar-la-carga-de-archivos">Paso 4: Habilitar la carga de archivos</h3>
+<ol>
+<li>Descomentamos la línea write_enable=YES para permitir la carga de archivos:</li>
+</ol>
+<p>```bash
+    #write_enable=YES
+2. Reiniciamos el servidor nuevamente.</p>
+<h3 id="paso-5-configurar-chroot-para-los-usuarios">Paso 5: Configurar Chroot para los usuarios</h3>
+<ol>
+<li>Habilitamos la cárcel (chroot) para usuarios locales:</li>
+</ol>
+<p>```bash
+    chroot_local_user=YES
+2. Para restringir el acceso solo a su directorio, creamos un subdirectorio:</p>
+<ul>
+<li>mkdir /home/userftp/ftp</li>
+<li>mkdir /home/userftp/ftp/upload</li>
+<li>chmod a-w /home/userftp/ftp</li>
+<li>chmod u+w /home/userftp/ftp/upload</li>
+<li>Configuramos el archivo vsftpd.conf:</li>
+</ul>
+<p>```bash
+    user_sub_token=userftp
+    local_root=/home/userftp/ftp</p>
+<h3 id="paso-6-restriccion-de-usuarios">Paso 6: Restricción de usuarios</h3>
+<ol>
+<li>Configuramos el archivo /etc/vsftpd.userlist para permitir acceso solo a userftp:</li>
+</ol>
+<p>```bash
+    echo "userftp" | sudo tee -a /etc/vsftpd.userlist
+2. Reiniciamos el servicio para aplicar los cambios:</p>
+<p>```bash
+    sudo systemctl restart vsftpd</p>
+<h3 id="paso-7-comprobacion-del-acceso-ftp">Paso 7: Comprobación del acceso FTP</h3>
+<ol>
+<li>
+<p>Intentamos conectarnos como usuario anónimo (debería fallar).</p>
+</li>
+<li>
+<p>Probamos conexión como userftp y verificamos acceso y carga de archivos.</p>
+</li>
+<li>
+<p>Comandos de prueba:
+   ```bash
+    get pruebaftp.txt (descargar archivo)
+    put archivo.txt (subir archivo)</p>
+</li>
+<li>Verificamos que los archivos se descarguen correctamente en el directorio local y con los permisos adecuados.</li>
+</ol>
+<h3 id="resumen-de-la-configuracion-final">Resumen de la configuración final</h3>
+<ul>
+<li>Solo usuarios locales pueden conectarse.</li>
+<li>Carga de archivos habilitada con umask 022.</li>
+<li>Directorios de acceso restringidos usando chroot.</li>
+<li>Sólo userftp puede conectarse.</li>
+</ul>
+<h1 id="practica-3-configuracion-de-servidor-ftp-con-cifrado">Práctica 3 - Configuración de servidor FTP con Cifrado</h1>
+<p>En esta práctica, aprenderemos cómo asegurar la conexión usando el protocolo SSL/TLS, lo que permitirá transferir datos encriptados a través de FTP.</p>
+<p>Recuerda que existen dos modos de conexión cifrada de FTP: <strong>FTPS</strong> y <strong>SFTP</strong>, los cuales no están relacionados entre sí en cuanto a configuración y funcionamiento.</p>
+<h2 id="ftps-file-transfer-protocol-secure">FTPS (File Transfer Protocol Secure)</h2>
+<p>Es a FTP lo que HTTPS es a HTTP. El servidor FTP define sus claves pública y privada, las cuales comparte con el cliente para establecer un canal seguro. Para habilitar esta conexión cifrada, es necesario generar un certificado SSL y configurar el servidor <code>vsftpd</code>.</p>
+<p>Existen dos tipos de conexiones FTPS:</p>
+<ul>
+<li><strong>FTPS Explícito (FTPES):</strong> El cliente solicita la conexión segura mediante un comando (por ejemplo, <code>AUTH TLS</code>).</li>
+<li><strong>FTPS Implícito (FTPIS):</strong> La conexión segura se establece automáticamente al conectarse al puerto 990.</li>
+</ul>
+<h2 id="sftp-ssh-file-transfer-protocol">SFTP (SSH File Transfer Protocol)</h2>
+<p>En este caso, la conexión se realiza a través de un canal SSH, y <code>vsftpd</code> no necesita configuración especial. La conexión usa el puerto 22 para SSH, y los datos se transfieren a través de ese canal cifrado.</p>
+<hr />
+<h2 id="instancia-en-aws">Instancia en AWS</h2>
+<h3 id="iniciar-la-instancia-aws-p4-vsftpd">Iniciar la instancia AWS P4-vsftpd</h3>
+<p>Asegúrate de que la instancia creada previamente esté en funcionamiento, ya que contiene el servidor <code>vsftpd</code> instalado y los usuarios con permisos de FTP.</p>
+<h3 id="comprobar-estado-del-servicio-vsftpd">Comprobar estado del servicio vsftpd:</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>vsftpd
+</code></pre></div>
+<p>Si no está en ejecución, inicia y habilita el servicio:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>vsftpd
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>vsftpd.service
+</code></pre></div>
+<h2 id="configuracion-de-ftps-ftp-sobre-ssltls">Configuración de FTPS (FTP sobre SSL/TLS)</h2>
+<h3 id="generar-un-certificado-ssl-autofirmado">Generar un certificado SSL autofirmado</h3>
+<p>Usaremos OpenSSL para generar un certificado SSL y su clave privada. Ejecuta el siguiente comando:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>openssl<span class="w"> </span>req<span class="w"> </span>-x509<span class="w"> </span>-nodes<span class="w"> </span>-days<span class="w"> </span><span class="m">365</span><span class="w"> </span>-newkey<span class="w"> </span>rsa:2048<span class="w"> </span>-keyout<span class="w"> </span>/etc/ssl/private/vsftpd.pem<span class="w"> </span>-out<span class="w"> </span>/etc/ssl/private/vsftpd.pem
+</code></pre></div>
+<p>Esto generará un certificado autofirmado válido por 365 días.</p>
+<h3 id="configurar-el-servidor-vsftpd-para-habilitar-ssltls">Configurar el servidor vsftpd para habilitar SSL/TLS</h3>
+<p>Realiza una copia de seguridad del archivo de configuración:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>cp<span class="w"> </span>/etc/vsftpd.conf<span class="w"> </span>/etc/vsftpd.conf.backup2
+</code></pre></div>
+<p>Edita el archivo de configuración:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/vsftpd.conf
+</code></pre></div>
+<p>Modifica las siguientes configuraciones:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">rsa_cert_file</span><span class="o">=</span>/etc/ssl/private/vsftpd.pem
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nv">rsa_private_key_file</span><span class="o">=</span>/etc/ssl/private/vsftpd.pem
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nv">ssl_enable</span><span class="o">=</span>YES
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nv">allow_anon_ssl</span><span class="o">=</span>NO
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nv">force_local_data_ssl</span><span class="o">=</span>YES
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="nv">force_local_logins_ssl</span><span class="o">=</span>YES
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nv">ssl_tlsv1</span><span class="o">=</span>YES
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="nv">ssl_sslv2</span><span class="o">=</span>NO
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nv">ssl_sslv3</span><span class="o">=</span>NO
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="nv">require_ssl_reuse</span><span class="o">=</span>NO
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="nv">ssl_ciphers</span><span class="o">=</span>HIGH
+</code></pre></div>
+<h3 id="habilitar-el-modo-pasivo">Habilitar el modo pasivo</h3>
+<p>Para evitar problemas con conexiones pasivas, define puertos específicos en el archivo <code>vsftpd.conf</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">pasv_enable</span><span class="o">=</span>YES
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nv">pasv_min_port</span><span class="o">=</span><span class="m">1027</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nv">pasv_max_port</span><span class="o">=</span><span class="m">1030</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nv">pasv_address</span><span class="o">=</span>X.X.X.X
+</code></pre></div>
+<p><code>pasv_address</code> debe ser la IP pública de tu servidor. Si no se configura, se usará la IP local.</p>
+<h3 id="reiniciar-el-servicio-vsftpd">Reiniciar el servicio vsftpd:</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>--now<span class="w"> </span>vsftpd
+</code></pre></div>
+<h2 id="comprobacion-de-la-conexion-ftp-al-servidor-vsftpd">Comprobación de la conexión FTP al servidor vsftpd</h2>
+<h3 id="acceso-con-cliente-ftp-en-modo-comando">Acceso con Cliente FTP en Modo Comando:</h3>
+<p>Abre una terminal y escribe el siguiente comando para conectarte al servidor FTP:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ftp<span class="w"> </span>nombre_de_host_ftp
+</code></pre></div>
+<p>Reemplaza <code>nombre_de_host_ftp</code> con la dirección IP pública de tu servidor FTP.</p>
+<p>Ingresa el usuario y la contraseña (por ejemplo, <code>userftp</code> y <code>ieselcaminas</code>). Si la conexión es exitosa, deberías obtener el prompt <code>ftp&gt;</code>.</p>
+<h3 id="acceso-con-cliente-ftp-grafico-filezilla">Acceso con Cliente FTP Gráfico (FileZilla):</h3>
+<p>Abre FileZilla y crea una nueva conexión usando los siguientes parámetros:</p>
+<ul>
+<li><strong>Protocolo:</strong> FTP</li>
+<li><strong>Cifrado:</strong> Usar FTPS Explícito</li>
+<li><strong>Puerto:</strong> 21 (por defecto)</li>
+<li><strong>Servidor:</strong> Dirección IP pública de tu servidor.</li>
+<li><strong>Usuario:</strong> userftp</li>
+<li><strong>Contraseña:</strong> ieselcaminas</li>
+</ul>
+<p>Acepta el certificado SSL generado al intentar conectar.</p>
+<h2 id="sftp-ssh-file-transfer-protocol_1">SFTP (SSH File Transfer Protocol)</h2>
+<p>Para utilizar SFTP, no necesitas configurar <code>vsftpd</code>. La conexión se realiza a través de SSH en el puerto 22. Aquí se explican los pasos:</p>
+<ul>
+<li>Generar un par de claves SSH para el usuario <code>user2</code>, si aún no lo has hecho.</li>
+</ul>
+<h3 id="verificar-la-conexion-ssh">Verificar la conexión SSH:</h3>
+<p>Asegúrate de que la conexión SSH funcione correctamente antes de intentar la conexión SFTP:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ssh<span class="w"> </span>-i<span class="w"> </span>clave<span class="w"> </span>user2@ipserver
+</code></pre></div>
+<h3 id="conexion-sftp-en-modo-comando">Conexión SFTP en modo comando:</h3>
+<p>Para conectarte por SFTP en modo comando:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sftp<span class="w"> </span>user2@ipserver
+</code></pre></div>
+<h3 id="conexion-sftp-en-filezilla">Conexión SFTP en FileZilla:</h3>
+<p>Si prefieres usar FileZilla, configura la conexión como SFTP con el puerto 22. Asegúrate de indicar la ubicación de la clave privada para que la conexión funcione correctamente.</p>
+<hr />
+<h2 id="resumen-de-la-configuracion-final_1">Resumen de la configuración final:</h2>
+<ul>
+<li><strong>FTPS:</strong> La conexión segura se establece utilizando el protocolo SSL/TLS en <code>vsftpd</code>. Los datos se cifran durante la transferencia.</li>
+<li><strong>SFTP:</strong> Se utiliza el canal SSH para realizar las transferencias, y <code>vsftpd</code> no requiere configuración adicional.</li>
+</ul>
+<h1 id="practica-4-dockerizar-un-servidor-ftp">Práctica 4: Dockerizar un servidor FTP</h1>
+<p>En esta práctica, se configurará un servidor FTP utilizando Docker, basándonos en la imagen <code>fauria/vsftpd</code>. El objetivo es crear un contenedor con las mismas características que un servidor FTP básico.</p>
+<h2 id="iniciar-contenedor-ftp-basico">Iniciar contenedor FTP básico</h2>
+<p>Comenzamos con un contenedor que permita el acceso FTP simple:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>docker<span class="w"> </span>run<span class="w">     </span>--rm<span class="w">     </span>-p<span class="w"> </span><span class="m">21</span>:21<span class="w"> </span>-p<span class="w"> </span><span class="m">20</span>:20<span class="w">     </span>-d<span class="w">     </span>--name<span class="w"> </span>pruebavsftpd<span class="w">     </span>fauria/vsftpd
+</code></pre></div>
+<p>Recupera el usuario y contraseña con:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>pruebavsftpd
+</code></pre></div>
+<p>Luego, conecta con FileZilla utilizando el modo <strong>Activo</strong>.</p>
+<h2 id="montar-directorios-en-el-host">Montar directorios en el host</h2>
+<p>Para evitar que los archivos se borren al detener el contenedor, monta el directorio de datos en el host:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>mkdir<span class="w"> </span>datosftp
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>docker<span class="w"> </span>run<span class="w">     </span>--rm<span class="w">     </span>-p<span class="w"> </span><span class="m">21</span>:21<span class="w"> </span>-p<span class="w"> </span><span class="m">20</span>:20<span class="w">     </span>-d<span class="w">     </span>--name<span class="w"> </span>pruebavsftpd<span class="w">     </span>-v<span class="w"> </span>/home/admin/datosftp:/home/vsftpd<span class="w">     </span>fauria/vsftpd
+</code></pre></div>
+<p>Conéctate nuevamente con FileZilla y verifica que los archivos se guardan en <code>/home/admin/datosftp/</code>.</p>
+<h2 id="configuracion-con-usuario-ftp-y-modo-pasivo">Configuración con usuario FTP y modo pasivo</h2>
+<p>A continuación, creamos un usuario <code>userftp</code> y activamos el modo pasivo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>docker<span class="w"> </span>run<span class="w">     </span>--rm<span class="w">     </span>-e<span class="w"> </span><span class="nv">FTP_USER</span><span class="o">=</span>userftp<span class="w">     </span>-e<span class="w"> </span><span class="nv">FTP_PASS</span><span class="o">=</span>ieselcaminas<span class="w">     </span>-e<span class="w"> </span><span class="nv">PASV_MIN_PORT</span><span class="o">=</span><span class="m">21100</span><span class="w">     </span>-e<span class="w"> </span><span class="nv">PASV_MAX_PORT</span><span class="o">=</span><span class="m">21110</span><span class="w">     </span>-p<span class="w"> </span><span class="m">21</span>:21<span class="w"> </span>-p<span class="w"> </span><span class="m">21100</span>-21110:21100-21110<span class="w">     </span>-d<span class="w">     </span>--name<span class="w"> </span>pruebavsftpd<span class="w">     </span>-v<span class="w"> </span>/home/admin/datosftp:/home/vsftpd<span class="w">     </span>fauria/vsftpd
+</code></pre></div>
+<p>Conéctate con FileZilla usando el modo <strong>Pasivo</strong>.</p>
+<h2 id="configuracion-de-permisos-de-archivos">Configuración de permisos de archivos</h2>
+<p>Para ajustar los permisos de los archivos subidos, establecemos la variable <code>LOCAL_UMASK</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>docker<span class="w"> </span>run<span class="w">     </span>-e<span class="w"> </span><span class="nv">FTP_USER</span><span class="o">=</span>userftp<span class="w">     </span>-e<span class="w"> </span><span class="nv">FTP_PASS</span><span class="o">=</span>ieselcaminas<span class="w">     </span>-e<span class="w"> </span><span class="nv">PASV_MIN_PORT</span><span class="o">=</span><span class="m">21100</span><span class="w">     </span>-e<span class="w"> </span><span class="nv">PASV_MAX_PORT</span><span class="o">=</span><span class="m">21110</span><span class="w">     </span>-e<span class="w"> </span><span class="nv">LOCAL_UMASK</span><span class="o">=</span><span class="m">022</span><span class="w">     </span>-p<span class="w"> </span><span class="m">21</span>:21<span class="w"> </span>-p<span class="w"> </span><span class="m">21100</span>-21110:21100-21110<span class="w">     </span>-d<span class="w">     </span>--name<span class="w"> </span>vsftpdsincifrado<span class="w">     </span>-v<span class="w"> </span>/home/admin/datosftp:/home/vsftpd<span class="w">     </span>fauria/vsftpd
+</code></pre></div>
+<p>Verifica que los archivos subidos tengan los permisos correctos.</p>
+<h2 id="dockerizar-vsftpd-con-cifrado-ftps">Dockerizar vsftpd con CIFRADO (FTPS)</h2>
+<p>Para habilitar FTPS, creamos una imagen personalizada copiando los archivos de configuración y certificado:</p>
+<ol>
+<li>
+<p>Genera un certificado SSL:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>openssl<span class="w"> </span>req<span class="w"> </span>-x509<span class="w"> </span>-nodes<span class="w"> </span>-days<span class="w"> </span><span class="m">365</span><span class="w"> </span>-newkey<span class="w"> </span>rsa:2048<span class="w"> </span>-keyout<span class="w"> </span>vsftpd.pem<span class="w"> </span>-out<span class="w"> </span>vsftpd.pem
+</code></pre></div></p>
+</li>
+<li>
+<p>Copia el archivo <code>vsftpd.conf</code> desde un contenedor ya configurado sin cifrado:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>docker<span class="w"> </span>cp<span class="w"> </span>vsftpdsincifrado:/etc/vsftpd/vsftpd.conf<span class="w"> </span>.
+</code></pre></div>
+<p>Modifica <code>vsftpd.conf</code> para habilitar FTPS.</p>
+<ol>
+<li>Crea un <code>Dockerfile</code> para generar una imagen personalizada:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">fauria/vsftpd</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="k">COPY</span><span class="w"> </span>vsftpd.conf<span class="w"> </span>/etc/vsftpd/vsftpd.conf
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">COPY</span><span class="w"> </span>--chown<span class="o">=</span>root:root<span class="w"> </span>vsftpd.pem<span class="w"> </span>/etc/vsftpd/vsftpd.pem
+</code></pre></div>
+<ol>
+<li>Construye y corre la imagen:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>mivsftpd<span class="w"> </span>.
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>docker<span class="w"> </span>run<span class="w">        </span>-e<span class="w"> </span><span class="nv">FTP_USER</span><span class="o">=</span>userftp<span class="w">        </span>-e<span class="w"> </span><span class="nv">FTP_PASS</span><span class="o">=</span>ieselcaminas<span class="w">        </span>-e<span class="w"> </span><span class="nv">PASV_MIN_PORT</span><span class="o">=</span><span class="m">21100</span><span class="w">        </span>-e<span class="w"> </span><span class="nv">PASV_MAX_PORT</span><span class="o">=</span><span class="m">21110</span><span class="w">        </span>-e<span class="w"> </span><span class="nv">LOCAL_UMASK</span><span class="o">=</span><span class="m">022</span><span class="w">        </span>-p<span class="w"> </span><span class="m">21</span>:21<span class="w"> </span>-p<span class="w"> </span><span class="m">21100</span>-21110:21100-21110<span class="w">        </span>-d<span class="w">        </span>--name<span class="w"> </span>vsftpdconcifrado<span class="w">        </span>-v<span class="w"> </span>/home/admin/datosftp:/home/vsftpd<span class="w">        </span>mivsftpd
+</code></pre></div>
+<p>Conéctate usando <strong>FTP explícito sobre TLS</strong> y <strong>modo pasivo</strong>.</p>
+<h2 id="conclusion">Conclusión</h2>
+<p>Hemos dockerizado un servidor FTP con configuraciones de seguridad básicas y avanzadas (modo pasivo y FTPS).</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "toc.integrate", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

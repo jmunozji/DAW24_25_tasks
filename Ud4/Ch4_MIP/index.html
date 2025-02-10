@@ -1,0 +1,4595 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jmunozji.github.io/DAW24_25_tasks/Ud4/Ch4_MIP/">
+      
+      
+        <link rel="prev" href="../Ch4_MCG/">
+      
+      
+        <link rel="next" href="../Ch4_MMC/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Ch4 - MIP - DAW24_25_tasks</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-3NX5MD5C8H"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-3NX5MD5C8H",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-3NX5MD5C8H",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cheatsheet-configuracion-de-un-servidor-dns-en-debian" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="DAW24_25_tasks" class="md-header__button md-logo" aria-label="DAW24_25_tasks" data-md-component="logo">
+      
+  <img src="../../assets/logocaminas.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAW24_25_tasks
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ch4 - MIP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="green"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DAW24_25_tasks" class="md-nav__button md-logo" aria-label="DAW24_25_tasks" data-md-component="logo">
+      
+  <img src="../../assets/logocaminas.png" alt="logo">
+
+    </a>
+    DAW24_25_tasks
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tareas de DAW 24/25
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Ud1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/ABM/CABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Andreu Beltran Miralles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/ACF/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Alexandru Claudiu Fatu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/AEM/CHEATSHEET/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Alex Eduard Musat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/ALS/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cheatsheet1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/BSO/BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Bryan Oyola
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/DGD/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Darius Gabriel Dobre
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/DMP/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - David Maratrat Pons
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/EGM/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Eduard Gabriel Mirea
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/EV/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Eduard Varga
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/MCG/CMCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Mauricio Chamorro Gallego
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/MIP/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Marc Ibáñez Puchol
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/MMC/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Marcel Mañas Calafí
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/PPE/CPPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Pere Josep Prior España
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/RPE/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Roberto Percuto Escrig
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/RRLL/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Rommel Romero Llumiquinga
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/RSN/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Raul Simarro Navarro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/VATC/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Victor Alexandru Teleanu Covaci
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ud2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_BO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - BO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_MIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - MIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_RRLL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - RRLL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_RSN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud2/Ch2_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud3
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ud3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - BSO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3-DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 - EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_JMJ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - JMJ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_MIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - MIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_RRL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - RRL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_RXN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud4
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ud4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CH4_RSN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch4_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch4_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch4 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch4_ACV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - ACV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch4_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch4_BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - BSO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch4_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch4_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch4 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch4_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch4_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch4_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Ch4 - MIP
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Ch4 - MIP
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cheatsheet-configuracion-de-un-servidor-dns-en-debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cheatsheet: Configuración de un Servidor DNS en Debian
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cheatsheet: Configuración de un Servidor DNS en Debian">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-preparacion-del-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Preparación del Entorno
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-instalacion-de-herramientas-de-diagnostico" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Instalación de Herramientas de Diagnóstico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-pruebas-de-resolucion-de-nombres" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Pruebas de Resolución de Nombres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-instalacion-del-servidor-dns-bind9" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Instalación del Servidor DNS (BIND9)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-configuracion-basica-de-bind9" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Configuración Básica de BIND9
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-configuracion-de-zonas-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Configuración de Zonas DNS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-pruebas-de-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Pruebas de Funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-comprobacion-de-la-cache-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Comprobación de la Caché DNS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-reiniciar-el-servicio-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Reiniciar el Servicio DNS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheatsheet-dockerizacion-de-un-servidor-dns-con-bind9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cheatsheet: Dockerización de un Servidor DNS con BIND9
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cheatsheet: Dockerización de un Servidor DNS con BIND9">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-preparacion-del-entorno_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Preparación del Entorno
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-creacion-del-contenedor-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Creación del Contenedor Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-prueba-inicial-del-servidor-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Prueba Inicial del Servidor DNS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-preparacion-de-archivos-de-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Preparación de Archivos de Configuración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-copiar-archivos-al-contenedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Copiar Archivos al Contenedor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-reiniciar-el-contenedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Reiniciar el Contenedor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-verificacion-de-la-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Verificación de la Configuración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-pruebas-de-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Pruebas de Funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheatsheet-configuracion-de-un-servidor-ldap-con-openldap-y-phpldapadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cheatsheet: Configuración de un Servidor LDAP con OpenLDAP y phpLDAPadmin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cheatsheet: Configuración de un Servidor LDAP con OpenLDAP y phpLDAPadmin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-creacion-de-la-maquina-virtual-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Creación de la Máquina Virtual en AWS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-instalacion-de-openldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Instalación de OpenLDAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-configuracion-inicial-de-openldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Configuración Inicial de OpenLDAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-instalacion-de-phpldapadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Instalación de phpLDAPadmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-configuracion-de-phpldapadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Configuración de phpLDAPadmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-creacion-de-unidades-organizativas-ou" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Creación de Unidades Organizativas (OU)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-creacion-de-grupos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Creación de Grupos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-creacion-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Creación de Usuarios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-verificacion-de-la-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Verificación de la Configuración
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheatsheet-carga-de-datos-en-un-servidor-ldap-mediante-ficheros-ldif" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cheatsheet: Carga de Datos en un Servidor LDAP mediante Ficheros LDIF
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cheatsheet: Carga de Datos en un Servidor LDAP mediante Ficheros LDIF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-creacion-de-la-maquina-virtual-en-aws_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Creación de la Máquina Virtual en AWS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-instalacion-de-openldap_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Instalación de OpenLDAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-configuracion-inicial-de-openldap_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Configuración Inicial de OpenLDAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-creacion-de-unidades-organizativas-ou" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Creación de Unidades Organizativas (OU)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-creacion-de-grupos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Creación de Grupos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-creacion-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Creación de Usuarios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-modificacion-de-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Modificación de Objetos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-busqueda-en-la-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Búsqueda en la Base de Datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-eliminacion-de-registros" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Eliminación de Registros
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheatsheet-dockerizacion-de-un-servidor-ldap-con-openldap-y-phpldapadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cheatsheet: Dockerización de un Servidor LDAP con OpenLDAP y phpLDAPadmin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cheatsheet: Dockerización de un Servidor LDAP con OpenLDAP y phpLDAPadmin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-creacion-de-una-red-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Creación de una Red Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-creacion-del-contenedor-openldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Creación del Contenedor OpenLDAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-creacion-del-contenedor-phpldapadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Creación del Contenedor phpLDAPadmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-acceso-a-phpldapadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Acceso a phpLDAPadmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-configuracion-de-la-base-de-datos-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Configuración de la Base de Datos LDAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-verificacion-de-la-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Verificación de la Configuración
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheatsheet-autenticacion-apache-contra-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cheatsheet: Autenticación Apache contra LDAP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cheatsheet: Autenticación Apache contra LDAP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-preparacion-del-entorno_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Preparación del Entorno
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-habilitar-el-modulo-de-autenticacion-ldap-en-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Habilitar el Módulo de Autenticación LDAP en Apache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-creacion-del-directorio-protegido" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Creación del Directorio Protegido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-configuracion-de-apache-para-autenticacion-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Configuración de Apache para Autenticación LDAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-prueba-de-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Prueba de Autenticación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-configuracion-con-htaccess-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Configuración con .htaccess (Opcional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheatsheet-autenticacion-apache-contra-ldap-dockerizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cheatsheet: Autenticación Apache contra LDAP Dockerizada
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cheatsheet: Autenticación Apache contra LDAP Dockerizada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-preparacion-del-entorno_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Preparación del Entorno
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-creacion-del-dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Creación del Dockerfile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-construccion-de-la-imagen-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Construcción de la Imagen Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ejecucion-del-contenedor-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Ejecución del Contenedor Apache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-prueba-de-autenticacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Prueba de Autenticación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-configuracion-con-variables-de-entorno-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Configuración con Variables de Entorno (Opcional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheatsheet-autenticacion-nginx-contra-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cheatsheet: Autenticación Nginx contra LDAP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cheatsheet: Autenticación Nginx contra LDAP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-preparacion-del-entorno_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Preparación del Entorno
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-creacion-del-sitio-virtual-en-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Creación del Sitio Virtual en Nginx
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-instalacion-del-modulo-de-autenticacion-ldap-en-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Instalación del Módulo de Autenticación LDAP en Nginx
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-configuracion-de-la-autenticacion-ldap-en-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Configuración de la Autenticación LDAP en Nginx
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-prueba-de-autenticacion-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Prueba de Autenticación LDAP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch4_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch4_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch4_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch4_RRL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - RRL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch4_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch4_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud5
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ud5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch5 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - BSO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_MIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch5 - MIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_RRL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - RRL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_RSN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud6
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Ud6
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch6 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - BSO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_MIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - MIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_RRL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - RRL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_RSN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ud6_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Ch4 - MIP</h1>
+
+<h3 id="cheatsheet-configuracion-de-un-servidor-dns-en-debian">Cheatsheet: Configuración de un Servidor DNS en Debian</h3>
+<h4 id="1-preparacion-del-entorno">1. <strong>Preparación del Entorno</strong></h4>
+<ul>
+<li><strong>Eliminar entradas en <code>/etc/hosts</code></strong>: Asegúrate de que no haya entradas previas que puedan interferir con la resolución DNS.</li>
+<li><strong>Crear una instancia EC2 en AWS</strong>:<ul>
+<li>Nombre: <code>P5ServidorDNS</code>.</li>
+<li>Sistema operativo: Debian.</li>
+<li>Grupo de seguridad: Abre los puertos necesarios para consultas DNS (puerto 53 UDP/TCP).</li>
+</ul>
+</li>
+<li><strong>Asignar una IP elástica</strong>:<ul>
+<li>Asigna una IP elástica en AWS y asíociala a la instancia EC2.</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-instalacion-de-herramientas-de-diagnostico">2. <strong>Instalación de Herramientas de Diagnóstico</strong></h4>
+<ul>
+<li>Instala las herramientas <code>dig</code>, <code>host</code>, y <code>nslookup</code>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>dnsutils
+</code></pre></div></li>
+<li>Verifica el servidor DNS configurado:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cat<span class="w"> </span>/etc/resolv.conf
+</code></pre></div></li>
+</ul>
+<h4 id="3-pruebas-de-resolucion-de-nombres">3. <strong>Pruebas de Resolución de Nombres</strong></h4>
+<ul>
+<li><strong>Usar <code>host</code></strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>host<span class="w"> </span>cisco.com
+</code></pre></div></li>
+<li><strong>Usar <code>dig</code></strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>dig<span class="w"> </span>cisco.com
+</code></pre></div></li>
+<li><strong>Usar <code>nslookup</code></strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>nslookup<span class="w"> </span>cisco.com
+</code></pre></div></li>
+<li><strong>Consultar a un DNS específico</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>nslookup<span class="w"> </span>cisco.com<span class="w"> </span><span class="m">8</span>.8.8.8
+</code></pre></div></li>
+</ul>
+<h4 id="4-instalacion-del-servidor-dns-bind9">4. <strong>Instalación del Servidor DNS (BIND9)</strong></h4>
+<ul>
+<li>Instala BIND9:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>bind9<span class="w"> </span>bind9utils<span class="w"> </span>bind9-doc
+</code></pre></div></li>
+<li>Verifica si el servicio está activo:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>bind9
+</code></pre></div></li>
+</ul>
+<h4 id="5-configuracion-basica-de-bind9">5. <strong>Configuración Básica de BIND9</strong></h4>
+<ul>
+<li><strong>Archivo de configuración principal</strong>: <code>/etc/bind/named.conf</code>.</li>
+<li><strong>Habilitar consultas externas</strong>:<ul>
+<li>Edita <code>/etc/bind/named.conf.options</code> y añade:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>allow-query<span class="w"> </span><span class="o">{</span><span class="w"> </span>any<span class="p">;</span><span class="w"> </span><span class="o">}</span><span class="p">;</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li><strong>Desactivar recursividad</strong> (opcional):
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>recursion<span class="w"> </span>no<span class="p">;</span>
+</code></pre></div></li>
+<li><strong>Configurar forwarders</strong>:<ul>
+<li>Edita <code>/etc/bind/named.conf.options</code> y añade:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>forwarders<span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="m">8</span>.8.8.8<span class="p">;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="m">8</span>.8.4.4<span class="p">;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="o">}</span><span class="p">;</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li><strong>Reiniciar el servicio</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>bind9
+</code></pre></div></li>
+</ul>
+<h4 id="6-configuracion-de-zonas-dns">6. <strong>Configuración de Zonas DNS</strong></h4>
+<ul>
+<li><strong>Zona directa</strong>:<ul>
+<li>Edita <code>/etc/bind/named.conf.local</code> y añade:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>zone<span class="w"> </span><span class="s2">&quot;deaw.es&quot;</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="nb">type</span><span class="w"> </span>master<span class="p">;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span>file<span class="w"> </span><span class="s2">&quot;/etc/bind/db.deaw.es&quot;</span><span class="p">;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="o">}</span><span class="p">;</span>
+</code></pre></div></li>
+<li>Crea el archivo de zona <code>/etc/bind/db.deaw.es</code>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nv">$TTL</span><span class="w"> </span>1d
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nv">$ORIGIN</span><span class="w"> </span>deaw.es.
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>@<span class="w">   </span>IN<span class="w">  </span>SOA<span class="w">     </span>ns1.deaw.es.<span class="w"> </span>admin.deaw.es.<span class="w"> </span><span class="o">(</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">                  </span><span class="m">2023112301</span><span class="w">  </span><span class="p">;</span><span class="w"> </span>Serial
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">                  </span>8H<span class="w">          </span><span class="p">;</span><span class="w"> </span>Refresh
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">                  </span>2H<span class="w">          </span><span class="p">;</span><span class="w"> </span>Retry
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">                  </span>4W<span class="w">          </span><span class="p">;</span><span class="w"> </span>Expire
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">                  </span>1D<span class="w"> </span><span class="o">)</span><span class="w">        </span><span class="p">;</span><span class="w"> </span>Minimum<span class="w"> </span>TTL
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="p">;</span><span class="w"> </span>Name<span class="w"> </span>Servers
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">    </span>IN<span class="w">  </span>NS<span class="w">      </span>ns1.deaw.es.
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="p">;</span><span class="w"> </span>A<span class="w"> </span>records
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>ns1<span class="w"> </span>IN<span class="w">  </span>A<span class="w">       </span><span class="m">3</span>.85.104.173
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>www<span class="w"> </span>IN<span class="w">  </span>A<span class="w">       </span><span class="m">3</span>.85.104.173
+</code></pre></div></li>
+<li>Verifica la configuración:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>sudo<span class="w"> </span>named-checkzone<span class="w"> </span>deaw.es<span class="w"> </span>/etc/bind/db.deaw.es
+</code></pre></div></li>
+</ul>
+</li>
+<li><strong>Zona inversa</strong>:<ul>
+<li>Edita <code>/etc/bind/named.conf.local</code> y añade:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>zone<span class="w"> </span><span class="s2">&quot;104.85.3.in-addr.arpa&quot;</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="nb">type</span><span class="w"> </span>master<span class="p">;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span>file<span class="w"> </span><span class="s2">&quot;/etc/bind/db.3.85.104&quot;</span><span class="p">;</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="o">}</span><span class="p">;</span>
+</code></pre></div></li>
+<li>Crea el archivo de zona inversa <code>/etc/bind/db.3.85.104</code>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nv">$TTL</span><span class="w"> </span>1d
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nv">$ORIGIN</span><span class="w"> </span><span class="m">104</span>.85.3.IN-ADDR.ARPA.
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>@<span class="w">   </span>IN<span class="w">  </span>SOA<span class="w">     </span>ns1.deaw.es.<span class="w"> </span>admin.deaw.es.<span class="w"> </span><span class="o">(</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">                  </span><span class="m">2023112301</span><span class="w">  </span><span class="p">;</span><span class="w"> </span>Serial
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">                  </span>8H<span class="w">          </span><span class="p">;</span><span class="w"> </span>Refresh
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">                  </span>2H<span class="w">          </span><span class="p">;</span><span class="w"> </span>Retry
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">                  </span>4W<span class="w">          </span><span class="p">;</span><span class="w"> </span>Expire
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">                  </span>1D<span class="w"> </span><span class="o">)</span><span class="w">        </span><span class="p">;</span><span class="w"> </span>Minimum<span class="w"> </span>TTL
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="p">;</span><span class="w"> </span>Name<span class="w"> </span>Servers
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">    </span>IN<span class="w">  </span>NS<span class="w">      </span>ns1.deaw.es.
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="p">;</span><span class="w"> </span>PTR<span class="w"> </span>record
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="m">173</span><span class="w"> </span>IN<span class="w">  </span>PTR<span class="w">     </span>ns1.deaw.es.
+</code></pre></div></li>
+<li>Verifica la configuración:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>sudo<span class="w"> </span>named-checkzone<span class="w"> </span><span class="m">104</span>.85.3.in-addr.arpa<span class="w"> </span>/etc/bind/db.3.85.104
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h4 id="7-pruebas-de-funcionamiento">7. <strong>Pruebas de Funcionamiento</strong></h4>
+<ul>
+<li><strong>Resolución directa</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>nslookup<span class="w"> </span>www.deaw.es
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>dig<span class="w"> </span>deaw.es
+</code></pre></div></li>
+<li><strong>Resolución inversa</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>nslookup<span class="w"> </span><span class="m">3</span>.85.104.173
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>dig<span class="w"> </span>-x<span class="w"> </span><span class="m">3</span>.85.104.173
+</code></pre></div></li>
+</ul>
+<h4 id="8-comprobacion-de-la-cache-dns">8. <strong>Comprobación de la Caché DNS</strong></h4>
+<ul>
+<li>Realiza una consulta inicial y observa el tiempo de respuesta:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>dig<span class="w"> </span>cisco.com
+</code></pre></div></li>
+<li>Realiza la misma consulta nuevamente y verifica que el tiempo de respuesta ha disminuido debido a la caché.</li>
+</ul>
+<h4 id="9-reiniciar-el-servicio-dns">9. <strong>Reiniciar el Servicio DNS</strong></h4>
+<ul>
+<li>Después de cada cambio en la configuración, reinicia el servicio:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>bind9
+</code></pre></div></li>
+</ul>
+<h3 id="cheatsheet-dockerizacion-de-un-servidor-dns-con-bind9">Cheatsheet: Dockerización de un Servidor DNS con BIND9</h3>
+<h4 id="1-preparacion-del-entorno_1">1. <strong>Preparación del Entorno</strong></h4>
+<ul>
+<li><strong>Verificar puerto 53</strong>: Asegúrate de que el puerto 53 no esté en uso por otro servicio (como <code>systemd-resolved</code>). Si es necesario, detén el servicio:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>systemd-resolved
+</code></pre></div></li>
+</ul>
+<h4 id="2-creacion-del-contenedor-docker">2. <strong>Creación del Contenedor Docker</strong></h4>
+<ul>
+<li>Usa la imagen oficial de BIND9:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span>--name<span class="o">=</span>miserverdns<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span>--publish<span class="w"> </span><span class="m">53</span>:53/udp<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">    </span>--publish<span class="w"> </span><span class="m">53</span>:53/tcp<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">    </span>internetsystemsconsortium/bind9:9.18
+</code></pre></div></li>
+<li><strong>Explicación</strong>:<ul>
+<li><code>-d</code>: Ejecuta el contenedor en segundo plano (modo detached).</li>
+<li><code>--name=miserverdns</code>: Asigna un nombre al contenedor.</li>
+<li><code>--publish 53:53/udp</code> y <code>--publish 53:53/tcp</code>: Publica el puerto 53 (UDP y TCP) en el host.</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-prueba-inicial-del-servidor-dns">3. <strong>Prueba Inicial del Servidor DNS</strong></h4>
+<ul>
+<li>Verifica que el servidor DNS funciona correctamente:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>nslookup<span class="w"> </span>cisco.com<span class="w"> </span><span class="m">127</span>.0.0.1
+</code></pre></div></li>
+</ul>
+<h4 id="4-preparacion-de-archivos-de-configuracion">4. <strong>Preparación de Archivos de Configuración</strong></h4>
+<ul>
+<li>Crea una carpeta en tu host para almacenar los archivos de configuración:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>mkdir<span class="w"> </span>miserverdns
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="nb">cd</span><span class="w"> </span>miserverdns
+</code></pre></div></li>
+<li>
+<p>Crea los siguientes archivos dentro de la carpeta:</p>
+<ul>
+<li><strong><code>named.conf</code></strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>include<span class="w"> </span><span class="s2">&quot;/etc/bind/named.conf.options&quot;</span><span class="p">;</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>include<span class="w"> </span><span class="s2">&quot;/etc/bind/named.conf.local&quot;</span><span class="p">;</span>
+</code></pre></div></li>
+<li><strong><code>named.conf.options</code></strong>: Configura las opciones de BIND9 (por ejemplo, <code>allow-query</code> y <code>forwarders</code>).</li>
+<li><strong><code>named.conf.local</code></strong>: Define las zonas DNS (directa e inversa).</li>
+<li><strong><code>db.deaw.es</code></strong>: Archivo de zona directa para el dominio <code>deaw.es</code>.</li>
+<li><strong><code>db.3.85.104</code></strong>: Archivo de zona inversa para la red <code>3.85.104</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Ejemplo de <code>named.conf.local</code></strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>zone<span class="w"> </span><span class="s2">&quot;deaw.es&quot;</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="nb">type</span><span class="w"> </span>master<span class="p">;</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">    </span>file<span class="w"> </span><span class="s2">&quot;/etc/bind/db.deaw.es&quot;</span><span class="p">;</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="o">}</span><span class="p">;</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>zone<span class="w"> </span><span class="s2">&quot;104.85.3.in-addr.arpa&quot;</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="w">    </span><span class="nb">type</span><span class="w"> </span>master<span class="p">;</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="w">    </span>file<span class="w"> </span><span class="s2">&quot;/etc/bind/db.3.85.104&quot;</span><span class="p">;</span>
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="o">}</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Ejemplo de <code>db.deaw.es</code></strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nv">$TTL</span><span class="w"> </span>1d
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="nv">$ORIGIN</span><span class="w"> </span>deaw.es.
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>@<span class="w">   </span>IN<span class="w">  </span>SOA<span class="w">     </span>ns1.deaw.es.<span class="w"> </span>admin.deaw.es.<span class="w"> </span><span class="o">(</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="w">                  </span><span class="m">2023112301</span><span class="w">  </span><span class="p">;</span><span class="w"> </span>Serial
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="w">                  </span>8H<span class="w">          </span><span class="p">;</span><span class="w"> </span>Refresh
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="w">                  </span>2H<span class="w">          </span><span class="p">;</span><span class="w"> </span>Retry
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a><span class="w">                  </span>4W<span class="w">          </span><span class="p">;</span><span class="w"> </span>Expire
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a><span class="w">                  </span>1D<span class="w"> </span><span class="o">)</span><span class="w">        </span><span class="p">;</span><span class="w"> </span>Minimum<span class="w"> </span>TTL
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a><span class="p">;</span><span class="w"> </span>Name<span class="w"> </span>Servers
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a><span class="w">    </span>IN<span class="w">  </span>NS<span class="w">      </span>ns1.deaw.es.
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a><span class="p">;</span><span class="w"> </span>A<span class="w"> </span>records
+<a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a>ns1<span class="w"> </span>IN<span class="w">  </span>A<span class="w">       </span><span class="m">3</span>.85.104.173
+<a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a>www<span class="w"> </span>IN<span class="w">  </span>A<span class="w">       </span><span class="m">3</span>.85.104.173
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Ejemplo de <code>db.3.85.104</code></strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nv">$TTL</span><span class="w"> </span>1d
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="nv">$ORIGIN</span><span class="w"> </span><span class="m">104</span>.85.3.IN-ADDR.ARPA.
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>@<span class="w">   </span>IN<span class="w">  </span>SOA<span class="w">     </span>ns1.deaw.es.<span class="w"> </span>admin.deaw.es.<span class="w"> </span><span class="o">(</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="w">                  </span><span class="m">2023112301</span><span class="w">  </span><span class="p">;</span><span class="w"> </span>Serial
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="w">                  </span>8H<span class="w">          </span><span class="p">;</span><span class="w"> </span>Refresh
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a><span class="w">                  </span>2H<span class="w">          </span><span class="p">;</span><span class="w"> </span>Retry
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="w">                  </span>4W<span class="w">          </span><span class="p">;</span><span class="w"> </span>Expire
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a><span class="w">                  </span>1D<span class="w"> </span><span class="o">)</span><span class="w">        </span><span class="p">;</span><span class="w"> </span>Minimum<span class="w"> </span>TTL
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a><span class="p">;</span><span class="w"> </span>Name<span class="w"> </span>Servers
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a><span class="w">    </span>IN<span class="w">  </span>NS<span class="w">      </span>ns1.deaw.es.
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a><span class="p">;</span><span class="w"> </span>PTR<span class="w"> </span>record
+<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a><span class="m">173</span><span class="w"> </span>IN<span class="w">  </span>PTR<span class="w">     </span>ns1.deaw.es.
+</code></pre></div></p>
+</li>
+</ul>
+<h4 id="5-copiar-archivos-al-contenedor">5. <strong>Copiar Archivos al Contenedor</strong></h4>
+<ul>
+<li>Copia los archivos de configuración al contenedor:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>docker<span class="w"> </span>cp<span class="w"> </span>named.conf<span class="w"> </span>miserverdns:/etc/bind/
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>docker<span class="w"> </span>cp<span class="w"> </span>named.conf.options<span class="w"> </span>miserverdns:/etc/bind/
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>docker<span class="w"> </span>cp<span class="w"> </span>named.conf.local<span class="w"> </span>miserverdns:/etc/bind/
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>docker<span class="w"> </span>cp<span class="w"> </span>db.deaw.es<span class="w"> </span>miserverdns:/etc/bind/
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>docker<span class="w"> </span>cp<span class="w"> </span>db.3.85.104<span class="w"> </span>miserverdns:/etc/bind/
+</code></pre></div></li>
+</ul>
+<h4 id="6-reiniciar-el-contenedor">6. <strong>Reiniciar el Contenedor</strong></h4>
+<ul>
+<li>Reinicia el contenedor para aplicar los cambios:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>docker<span class="w"> </span>restart<span class="w"> </span>miserverdns
+</code></pre></div></li>
+</ul>
+<h4 id="7-verificacion-de-la-configuracion">7. <strong>Verificación de la Configuración</strong></h4>
+<ul>
+<li>Verifica la configuración con los siguientes comandos:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>miserverdns<span class="w"> </span>named-checkconf
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>miserverdns<span class="w"> </span>named-checkzone<span class="w"> </span>deaw.es<span class="w"> </span>/etc/bind/db.deaw.es
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>miserverdns<span class="w"> </span>named-checkzone<span class="w"> </span><span class="m">104</span>.85.3.in-addr.arpa<span class="w"> </span>/etc/bind/db.3.85.104
+</code></pre></div></li>
+</ul>
+<h4 id="8-pruebas-de-funcionamiento">8. <strong>Pruebas de Funcionamiento</strong></h4>
+<ul>
+<li><strong>Resolución directa</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>nslookup<span class="w"> </span>www.deaw.es<span class="w"> </span><span class="m">127</span>.0.0.1
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>dig<span class="w"> </span>deaw.es<span class="w"> </span>@127.0.0.1
+</code></pre></div></li>
+<li><strong>Resolución inversa</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>nslookup<span class="w"> </span><span class="m">3</span>.85.104.173<span class="w"> </span><span class="m">127</span>.0.0.1
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>dig<span class="w"> </span>-x<span class="w"> </span><span class="m">3</span>.85.104.173<span class="w"> </span>@127.0.0.1
+</code></pre></div></li>
+</ul>
+<h3 id="cheatsheet-configuracion-de-un-servidor-ldap-con-openldap-y-phpldapadmin">Cheatsheet: Configuración de un Servidor LDAP con OpenLDAP y phpLDAPadmin</h3>
+<h4 id="1-creacion-de-la-maquina-virtual-en-aws">1. <strong>Creación de la Máquina Virtual en AWS</strong></h4>
+<ul>
+<li><strong>Nombre de la instancia</strong>: <code>ServidorLDAP</code>.</li>
+<li><strong>Sistema operativo</strong>: Debian.</li>
+<li><strong>Grupo de seguridad</strong>: Abre los puertos necesarios para LDAP (389 TCP) y phpLDAPadmin (80 TCP).</li>
+<li><strong>Actualización del sistema</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>upgrade<span class="w"> </span>-y
+</code></pre></div></li>
+</ul>
+<h4 id="2-instalacion-de-openldap">2. <strong>Instalación de OpenLDAP</strong></h4>
+<ul>
+<li>Instala los paquetes necesarios:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>slapd<span class="w"> </span>ldap-utils
+</code></pre></div></li>
+<li>Durante la instalación, se solicitará una contraseña para el administrador de LDAP. Usa <code>ieselcaminas</code>.</li>
+</ul>
+<h4 id="3-configuracion-inicial-de-openldap">3. <strong>Configuración Inicial de OpenLDAP</strong></h4>
+<ul>
+<li>Reconfigura <code>slapd</code> para definir el dominio base:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>sudo<span class="w"> </span>dpkg-reconfigure<span class="w"> </span>slapd
+</code></pre></div></li>
+<li>
+<p><strong>Pasos durante la reconfiguración</strong>:</p>
+<ol>
+<li><strong>Omitir configuración inicial</strong>: Selecciona "No".</li>
+<li><strong>Nombre del dominio</strong>: Introduce <code>daw.ieselcaminas</code>.</li>
+<li><strong>Nombre de la organización</strong>: Introduce <code>daw.ieselcaminas</code>.</li>
+<li><strong>Contraseña de administrador</strong>: Usa <code>ieselcaminas</code>.</li>
+<li><strong>Base de datos backend</strong>: Selecciona <code>MDB</code>.</li>
+<li><strong>Eliminar base de datos al purgar</strong>: Selecciona "No".</li>
+<li><strong>Mover la base de datos antigua</strong>: Selecciona "Yes".</li>
+</ol>
+</li>
+<li>
+<p>Verifica la configuración con:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>sudo<span class="w"> </span>slapcat
+</code></pre></div>
+  Deberías ver el nodo raíz <code>dc=daw,dc=ieselcaminas</code>.</p>
+</li>
+</ul>
+<h4 id="4-instalacion-de-phpldapadmin">4. <strong>Instalación de phpLDAPadmin</strong></h4>
+<ul>
+<li>Instala phpLDAPadmin para la gestión gráfica:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>phpldapadmin
+</code></pre></div></li>
+<li>Accede a phpLDAPadmin desde tu navegador:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>http://&lt;IP_DEL_SERVIDOR&gt;/phpldapadmin
+</code></pre></div></li>
+</ul>
+<h4 id="5-configuracion-de-phpldapadmin">5. <strong>Configuración de phpLDAPadmin</strong></h4>
+<ul>
+<li>Edita el archivo de configuración para ajustar el dominio base:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/phpldapadmin/config.php
+</code></pre></div></li>
+<li>Busca y modifica las siguientes líneas:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="x">$servers-&gt;setValue(&#39;server&#39;,&#39;base&#39;,array(&#39;dc=daw,dc=ieselcaminas&#39;));</span>
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="x">$servers-&gt;setValue(&#39;login&#39;,&#39;bind_id&#39;,&#39;cn=admin,dc=daw,dc=ieselcaminas&#39;);</span>
+</code></pre></div></li>
+<li>Guarda y cierra el archivo.</li>
+</ul>
+<h4 id="6-creacion-de-unidades-organizativas-ou">6. <strong>Creación de Unidades Organizativas (OU)</strong></h4>
+<ul>
+<li><strong>Accede a phpLDAPadmin</strong>:<ul>
+<li>Usuario: <code>cn=admin,dc=daw,dc=ieselcaminas</code>.</li>
+<li>Contraseña: <code>ieselcaminas</code>.</li>
+</ul>
+</li>
+<li><strong>Crea las OU</strong>:<ol>
+<li>Haz clic en <code>dc=daw,dc=ieselcaminas</code>.</li>
+<li>Selecciona "Create a child entry".</li>
+<li>Elige "Generic: Organizational Unit".</li>
+<li>Crea las OU <code>ou=grupos</code> y <code>ou=usuarios</code>.</li>
+</ol>
+</li>
+</ul>
+<h4 id="7-creacion-de-grupos">7. <strong>Creación de Grupos</strong></h4>
+<ul>
+<li><strong>Crea el grupo <code>profesores</code></strong>:<ol>
+<li>Selecciona <code>ou=grupos</code>.</li>
+<li>Haz clic en "Create a child entry".</li>
+<li>Elige "Default" y luego "posixGroup".</li>
+<li>Completa los campos:<ul>
+<li><strong>Group Name</strong>: <code>profesores</code>.</li>
+<li><strong>GID Number</strong>: <code>10000</code>.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><strong>Crea el grupo <code>alumnos</code></strong>:<ul>
+<li>Sigue los mismos pasos, pero usa <code>alumnos</code> como nombre y <code>10001</code> como GID.</li>
+</ul>
+</li>
+</ul>
+<h4 id="8-creacion-de-usuarios">8. <strong>Creación de Usuarios</strong></h4>
+<ul>
+<li><strong>Crea el usuario <code>profe01</code></strong>:<ol>
+<li>Selecciona <code>ou=usuarios</code>.</li>
+<li>Haz clic en "Create a child entry".</li>
+<li>Elige "Default" y luego selecciona <code>account</code> y <code>posixAccount</code>.</li>
+<li>Completa los campos:<ul>
+<li><strong>First Name</strong>: <code>profe01</code>.</li>
+<li><strong>Last Name</strong>: <code>profesor</code>.</li>
+<li><strong>Common Name</strong>: <code>profe01</code>.</li>
+<li><strong>User ID</strong>: <code>profe01</code>.</li>
+<li><strong>Group ID</strong>: <code>10000</code> (profesores).</li>
+<li><strong>Home Directory</strong>: <code>/home/profe01</code>.</li>
+<li><strong>Password</strong>: Establece una contraseña.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><strong>Crea los usuarios <code>alu01</code> y <code>alu02</code></strong>:<ul>
+<li>Sigue los mismos pasos, pero usa <code>alumnos</code> como grupo (GID <code>10001</code>).</li>
+</ul>
+</li>
+</ul>
+<h4 id="9-verificacion-de-la-configuracion">9. <strong>Verificación de la Configuración</strong></h4>
+<ul>
+<li><strong>Verifica los usuarios y grupos</strong>:<ul>
+<li>Navega por el árbol LDAP en phpLDAPadmin para asegurarte de que los usuarios y grupos se han creado correctamente.</li>
+</ul>
+</li>
+<li><strong>Prueba la autenticación</strong>:<ul>
+<li>Usa <code>ldapsearch</code> para verificar que los usuarios y grupos son accesibles:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-b<span class="w"> </span><span class="s2">&quot;dc=daw,dc=ieselcaminas&quot;</span><span class="w"> </span>-D<span class="w"> </span><span class="s2">&quot;cn=admin,dc=daw,dc=ieselcaminas&quot;</span><span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;ieselcaminas&quot;</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h3 id="cheatsheet-carga-de-datos-en-un-servidor-ldap-mediante-ficheros-ldif">Cheatsheet: Carga de Datos en un Servidor LDAP mediante Ficheros LDIF</h3>
+<h4 id="1-creacion-de-la-maquina-virtual-en-aws_1">1. <strong>Creación de la Máquina Virtual en AWS</strong></h4>
+<ul>
+<li><strong>Nombre de la instancia</strong>: <code>ServidorLDAP2</code>.</li>
+<li><strong>Sistema operativo</strong>: Debian.</li>
+<li><strong>Grupo de seguridad</strong>: Usa el grupo de seguridad <code>ServidorLDAP</code> creado anteriormente.</li>
+<li><strong>Actualización del sistema</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>upgrade<span class="w"> </span>-y
+</code></pre></div></li>
+</ul>
+<h4 id="2-instalacion-de-openldap_1">2. <strong>Instalación de OpenLDAP</strong></h4>
+<ul>
+<li>Instala los paquetes necesarios:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>slapd<span class="w"> </span>ldap-utils
+</code></pre></div></li>
+<li>Durante la instalación, se solicitará una contraseña para el administrador de LDAP. Usa <code>ieselcaminas</code>.</li>
+</ul>
+<h4 id="3-configuracion-inicial-de-openldap_1">3. <strong>Configuración Inicial de OpenLDAP</strong></h4>
+<ul>
+<li>Reconfigura <code>slapd</code> para definir el dominio base:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>sudo<span class="w"> </span>dpkg-reconfigure<span class="w"> </span>slapd
+</code></pre></div></li>
+<li>
+<p><strong>Pasos durante la reconfiguración</strong>:</p>
+<ol>
+<li><strong>Omitir configuración inicial</strong>: Selecciona "No".</li>
+<li><strong>Nombre del dominio</strong>: Introduce <code>proyecto-empresa.local</code>.</li>
+<li><strong>Nombre de la organización</strong>: Introduce <code>proyecto-empresa.local</code>.</li>
+<li><strong>Contraseña de administrador</strong>: Usa <code>ieselcaminas</code>.</li>
+<li><strong>Base de datos backend</strong>: Selecciona <code>MDB</code>.</li>
+<li><strong>Eliminar base de datos al purgar</strong>: Selecciona "No".</li>
+<li><strong>Mover la base de datos antigua</strong>: Selecciona "Yes".</li>
+</ol>
+</li>
+<li>
+<p>Verifica la configuración con:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>sudo<span class="w"> </span>slapcat
+</code></pre></div>
+  Deberías ver el nodo raíz <code>dc=proyecto-empresa,dc=local</code>.</p>
+</li>
+</ul>
+<h4 id="4-creacion-de-unidades-organizativas-ou">4. <strong>Creación de Unidades Organizativas (OU)</strong></h4>
+<ul>
+<li>Crea un archivo <code>estructura_basica.ldif</code> con el siguiente contenido:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="c1"># Usuarios</span>
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">ou</span><span class="o">=</span><span class="s">usuarios</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">proyecto-empresa</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">local</span>
+<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">organizationalUnit</span>
+<a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a><span class="na">ou</span><span class="p">:</span><span class="w"> </span><span class="s">usuarios</span>
+<a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a>
+<a id="__codelineno-48-6" name="__codelineno-48-6" href="#__codelineno-48-6"></a><span class="c1"># Grupos</span>
+<a id="__codelineno-48-7" name="__codelineno-48-7" href="#__codelineno-48-7"></a><span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">ou</span><span class="o">=</span><span class="s">grupos</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">proyecto-empresa</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">local</span>
+<a id="__codelineno-48-8" name="__codelineno-48-8" href="#__codelineno-48-8"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">organizationalUnit</span>
+<a id="__codelineno-48-9" name="__codelineno-48-9" href="#__codelineno-48-9"></a><span class="na">ou</span><span class="p">:</span><span class="w"> </span><span class="s">grupos</span>
+</code></pre></div></li>
+<li>Añade las OU al servidor LDAP:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>ldapadd<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>admin,dc<span class="o">=</span>proyecto-empresa,dc<span class="o">=</span><span class="nb">local</span><span class="w"> </span>-w<span class="w"> </span>ieselcaminas<span class="w"> </span>-f<span class="w"> </span>estructura_basica.ldif
+</code></pre></div></li>
+</ul>
+<h4 id="5-creacion-de-grupos">5. <strong>Creación de Grupos</strong></h4>
+<ul>
+<li>Crea un archivo <code>grupos.ldif</code> con el siguiente contenido:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="c1"># Grupo profesores</span>
+<a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a><span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">cn</span><span class="o">=</span><span class="s">profesores</span><span class="p">,</span><span class="na">ou</span><span class="o">=</span><span class="s">grupos</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">proyecto-empresa</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">local</span>
+<a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">posixGroup</span>
+<a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a><span class="na">cn</span><span class="p">:</span><span class="w"> </span><span class="s">profesores</span>
+<a id="__codelineno-50-5" name="__codelineno-50-5" href="#__codelineno-50-5"></a><span class="na">gidNumber</span><span class="p">:</span><span class="w"> </span><span class="s">10000</span>
+<a id="__codelineno-50-6" name="__codelineno-50-6" href="#__codelineno-50-6"></a>
+<a id="__codelineno-50-7" name="__codelineno-50-7" href="#__codelineno-50-7"></a><span class="c1"># Grupo alumnos</span>
+<a id="__codelineno-50-8" name="__codelineno-50-8" href="#__codelineno-50-8"></a><span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">cn</span><span class="o">=</span><span class="s">alumnos</span><span class="p">,</span><span class="na">ou</span><span class="o">=</span><span class="s">grupos</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">proyecto-empresa</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">local</span>
+<a id="__codelineno-50-9" name="__codelineno-50-9" href="#__codelineno-50-9"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">posixGroup</span>
+<a id="__codelineno-50-10" name="__codelineno-50-10" href="#__codelineno-50-10"></a><span class="na">cn</span><span class="p">:</span><span class="w"> </span><span class="s">alumnos</span>
+<a id="__codelineno-50-11" name="__codelineno-50-11" href="#__codelineno-50-11"></a><span class="na">gidNumber</span><span class="p">:</span><span class="w"> </span><span class="s">10001</span>
+</code></pre></div></li>
+<li>Añade los grupos al servidor LDAP:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>ldapadd<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>admin,dc<span class="o">=</span>proyecto-empresa,dc<span class="o">=</span><span class="nb">local</span><span class="w"> </span>-w<span class="w"> </span>ieselcaminas<span class="w"> </span>-f<span class="w"> </span>grupos.ldif
+</code></pre></div></li>
+</ul>
+<h4 id="6-creacion-de-usuarios">6. <strong>Creación de Usuarios</strong></h4>
+<ul>
+<li>Crea un archivo <code>profesores.ldif</code> con el siguiente contenido:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="c1"># Profe01</span>
+<a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a><span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">uid</span><span class="o">=</span><span class="s">profe01</span><span class="p">,</span><span class="na">ou</span><span class="o">=</span><span class="s">usuarios</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">proyecto-empresa</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">local</span>
+<a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">inetOrgPerson</span>
+<a id="__codelineno-52-4" name="__codelineno-52-4" href="#__codelineno-52-4"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">posixAccount</span>
+<a id="__codelineno-52-5" name="__codelineno-52-5" href="#__codelineno-52-5"></a><span class="na">uid</span><span class="p">:</span><span class="w"> </span><span class="s">profe01</span>
+<a id="__codelineno-52-6" name="__codelineno-52-6" href="#__codelineno-52-6"></a><span class="na">cn</span><span class="p">:</span><span class="w"> </span><span class="s">profe01</span>
+<a id="__codelineno-52-7" name="__codelineno-52-7" href="#__codelineno-52-7"></a><span class="na">sn</span><span class="p">:</span><span class="w"> </span><span class="s">DAW</span>
+<a id="__codelineno-52-8" name="__codelineno-52-8" href="#__codelineno-52-8"></a><span class="na">loginShell</span><span class="p">:</span><span class="w"> </span><span class="s">/bin/bash</span>
+<a id="__codelineno-52-9" name="__codelineno-52-9" href="#__codelineno-52-9"></a><span class="na">uidNumber</span><span class="p">:</span><span class="w"> </span><span class="s">1001</span>
+<a id="__codelineno-52-10" name="__codelineno-52-10" href="#__codelineno-52-10"></a><span class="na">gidNumber</span><span class="p">:</span><span class="w"> </span><span class="s">10000</span>
+<a id="__codelineno-52-11" name="__codelineno-52-11" href="#__codelineno-52-11"></a><span class="na">homeDirectory</span><span class="p">:</span><span class="w"> </span><span class="s">/home/profe01</span>
+<a id="__codelineno-52-12" name="__codelineno-52-12" href="#__codelineno-52-12"></a><span class="na">gecos</span><span class="p">:</span><span class="w"> </span><span class="s">Profe01 DAW</span>
+<a id="__codelineno-52-13" name="__codelineno-52-13" href="#__codelineno-52-13"></a><span class="na">userPassword</span><span class="p">:</span><span class="w"> </span><span class="s">123456</span>
+<a id="__codelineno-52-14" name="__codelineno-52-14" href="#__codelineno-52-14"></a>
+<a id="__codelineno-52-15" name="__codelineno-52-15" href="#__codelineno-52-15"></a><span class="c1"># Profe02</span>
+<a id="__codelineno-52-16" name="__codelineno-52-16" href="#__codelineno-52-16"></a><span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">uid</span><span class="o">=</span><span class="s">profe02</span><span class="p">,</span><span class="na">ou</span><span class="o">=</span><span class="s">usuarios</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">proyecto-empresa</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">local</span>
+<a id="__codelineno-52-17" name="__codelineno-52-17" href="#__codelineno-52-17"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">inetOrgPerson</span>
+<a id="__codelineno-52-18" name="__codelineno-52-18" href="#__codelineno-52-18"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">posixAccount</span>
+<a id="__codelineno-52-19" name="__codelineno-52-19" href="#__codelineno-52-19"></a><span class="na">uid</span><span class="p">:</span><span class="w"> </span><span class="s">profe02</span>
+<a id="__codelineno-52-20" name="__codelineno-52-20" href="#__codelineno-52-20"></a><span class="na">cn</span><span class="p">:</span><span class="w"> </span><span class="s">profe02</span>
+<a id="__codelineno-52-21" name="__codelineno-52-21" href="#__codelineno-52-21"></a><span class="na">sn</span><span class="p">:</span><span class="w"> </span><span class="s">DAW</span>
+<a id="__codelineno-52-22" name="__codelineno-52-22" href="#__codelineno-52-22"></a><span class="na">loginShell</span><span class="p">:</span><span class="w"> </span><span class="s">/bin/bash</span>
+<a id="__codelineno-52-23" name="__codelineno-52-23" href="#__codelineno-52-23"></a><span class="na">uidNumber</span><span class="p">:</span><span class="w"> </span><span class="s">1002</span>
+<a id="__codelineno-52-24" name="__codelineno-52-24" href="#__codelineno-52-24"></a><span class="na">gidNumber</span><span class="p">:</span><span class="w"> </span><span class="s">10000</span>
+<a id="__codelineno-52-25" name="__codelineno-52-25" href="#__codelineno-52-25"></a><span class="na">homeDirectory</span><span class="p">:</span><span class="w"> </span><span class="s">/home/profe02</span>
+<a id="__codelineno-52-26" name="__codelineno-52-26" href="#__codelineno-52-26"></a><span class="na">gecos</span><span class="p">:</span><span class="w"> </span><span class="s">Profe02 DAW</span>
+<a id="__codelineno-52-27" name="__codelineno-52-27" href="#__codelineno-52-27"></a><span class="na">userPassword</span><span class="p">:</span><span class="w"> </span><span class="s">123456</span>
+</code></pre></div></li>
+<li>
+<p>Añade los usuarios al servidor LDAP:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>ldapadd<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>admin,dc<span class="o">=</span>proyecto-empresa,dc<span class="o">=</span><span class="nb">local</span><span class="w"> </span>-w<span class="w"> </span>ieselcaminas<span class="w"> </span>-f<span class="w"> </span>profesores.ldif
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Crea usuarios alumnos</strong>:</p>
+<ul>
+<li>Sigue el mismo formato que <code>profesores.ldif</code>, pero usa <code>alu01</code> y <code>alu02</code> como nombres, <code>2001</code> y <code>2002</code> como <code>uidNumber</code>, y <code>10001</code> como <code>gidNumber</code>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="7-modificacion-de-objetos">7. <strong>Modificación de Objetos</strong></h4>
+<ul>
+<li>Crea un archivo <code>cambiar_usuario.ldif</code> para cambiar la contraseña de un usuario:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="c1"># Cambiar contraseña Usuario</span>
+<a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">uid</span><span class="o">=</span><span class="s">alu01</span><span class="p">,</span><span class="na">ou</span><span class="o">=</span><span class="s">usuarios</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">proyecto-empresa</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">local</span>
+<a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="k">changetype</span><span class="p">:</span><span class="w"> </span><span class="k">modify</span>
+<a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a><span class="k">replace</span><span class="p">:</span><span class="w"> </span><span class="na">userPassword</span>
+<a id="__codelineno-54-5" name="__codelineno-54-5" href="#__codelineno-54-5"></a><span class="na">userPassword</span><span class="p">:</span><span class="w"> </span><span class="s">654321</span>
+</code></pre></div></li>
+<li>Modifica la contraseña:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>ldapmodify<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>admin,dc<span class="o">=</span>proyecto-empresa,dc<span class="o">=</span><span class="nb">local</span><span class="w"> </span>-w<span class="w"> </span>ieselcaminas<span class="w"> </span>-f<span class="w"> </span>cambiar_usuario.ldif
+</code></pre></div></li>
+</ul>
+<h4 id="8-busqueda-en-la-base-de-datos">8. <strong>Búsqueda en la Base de Datos</strong></h4>
+<ul>
+<li><strong>Buscar todos los profesores</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-b<span class="w"> </span><span class="nv">dc</span><span class="o">=</span>proyecto-empresa,dc<span class="o">=</span><span class="nb">local</span><span class="w"> </span><span class="s2">&quot;(uid=*profe*)&quot;</span>
+</code></pre></div></li>
+<li><strong>Buscar un profesor por <code>uidNumber</code></strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-b<span class="w"> </span><span class="nv">dc</span><span class="o">=</span>proyecto-empresa,dc<span class="o">=</span><span class="nb">local</span><span class="w"> </span><span class="s2">&quot;(uidNumber=1002)&quot;</span>
+</code></pre></div></li>
+<li><strong>Buscar profesores con <code>gidNumber</code> específico</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-b<span class="w"> </span><span class="nv">dc</span><span class="o">=</span>proyecto-empresa,dc<span class="o">=</span><span class="nb">local</span><span class="w"> </span><span class="s2">&quot;(&amp;(uid=*profe*)(gidNumber=10001))&quot;</span>
+</code></pre></div></li>
+</ul>
+<h4 id="9-eliminacion-de-registros">9. <strong>Eliminación de Registros</strong></h4>
+<ul>
+<li><strong>Eliminar un usuario</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>ldapdelete<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>admin,dc<span class="o">=</span>proyecto-empresa,dc<span class="o">=</span><span class="nb">local</span><span class="w"> </span>-w<span class="w"> </span>ieselcaminas<span class="w"> </span><span class="nv">uid</span><span class="o">=</span>alu02,ou<span class="o">=</span>usuarios,dc<span class="o">=</span>proyecto-empresa,dc<span class="o">=</span><span class="nb">local</span>
+</code></pre></div></li>
+</ul>
+<h3 id="cheatsheet-dockerizacion-de-un-servidor-ldap-con-openldap-y-phpldapadmin">Cheatsheet: Dockerización de un Servidor LDAP con OpenLDAP y phpLDAPadmin</h3>
+<h4 id="1-creacion-de-una-red-docker">1. <strong>Creación de una Red Docker</strong></h4>
+<ul>
+<li>Crea una red Docker para que los contenedores de OpenLDAP y phpLDAPadmin puedan comunicarse:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>ldap-network
+</code></pre></div></li>
+</ul>
+<h4 id="2-creacion-del-contenedor-openldap">2. <strong>Creación del Contenedor OpenLDAP</strong></h4>
+<ul>
+<li>Usa la imagen oficial de OpenLDAP para crear el contenedor:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a><span class="w">    </span>--net<span class="w"> </span>ldap-network<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a><span class="w">    </span>--hostname<span class="w"> </span>ldap-service<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-61-4" name="__codelineno-61-4" href="#__codelineno-61-4"></a><span class="w">    </span>--name<span class="w"> </span>ldap-service<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-61-5" name="__codelineno-61-5" href="#__codelineno-61-5"></a><span class="w">    </span>--env<span class="w"> </span><span class="nv">LDAP_ORGANISATION</span><span class="o">=</span><span class="s2">&quot;daw.ieselcaminas&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-61-6" name="__codelineno-61-6" href="#__codelineno-61-6"></a><span class="w">    </span>--env<span class="w"> </span><span class="nv">LDAP_DOMAIN</span><span class="o">=</span><span class="s2">&quot;daw.ieselcaminas&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-61-7" name="__codelineno-61-7" href="#__codelineno-61-7"></a><span class="w">    </span>--env<span class="w"> </span><span class="nv">LDAP_ADMIN_PASSWORD</span><span class="o">=</span><span class="s2">&quot;ieselcaminas&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-61-8" name="__codelineno-61-8" href="#__codelineno-61-8"></a><span class="w">    </span>--detach<span class="w"> </span>osixia/openldap
+</code></pre></div></li>
+<li>
+<p><strong>Explicación</strong>:</p>
+<ul>
+<li><code>--net ldap-network</code>: Conecta el contenedor a la red <code>ldap-network</code>.</li>
+<li><code>--hostname ldap-service</code>: Asigna un nombre de host al contenedor dentro de la red.</li>
+<li><code>--env</code>: Define variables de entorno para configurar OpenLDAP.</li>
+<li><code>--detach</code>: Ejecuta el contenedor en segundo plano.</li>
+</ul>
+</li>
+<li>
+<p><strong>Verifica la creación de la base de datos</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>ldap-service<span class="w"> </span>slapcat
+</code></pre></div>
+  Deberías ver el nodo raíz <code>dc=daw,dc=ieselcaminas</code>.</p>
+</li>
+</ul>
+<h4 id="3-creacion-del-contenedor-phpldapadmin">3. <strong>Creación del Contenedor phpLDAPadmin</strong></h4>
+<ul>
+<li>Usa la imagen oficial de phpLDAPadmin para crear el contenedor:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-63-2" name="__codelineno-63-2" href="#__codelineno-63-2"></a><span class="w">    </span>--net<span class="w"> </span>ldap-network<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-63-3" name="__codelineno-63-3" href="#__codelineno-63-3"></a><span class="w">    </span>--name<span class="w"> </span>phpldapadmin-service<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-63-4" name="__codelineno-63-4" href="#__codelineno-63-4"></a><span class="w">    </span>--publish<span class="w"> </span><span class="m">443</span>:443<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-63-5" name="__codelineno-63-5" href="#__codelineno-63-5"></a><span class="w">    </span>--hostname<span class="w"> </span>phpldapadmin-service<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-63-6" name="__codelineno-63-6" href="#__codelineno-63-6"></a><span class="w">    </span>--env<span class="w"> </span><span class="nv">PHPLDAPADMIN_LDAP_HOSTS</span><span class="o">=</span>ldap-service<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-63-7" name="__codelineno-63-7" href="#__codelineno-63-7"></a><span class="w">    </span>--detach<span class="w"> </span>osixia/phpldapadmin
+</code></pre></div></li>
+<li><strong>Explicación</strong>:<ul>
+<li><code>--net ldap-network</code>: Conecta el contenedor a la red <code>ldap-network</code>.</li>
+<li><code>--publish 443:443</code>: Expone el puerto 443 del contenedor para acceder a phpLDAPadmin.</li>
+<li><code>--env PHPLDAPADMIN_LDAP_HOSTS=ldap-service</code>: Indica a phpLDAPadmin que el servidor LDAP está en el host <code>ldap-service</code>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-acceso-a-phpldapadmin">4. <strong>Acceso a phpLDAPadmin</strong></h4>
+<ul>
+<li>Accede a phpLDAPadmin desde tu navegador:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>https://&lt;IP_DEL_SERVIDOR&gt;
+</code></pre></div></li>
+<li><strong>Credenciales de inicio de sesión</strong>:<ul>
+<li><strong>Usuario</strong>: <code>cn=admin,dc=daw,dc=ieselcaminas</code>.</li>
+<li><strong>Contraseña</strong>: <code>ieselcaminas</code>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-configuracion-de-la-base-de-datos-ldap">5. <strong>Configuración de la Base de Datos LDAP</strong></h4>
+<ul>
+<li><strong>Creación de Unidades Organizativas (OU)</strong>:<ul>
+<li>Usa phpLDAPadmin para crear las OU <code>ou=usuarios</code> y <code>ou=grupos</code> bajo <code>dc=daw,dc=ieselcaminas</code>.</li>
+</ul>
+</li>
+<li><strong>Creación de Grupos</strong>:<ul>
+<li>Crea los grupos <code>profesores</code> (GID <code>10000</code>) y <code>alumnos</code> (GID <code>10001</code>).</li>
+</ul>
+</li>
+<li><strong>Creación de Usuarios</strong>:<ul>
+<li>Crea usuarios como <code>profe01</code>, <code>profe02</code>, <code>alu01</code>, y <code>alu02</code> dentro de las OU correspondientes.</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-verificacion-de-la-configuracion">6. <strong>Verificación de la Configuración</strong></h4>
+<ul>
+<li><strong>Verifica los usuarios y grupos</strong>:<ul>
+<li>Navega por el árbol LDAP en phpLDAPadmin para asegurarte de que los usuarios y grupos se han creado correctamente.</li>
+</ul>
+</li>
+<li><strong>Prueba la autenticación</strong>:<ul>
+<li>Usa <code>ldapsearch</code> para verificar que los usuarios y grupos son accesibles:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-b<span class="w"> </span><span class="s2">&quot;dc=daw,dc=ieselcaminas&quot;</span><span class="w"> </span>-D<span class="w"> </span><span class="s2">&quot;cn=admin,dc=daw,dc=ieselcaminas&quot;</span><span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;ieselcaminas&quot;</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h3 id="cheatsheet-autenticacion-apache-contra-ldap">Cheatsheet: Autenticación Apache contra LDAP</h3>
+<h4 id="1-preparacion-del-entorno_2">1. <strong>Preparación del Entorno</strong></h4>
+<ul>
+<li><strong>Arranca la máquina <code>ServidorLDAP</code></strong>: Asegúrate de que el servidor LDAP esté funcionando.</li>
+<li><strong>Verifica el servicio Apache</strong>: Comprueba que Apache está en ejecución:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>apache2
+</code></pre></div></li>
+</ul>
+<h4 id="2-habilitar-el-modulo-de-autenticacion-ldap-en-apache">2. <strong>Habilitar el Módulo de Autenticación LDAP en Apache</strong></h4>
+<ul>
+<li>Habilita el módulo <code>authnz_ldap</code>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>sudo<span class="w"> </span>a2enmod<span class="w"> </span>authnz_ldap
+</code></pre></div></li>
+</ul>
+<h4 id="3-creacion-del-directorio-protegido">3. <strong>Creación del Directorio Protegido</strong></h4>
+<ul>
+<li>Crea un directorio <code>test</code> dentro de <code>/var/www/html</code>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>/var/www/html/test
+</code></pre></div></li>
+<li>Crea un archivo <code>index.html</code> dentro del directorio:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/var/www/html/test/index.html
+</code></pre></div>
+  Contenido de <code>index.html</code>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-70-3" name="__codelineno-70-3" href="#__codelineno-70-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-70-4" name="__codelineno-70-4" href="#__codelineno-70-4"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Sitio LDAP!<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-70-5" name="__codelineno-70-5" href="#__codelineno-70-5"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-70-6" name="__codelineno-70-6" href="#__codelineno-70-6"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-70-7" name="__codelineno-70-7" href="#__codelineno-70-7"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Bienvenido al sitio validado por LDAP!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-70-8" name="__codelineno-70-8" href="#__codelineno-70-8"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-70-9" name="__codelineno-70-9" href="#__codelineno-70-9"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></li>
+<li>Cambia el propietario del directorio y su contenido a <code>www-data</code>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/html/test
+</code></pre></div></li>
+</ul>
+<h4 id="4-configuracion-de-apache-para-autenticacion-ldap">4. <strong>Configuración de Apache para Autenticación LDAP</strong></h4>
+<ul>
+<li>Haz una copia de seguridad del archivo de configuración de Apache:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a>sudo<span class="w"> </span>cp<span class="w"> </span>/etc/apache2/sites-enabled/000-default.conf<span class="w"> </span>/etc/apache2/sites-enabled/000-default.conf.backup
+</code></pre></div></li>
+<li>Edita el archivo de configuración:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/apache2/sites-enabled/000-default.conf
+</code></pre></div></li>
+<li>Añade las siguientes líneas dentro del bloque <code>&lt;VirtualHost&gt;</code>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a><span class="nt">&lt;Directory</span><span class="w"> </span><span class="s">&quot;/var/www/html/test&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-74-2" name="__codelineno-74-2" href="#__codelineno-74-2"></a><span class="w">    </span><span class="nb">AuthType</span><span class="w"> </span>Basic
+<a id="__codelineno-74-3" name="__codelineno-74-3" href="#__codelineno-74-3"></a><span class="w">    </span><span class="nb">AuthName</span><span class="w"> </span><span class="s2">&quot;Apache LDAP authentication&quot;</span>
+<a id="__codelineno-74-4" name="__codelineno-74-4" href="#__codelineno-74-4"></a><span class="w">    </span><span class="nb">AuthBasicProvider</span><span class="w"> </span>ldap
+<a id="__codelineno-74-5" name="__codelineno-74-5" href="#__codelineno-74-5"></a><span class="w">    </span><span class="nb">AuthLDAPURL</span><span class="w"> </span><span class="s2">&quot;ldap://127.0.0.1/ou=usuarios,dc=daw,dc=ieselcaminas?uid?sub&quot;</span>
+<a id="__codelineno-74-6" name="__codelineno-74-6" href="#__codelineno-74-6"></a><span class="w">    </span><span class="nb">AuthLDAPBindDN</span><span class="w"> </span><span class="s2">&quot;cn=admin,dc=daw,dc=ieselcaminas&quot;</span>
+<a id="__codelineno-74-7" name="__codelineno-74-7" href="#__codelineno-74-7"></a><span class="w">    </span><span class="nb">AuthLDAPBindPassword</span><span class="w"> </span>ieselcaminas
+<a id="__codelineno-74-8" name="__codelineno-74-8" href="#__codelineno-74-8"></a><span class="w">    </span><span class="nb">Require</span><span class="w"> </span>valid-user
+<a id="__codelineno-74-9" name="__codelineno-74-9" href="#__codelineno-74-9"></a><span class="nt">&lt;/Directory&gt;</span>
+</code></pre></div></li>
+<li>
+<p><strong>Explicación de las directivas</strong>:</p>
+<ul>
+<li><code>AuthType Basic</code>: Define el método de autenticación básica.</li>
+<li><code>AuthName</code>: Especifica el mensaje que se muestra en el cuadro de diálogo de autenticación.</li>
+<li><code>AuthBasicProvider ldap</code>: Indica que el proveedor de autenticación es LDAP.</li>
+<li><code>AuthLDAPURL</code>: Especifica la URL del servidor LDAP y los parámetros de búsqueda.</li>
+<li><code>AuthLDAPBindDN</code> y <code>AuthLDAPBindPassword</code>: Credenciales para autenticarse en el servidor LDAP.</li>
+<li><code>Require valid-user</code>: Permite el acceso solo a usuarios autenticados.</li>
+</ul>
+</li>
+<li>
+<p><strong>Reinicia Apache</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div></p>
+</li>
+</ul>
+<h4 id="5-prueba-de-autenticacion">5. <strong>Prueba de Autenticación</strong></h4>
+<ul>
+<li>Abre una ventana privada en tu navegador y accede a:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a>http://&lt;IP_DEL_SERVIDOR&gt;/test
+</code></pre></div></li>
+<li>Introduce las credenciales de un usuario LDAP (por ejemplo, <code>profe01</code> y su contraseña).</li>
+<li>Verifica que el acceso es correcto y que se muestra la página <code>index.html</code>.</li>
+</ul>
+<h4 id="6-configuracion-con-htaccess-opcional">6. <strong>Configuración con <code>.htaccess</code> (Opcional)</strong></h4>
+<ul>
+<li><strong>Recupera la configuración original de Apache</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a>sudo<span class="w"> </span>cp<span class="w"> </span>/etc/apache2/sites-enabled/000-default.conf.backup<span class="w"> </span>/etc/apache2/sites-enabled/000-default.conf
+</code></pre></div></li>
+<li>Modifica el bloque <code>&lt;Directory&gt;</code> en el archivo de configuración:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a><span class="nt">&lt;Directory</span><span class="w"> </span><span class="s">&quot;/var/www/html/test&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-78-2" name="__codelineno-78-2" href="#__codelineno-78-2"></a><span class="w">    </span><span class="nb">AllowOverride</span><span class="w"> </span><span class="k">All</span>
+<a id="__codelineno-78-3" name="__codelineno-78-3" href="#__codelineno-78-3"></a><span class="nt">&lt;/Directory&gt;</span>
+</code></pre></div></li>
+<li><strong>Crea un archivo <code>.htaccess</code></strong> en <code>/var/www/html/test</code>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/var/www/html/test/.htaccess
+</code></pre></div>
+  Contenido de <code>.htaccess</code>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a><span class="nb">AuthType</span><span class="w"> </span>Basic
+<a id="__codelineno-80-2" name="__codelineno-80-2" href="#__codelineno-80-2"></a><span class="nb">AuthName</span><span class="w"> </span><span class="s2">&quot;Apache LDAP authentication&quot;</span>
+<a id="__codelineno-80-3" name="__codelineno-80-3" href="#__codelineno-80-3"></a><span class="nb">AuthBasicProvider</span><span class="w"> </span>ldap
+<a id="__codelineno-80-4" name="__codelineno-80-4" href="#__codelineno-80-4"></a><span class="nb">AuthLDAPURL</span><span class="w"> </span><span class="s2">&quot;ldap://127.0.0.1/ou=usuarios,dc=daw,dc=ieselcaminas?uid?sub&quot;</span>
+<a id="__codelineno-80-5" name="__codelineno-80-5" href="#__codelineno-80-5"></a><span class="nb">Require</span><span class="w"> </span>valid-user
+</code></pre></div></li>
+<li><strong>Configura las credenciales de LDAP en <code>/etc/ldap/ldap.conf</code></strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/ldap/ldap.conf
+</code></pre></div>
+  Contenido de <code>ldap.conf</code>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a><span class="c1"># Opciones de conexión</span>
+<a id="__codelineno-82-2" name="__codelineno-82-2" href="#__codelineno-82-2"></a>BINDDN<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>admin,dc<span class="o">=</span>daw,dc<span class="o">=</span>ieselcaminas
+<a id="__codelineno-82-3" name="__codelineno-82-3" href="#__codelineno-82-3"></a>BINDPW<span class="w"> </span>ieselcaminas
+</code></pre></div></li>
+<li><strong>Reinicia Apache</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div></li>
+<li><strong>Prueba nuevamente el acceso</strong> a <code>http://&lt;IP_DEL_SERVIDOR&gt;/test</code>.</li>
+</ul>
+<h3 id="cheatsheet-autenticacion-apache-contra-ldap-dockerizada">Cheatsheet: Autenticación Apache contra LDAP Dockerizada</h3>
+<h4 id="1-preparacion-del-entorno_3">1. <strong>Preparación del Entorno</strong></h4>
+<ul>
+<li><strong>Asegúrate de tener el servidor OpenLDAP dockerizado funcionando</strong>: Debe estar configurado con los usuarios creados en la "Práctica 5 - Dockerización de servidor LDAP".</li>
+<li><strong>Verifica la red Docker</strong>: Asegúrate de que la red <code>ldap-network</code> esté creada y que los contenedores de OpenLDAP y phpLDAPadmin estén conectados a ella.</li>
+</ul>
+<h4 id="2-creacion-del-dockerfile">2. <strong>Creación del Dockerfile</strong></h4>
+<ul>
+<li>
+<p>Crea un archivo <code>Dockerfile</code> con el siguiente contenido:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">php:7-apache</span>
+<a id="__codelineno-84-2" name="__codelineno-84-2" href="#__codelineno-84-2"></a>
+<a id="__codelineno-84-3" name="__codelineno-84-3" href="#__codelineno-84-3"></a><span class="c"># Activamos el módulo LDAP de Apache</span>
+<a id="__codelineno-84-4" name="__codelineno-84-4" href="#__codelineno-84-4"></a><span class="k">RUN</span><span class="w"> </span>a2enmod<span class="w"> </span>authnz_ldap
+<a id="__codelineno-84-5" name="__codelineno-84-5" href="#__codelineno-84-5"></a>
+<a id="__codelineno-84-6" name="__codelineno-84-6" href="#__codelineno-84-6"></a><span class="c"># Creamos el directorio test</span>
+<a id="__codelineno-84-7" name="__codelineno-84-7" href="#__codelineno-84-7"></a><span class="k">RUN</span><span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/www/html/test
+<a id="__codelineno-84-8" name="__codelineno-84-8" href="#__codelineno-84-8"></a>
+<a id="__codelineno-84-9" name="__codelineno-84-9" href="#__codelineno-84-9"></a><span class="c"># Copiamos los ficheros necesarios</span>
+<a id="__codelineno-84-10" name="__codelineno-84-10" href="#__codelineno-84-10"></a><span class="k">COPY</span><span class="w"> </span>index.html<span class="w"> </span>/var/www/html/test/index.html
+<a id="__codelineno-84-11" name="__codelineno-84-11" href="#__codelineno-84-11"></a><span class="k">COPY</span><span class="w"> </span><span class="m">000</span>-default.conf<span class="w"> </span>/etc/apache2/sites-enabled/000-default.conf
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Archivo <code>index.html</code></strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-85-2" name="__codelineno-85-2" href="#__codelineno-85-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-85-3" name="__codelineno-85-3" href="#__codelineno-85-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-85-4" name="__codelineno-85-4" href="#__codelineno-85-4"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Sitio LDAP!<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-85-5" name="__codelineno-85-5" href="#__codelineno-85-5"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-85-6" name="__codelineno-85-6" href="#__codelineno-85-6"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-85-7" name="__codelineno-85-7" href="#__codelineno-85-7"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Bienvenido al sitio validado por LDAP!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-85-8" name="__codelineno-85-8" href="#__codelineno-85-8"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-85-9" name="__codelineno-85-9" href="#__codelineno-85-9"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Archivo <code>000-default.conf</code></strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-86-1" name="__codelineno-86-1" href="#__codelineno-86-1"></a><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="s">*:80</span><span class="nt">&gt;</span>
+<a id="__codelineno-86-2" name="__codelineno-86-2" href="#__codelineno-86-2"></a><span class="w">    </span><span class="nb">ServerAdmin</span><span class="w"> </span>webmaster@localhost
+<a id="__codelineno-86-3" name="__codelineno-86-3" href="#__codelineno-86-3"></a><span class="w">    </span><span class="nb">DocumentRoot</span><span class="w"> </span><span class="sx">/var/www/html</span>
+<a id="__codelineno-86-4" name="__codelineno-86-4" href="#__codelineno-86-4"></a><span class="w">    </span><span class="nb">ErrorLog</span><span class="w"> </span>${APACHE_LOG_DIR}/error.log
+<a id="__codelineno-86-5" name="__codelineno-86-5" href="#__codelineno-86-5"></a><span class="w">    </span><span class="nb">CustomLog</span><span class="w"> </span>${APACHE_LOG_DIR}/access.log<span class="w"> </span>combined
+<a id="__codelineno-86-6" name="__codelineno-86-6" href="#__codelineno-86-6"></a>
+<a id="__codelineno-86-7" name="__codelineno-86-7" href="#__codelineno-86-7"></a><span class="w">    </span><span class="nt">&lt;Directory</span><span class="w"> </span><span class="s">&quot;/var/www/html/test&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-86-8" name="__codelineno-86-8" href="#__codelineno-86-8"></a><span class="w">        </span><span class="nb">AuthType</span><span class="w"> </span>Basic
+<a id="__codelineno-86-9" name="__codelineno-86-9" href="#__codelineno-86-9"></a><span class="w">        </span><span class="nb">AuthName</span><span class="w"> </span><span class="s2">&quot;Apache LDAP authentication&quot;</span>
+<a id="__codelineno-86-10" name="__codelineno-86-10" href="#__codelineno-86-10"></a><span class="w">        </span><span class="nb">AuthBasicProvider</span><span class="w"> </span>ldap
+<a id="__codelineno-86-11" name="__codelineno-86-11" href="#__codelineno-86-11"></a><span class="w">        </span><span class="nb">AuthLDAPURL</span><span class="w"> </span><span class="s2">&quot;ldap://ldap-service/ou=usuarios,dc=daw,dc=ieselcaminas?uid?sub&quot;</span>
+<a id="__codelineno-86-12" name="__codelineno-86-12" href="#__codelineno-86-12"></a><span class="w">        </span><span class="nb">AuthLDAPBindDN</span><span class="w"> </span><span class="s2">&quot;cn=admin,dc=daw,dc=ieselcaminas&quot;</span>
+<a id="__codelineno-86-13" name="__codelineno-86-13" href="#__codelineno-86-13"></a><span class="w">        </span><span class="nb">AuthLDAPBindPassword</span><span class="w"> </span>ieselcaminas
+<a id="__codelineno-86-14" name="__codelineno-86-14" href="#__codelineno-86-14"></a><span class="w">        </span><span class="nb">Require</span><span class="w"> </span>valid-user
+<a id="__codelineno-86-15" name="__codelineno-86-15" href="#__codelineno-86-15"></a><span class="w">    </span><span class="nt">&lt;/Directory&gt;</span>
+<a id="__codelineno-86-16" name="__codelineno-86-16" href="#__codelineno-86-16"></a><span class="nt">&lt;/VirtualHost&gt;</span>
+</code></pre></div></p>
+</li>
+</ul>
+<h4 id="3-construccion-de-la-imagen-docker">3. <strong>Construcción de la Imagen Docker</strong></h4>
+<ul>
+<li>Construye la imagen Docker:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>my-apache2<span class="w"> </span>.
+</code></pre></div></li>
+</ul>
+<h4 id="4-ejecucion-del-contenedor-apache">4. <strong>Ejecución del Contenedor Apache</strong></h4>
+<ul>
+<li>Lanza el contenedor Apache conectado a la red <code>ldap-network</code>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-88-1" name="__codelineno-88-1" href="#__codelineno-88-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-88-2" name="__codelineno-88-2" href="#__codelineno-88-2"></a><span class="w">    </span>--net<span class="w"> </span>ldap-network<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-88-3" name="__codelineno-88-3" href="#__codelineno-88-3"></a><span class="w">    </span>--name<span class="w"> </span>apache2_server<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-88-4" name="__codelineno-88-4" href="#__codelineno-88-4"></a><span class="w">    </span>-d<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-88-5" name="__codelineno-88-5" href="#__codelineno-88-5"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">80</span>:80<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-88-6" name="__codelineno-88-6" href="#__codelineno-88-6"></a><span class="w">    </span>my-apache2
+</code></pre></div></li>
+</ul>
+<h4 id="5-prueba-de-autenticacion_1">5. <strong>Prueba de Autenticación</strong></h4>
+<ul>
+<li>Accede desde un navegador a:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a>http://&lt;IP_DEL_SERVIDOR&gt;/test
+</code></pre></div></li>
+<li>Introduce las credenciales de un usuario LDAP (por ejemplo, <code>profe01</code> y su contraseña).</li>
+<li>Verifica que el acceso es correcto y que se muestra la página <code>index.html</code>.</li>
+</ul>
+<h4 id="6-configuracion-con-variables-de-entorno-opcional">6. <strong>Configuración con Variables de Entorno (Opcional)</strong></h4>
+<ul>
+<li>
+<p><strong>Modifica el archivo <code>000-default.conf</code></strong> para usar variables de entorno:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-90-1" name="__codelineno-90-1" href="#__codelineno-90-1"></a><span class="nb">PassEnv</span><span class="w"> </span>LDAP_BIND_ON
+<a id="__codelineno-90-2" name="__codelineno-90-2" href="#__codelineno-90-2"></a><span class="nb">PassEnv</span><span class="w"> </span>LDAP_PASSWORD
+<a id="__codelineno-90-3" name="__codelineno-90-3" href="#__codelineno-90-3"></a><span class="nb">PassEnv</span><span class="w"> </span>LDAP_URL
+<a id="__codelineno-90-4" name="__codelineno-90-4" href="#__codelineno-90-4"></a><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="s">*:80</span><span class="nt">&gt;</span>
+<a id="__codelineno-90-5" name="__codelineno-90-5" href="#__codelineno-90-5"></a><span class="w">    </span><span class="nb">ServerAdmin</span><span class="w"> </span>webmaster@localhost
+<a id="__codelineno-90-6" name="__codelineno-90-6" href="#__codelineno-90-6"></a><span class="w">    </span><span class="nb">DocumentRoot</span><span class="w"> </span><span class="sx">/var/www/html</span>
+<a id="__codelineno-90-7" name="__codelineno-90-7" href="#__codelineno-90-7"></a><span class="w">    </span><span class="nb">ErrorLog</span><span class="w"> </span>${APACHE_LOG_DIR}/error.log
+<a id="__codelineno-90-8" name="__codelineno-90-8" href="#__codelineno-90-8"></a><span class="w">    </span><span class="nb">CustomLog</span><span class="w"> </span>${APACHE_LOG_DIR}/access.log<span class="w"> </span>combined
+<a id="__codelineno-90-9" name="__codelineno-90-9" href="#__codelineno-90-9"></a>
+<a id="__codelineno-90-10" name="__codelineno-90-10" href="#__codelineno-90-10"></a><span class="w">    </span><span class="nt">&lt;Directory</span><span class="w"> </span><span class="s">&quot;/var/www/html/test&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-90-11" name="__codelineno-90-11" href="#__codelineno-90-11"></a><span class="w">        </span><span class="nb">AuthType</span><span class="w"> </span>Basic
+<a id="__codelineno-90-12" name="__codelineno-90-12" href="#__codelineno-90-12"></a><span class="w">        </span><span class="nb">AuthName</span><span class="w"> </span><span class="s2">&quot;Apache LDAP authentication&quot;</span>
+<a id="__codelineno-90-13" name="__codelineno-90-13" href="#__codelineno-90-13"></a><span class="w">        </span><span class="nb">AuthBasicProvider</span><span class="w"> </span>ldap
+<a id="__codelineno-90-14" name="__codelineno-90-14" href="#__codelineno-90-14"></a><span class="w">        </span><span class="nb">AuthLDAPBindDN</span><span class="w"> </span>${LDAP_BIND_ON}
+<a id="__codelineno-90-15" name="__codelineno-90-15" href="#__codelineno-90-15"></a><span class="w">        </span><span class="nb">AuthLDAPBindPassword</span><span class="w"> </span>${LDAP_PASSWORD}
+<a id="__codelineno-90-16" name="__codelineno-90-16" href="#__codelineno-90-16"></a><span class="w">        </span><span class="nb">AuthLDAPURL</span><span class="w"> </span>${LDAP_URL}
+<a id="__codelineno-90-17" name="__codelineno-90-17" href="#__codelineno-90-17"></a><span class="w">        </span><span class="nb">Require</span><span class="w"> </span>valid-user
+<a id="__codelineno-90-18" name="__codelineno-90-18" href="#__codelineno-90-18"></a><span class="w">    </span><span class="nt">&lt;/Directory&gt;</span>
+<a id="__codelineno-90-19" name="__codelineno-90-19" href="#__codelineno-90-19"></a><span class="nt">&lt;/VirtualHost&gt;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Reconstruye la imagen Docker</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-91-1" name="__codelineno-91-1" href="#__codelineno-91-1"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>my-apache2<span class="w"> </span>.
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Lanza el contenedor con variables de entorno</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-92-1" name="__codelineno-92-1" href="#__codelineno-92-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-92-2" name="__codelineno-92-2" href="#__codelineno-92-2"></a><span class="w">    </span>--name<span class="w"> </span>apache2_server<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-92-3" name="__codelineno-92-3" href="#__codelineno-92-3"></a><span class="w">    </span>--net<span class="w"> </span>ldap-network<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-92-4" name="__codelineno-92-4" href="#__codelineno-92-4"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">80</span>:80<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-92-5" name="__codelineno-92-5" href="#__codelineno-92-5"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">LDAP_BIND_ON</span><span class="o">=</span><span class="s1">&#39;cn=admin,dc=daw,dc=ieselcaminas&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-92-6" name="__codelineno-92-6" href="#__codelineno-92-6"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">LDAP_PASSWORD</span><span class="o">=</span><span class="s1">&#39;ieselcaminas&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-92-7" name="__codelineno-92-7" href="#__codelineno-92-7"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">LDAP_URL</span><span class="o">=</span><span class="s1">&#39;ldap://ldap-service/ou=usuarios,dc=daw,dc=ieselcaminas?uid?sub&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-92-8" name="__codelineno-92-8" href="#__codelineno-92-8"></a><span class="w">    </span>my-apache2
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Prueba nuevamente el acceso</strong> a <code>http://&lt;IP_DEL_SERVIDOR&gt;/test</code>.</p>
+</li>
+</ul>
+<h3 id="cheatsheet-autenticacion-nginx-contra-ldap">Cheatsheet: Autenticación Nginx contra LDAP</h3>
+<h4 id="1-preparacion-del-entorno_4">1. <strong>Preparación del Entorno</strong></h4>
+<ul>
+<li><strong>Servidor LDAP</strong>: Asegúrate de que el servidor LDAP configurado en la "Práctica 2" esté en ejecución. Obtén su IP pública.</li>
+<li><strong>Servidor Nginx</strong>: Crea una nueva instancia EC2 en AWS o utiliza una existente con Nginx instalado.</li>
+</ul>
+<h4 id="2-creacion-del-sitio-virtual-en-nginx">2. <strong>Creación del Sitio Virtual en Nginx</strong></h4>
+<ul>
+<li>Crea el directorio para el sitio virtual:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-93-1" name="__codelineno-93-1" href="#__codelineno-93-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/www/sitioldap
+</code></pre></div></li>
+<li>
+<p>Crea el archivo <code>index.html</code>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-94-1" name="__codelineno-94-1" href="#__codelineno-94-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/var/www/sitioldap/index.html
+</code></pre></div>
+  Contenido de <code>index.html</code>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-95-1" name="__codelineno-95-1" href="#__codelineno-95-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-95-2" name="__codelineno-95-2" href="#__codelineno-95-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-95-3" name="__codelineno-95-3" href="#__codelineno-95-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-95-4" name="__codelineno-95-4" href="#__codelineno-95-4"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Sitio LDAP!<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-95-5" name="__codelineno-95-5" href="#__codelineno-95-5"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-95-6" name="__codelineno-95-6" href="#__codelineno-95-6"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-95-7" name="__codelineno-95-7" href="#__codelineno-95-7"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Bienvenido al sitio validado por LDAP!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-95-8" name="__codelineno-95-8" href="#__codelineno-95-8"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-95-9" name="__codelineno-95-9" href="#__codelineno-95-9"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Crea el archivo de configuración del sitio virtual:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-96-1" name="__codelineno-96-1" href="#__codelineno-96-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/nginx/sites-available/sitioldap
+</code></pre></div>
+  Contenido inicial (sin autenticación LDAP):
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-97-1" name="__codelineno-97-1" href="#__codelineno-97-1"></a><span class="k">server</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-97-2" name="__codelineno-97-2" href="#__codelineno-97-2"></a><span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span>
+<a id="__codelineno-97-3" name="__codelineno-97-3" href="#__codelineno-97-3"></a><span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">sitioldap</span><span class="p">;</span>
+<a id="__codelineno-97-4" name="__codelineno-97-4" href="#__codelineno-97-4"></a><span class="w">    </span><span class="kn">root</span><span class="w"> </span><span class="s">/var/www/sitioldap</span><span class="p">;</span>
+<a id="__codelineno-97-5" name="__codelineno-97-5" href="#__codelineno-97-5"></a><span class="w">    </span><span class="kn">index</span><span class="w"> </span><span class="s">index.html</span><span class="p">;</span>
+<a id="__codelineno-97-6" name="__codelineno-97-6" href="#__codelineno-97-6"></a>
+<a id="__codelineno-97-7" name="__codelineno-97-7" href="#__codelineno-97-7"></a><span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-97-8" name="__codelineno-97-8" href="#__codelineno-97-8"></a><span class="w">        </span><span class="kn">try_files</span><span class="w"> </span><span class="nv">$uri</span><span class="w"> </span><span class="nv">$uri/</span><span class="w"> </span><span class="p">=</span><span class="mi">404</span><span class="p">;</span>
+<a id="__codelineno-97-9" name="__codelineno-97-9" href="#__codelineno-97-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-97-10" name="__codelineno-97-10" href="#__codelineno-97-10"></a><span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Activa el sitio virtual:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-98-1" name="__codelineno-98-1" href="#__codelineno-98-1"></a>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/etc/nginx/sites-available/sitioldap<span class="w"> </span>/etc/nginx/sites-enabled/
+</code></pre></div></p>
+</li>
+<li>
+<p>Verifica la configuración de Nginx:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-99-1" name="__codelineno-99-1" href="#__codelineno-99-1"></a>sudo<span class="w"> </span>nginx<span class="w"> </span>-t
+</code></pre></div></p>
+</li>
+<li>
+<p>Reinicia Nginx:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-100-1" name="__codelineno-100-1" href="#__codelineno-100-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>nginx
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Acceso al sitio</strong>: Modifica el archivo <code>/etc/hosts</code> en tu máquina local para incluir la IP del servidor Nginx y el nombre <code>sitioldap</code>. Accede a <code>http://sitioldap</code> para verificar que el sitio funciona sin autenticación.</p>
+</li>
+</ul>
+<h4 id="3-instalacion-del-modulo-de-autenticacion-ldap-en-nginx">3. <strong>Instalación del Módulo de Autenticación LDAP en Nginx</strong></h4>
+<ul>
+<li>
+<p>Descarga e instala el módulo <code>ngx_http_auth_ldap_module</code>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-101-1" name="__codelineno-101-1" href="#__codelineno-101-1"></a>wget<span class="w"> </span>https://example.com/path/to/libnginx-mod-http-auth-ldap_1.0.0-1_amd64.deb
+<a id="__codelineno-101-2" name="__codelineno-101-2" href="#__codelineno-101-2"></a>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>libnginx-mod-http-auth-ldap_1.0.0-1_amd64.deb
+</code></pre></div></p>
+</li>
+<li>
+<p>Verifica que el módulo esté habilitado:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-102-1" name="__codelineno-102-1" href="#__codelineno-102-1"></a>ls<span class="w"> </span>-la<span class="w"> </span>/etc/nginx/modules-enabled/
+</code></pre></div></p>
+</li>
+</ul>
+<h4 id="4-configuracion-de-la-autenticacion-ldap-en-nginx">4. <strong>Configuración de la Autenticación LDAP en Nginx</strong></h4>
+<ul>
+<li>
+<p>Edita el archivo de configuración principal de Nginx (<code>/etc/nginx/nginx.conf</code>) para añadir el bloque <code>ldap_server</code>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-103-1" name="__codelineno-103-1" href="#__codelineno-103-1"></a><span class="k">http</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-103-2" name="__codelineno-103-2" href="#__codelineno-103-2"></a><span class="w">    </span><span class="kn">ldap_server</span><span class="w"> </span><span class="s">mi_servidor_ldap</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-103-3" name="__codelineno-103-3" href="#__codelineno-103-3"></a><span class="w">        </span><span class="kn">url</span><span class="w"> </span><span class="s">ldap://&lt;IP_SERVIDOR_LDAP&gt;/ou=usuarios,dc=daw,dc=ieselcaminas?uid?sub</span><span class="p">;</span>
+<a id="__codelineno-103-4" name="__codelineno-103-4" href="#__codelineno-103-4"></a><span class="w">        </span><span class="kn">binddn</span><span class="w"> </span><span class="s">&quot;cn=admin,dc=daw,dc=ieselcaminas&quot;</span><span class="p">;</span>
+<a id="__codelineno-103-5" name="__codelineno-103-5" href="#__codelineno-103-5"></a><span class="w">        </span><span class="kn">binddn_passwd</span><span class="w"> </span><span class="s">&quot;ieselcaminas&quot;</span><span class="p">;</span>
+<a id="__codelineno-103-6" name="__codelineno-103-6" href="#__codelineno-103-6"></a><span class="w">        </span><span class="kn">group_attribute</span><span class="w"> </span><span class="s">member</span><span class="p">;</span>
+<a id="__codelineno-103-7" name="__codelineno-103-7" href="#__codelineno-103-7"></a><span class="w">        </span><span class="kn">group_attribute_is_dn</span><span class="w"> </span><span class="no">on</span><span class="p">;</span>
+<a id="__codelineno-103-8" name="__codelineno-103-8" href="#__codelineno-103-8"></a><span class="w">        </span><span class="kn">require</span><span class="w"> </span><span class="s">valid_user</span><span class="p">;</span>
+<a id="__codelineno-103-9" name="__codelineno-103-9" href="#__codelineno-103-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-103-10" name="__codelineno-103-10" href="#__codelineno-103-10"></a>
+<a id="__codelineno-103-11" name="__codelineno-103-11" href="#__codelineno-103-11"></a><span class="w">    </span><span class="kn">include</span><span class="w"> </span><span class="s">/etc/nginx/sites-enabled/*</span><span class="p">;</span>
+<a id="__codelineno-103-12" name="__codelineno-103-12" href="#__codelineno-103-12"></a><span class="p">}</span>
+</code></pre></div>
+  Reemplaza <code>&lt;IP_SERVIDOR_LDAP&gt;</code> con la IP pública del servidor LDAP.</p>
+</li>
+<li>
+<p>Modifica el archivo de configuración del sitio virtual (<code>/etc/nginx/sites-available/sitioldap</code>) para habilitar la autenticación LDAP:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-104-1" name="__codelineno-104-1" href="#__codelineno-104-1"></a><span class="k">server</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-104-2" name="__codelineno-104-2" href="#__codelineno-104-2"></a><span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span>
+<a id="__codelineno-104-3" name="__codelineno-104-3" href="#__codelineno-104-3"></a><span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">sitioldap</span><span class="p">;</span>
+<a id="__codelineno-104-4" name="__codelineno-104-4" href="#__codelineno-104-4"></a><span class="w">    </span><span class="kn">root</span><span class="w"> </span><span class="s">/var/www/sitioldap</span><span class="p">;</span>
+<a id="__codelineno-104-5" name="__codelineno-104-5" href="#__codelineno-104-5"></a><span class="w">    </span><span class="kn">index</span><span class="w"> </span><span class="s">index.html</span><span class="p">;</span>
+<a id="__codelineno-104-6" name="__codelineno-104-6" href="#__codelineno-104-6"></a>
+<a id="__codelineno-104-7" name="__codelineno-104-7" href="#__codelineno-104-7"></a><span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-104-8" name="__codelineno-104-8" href="#__codelineno-104-8"></a><span class="w">        </span><span class="kn">try_files</span><span class="w"> </span><span class="nv">$uri</span><span class="w"> </span><span class="nv">$uri/</span><span class="w"> </span><span class="p">=</span><span class="mi">404</span><span class="p">;</span>
+<a id="__codelineno-104-9" name="__codelineno-104-9" href="#__codelineno-104-9"></a><span class="w">        </span><span class="kn">auth_ldap</span><span class="w"> </span><span class="s">&quot;Protected</span><span class="w"> </span><span class="s">Area&quot;</span><span class="p">;</span>
+<a id="__codelineno-104-10" name="__codelineno-104-10" href="#__codelineno-104-10"></a><span class="w">        </span><span class="kn">auth_ldap_servers</span><span class="w"> </span><span class="s">mi_servidor_ldap</span><span class="p">;</span>
+<a id="__codelineno-104-11" name="__codelineno-104-11" href="#__codelineno-104-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-104-12" name="__codelineno-104-12" href="#__codelineno-104-12"></a><span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Verifica la configuración de Nginx:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-105-1" name="__codelineno-105-1" href="#__codelineno-105-1"></a>sudo<span class="w"> </span>nginx<span class="w"> </span>-t
+</code></pre></div></p>
+</li>
+<li>
+<p>Reinicia Nginx:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-106-1" name="__codelineno-106-1" href="#__codelineno-106-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>nginx
+</code></pre></div></p>
+</li>
+</ul>
+<h4 id="5-prueba-de-autenticacion-ldap">5. <strong>Prueba de Autenticación LDAP</strong></h4>
+<ul>
+<li>Accede a <code>http://sitioldap</code> desde un navegador.</li>
+<li>Debería aparecer un cuadro de diálogo solicitando usuario y contraseña.</li>
+<li>Usa las credenciales de un usuario LDAP (por ejemplo, <code>profe01</code> y su contraseña) para autenticarte.</li>
+<li>Verifica que el acceso es correcto y que se muestra la página <code>index.html</code>.</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "toc.integrate", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

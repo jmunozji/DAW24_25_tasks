@@ -1,0 +1,3522 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jmunozji.github.io/DAW24_25_tasks/Ud2/Ch2_RRLL/">
+      
+      
+        <link rel="prev" href="../Ch2_RPE/">
+      
+      
+        <link rel="next" href="../Ch2_RSN/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>CH2 - RRLL - DAW24_25_tasks</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-3NX5MD5C8H"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-3NX5MD5C8H",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-3NX5MD5C8H",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cheatsheet-docker-de-rommel" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="DAW24_25_tasks" class="md-header__button md-logo" aria-label="DAW24_25_tasks" data-md-component="logo">
+      
+  <img src="../../assets/logocaminas.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAW24_25_tasks
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CH2 - RRLL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="green"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DAW24_25_tasks" class="md-nav__button md-logo" aria-label="DAW24_25_tasks" data-md-component="logo">
+      
+  <img src="../../assets/logocaminas.png" alt="logo">
+
+    </a>
+    DAW24_25_tasks
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tareas de DAW 24/25
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Ud1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/ABM/CABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Andreu Beltran Miralles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/ACF/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Alexandru Claudiu Fatu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/AEM/CHEATSHEET/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Alex Eduard Musat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/ALS/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cheatsheet1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/BSO/BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Bryan Oyola
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/DGD/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Darius Gabriel Dobre
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/DMP/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - David Maratrat Pons
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/EGM/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Eduard Gabriel Mirea
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/EV/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Eduard Varga
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/MCG/CMCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Mauricio Chamorro Gallego
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/MIP/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Marc Ibáñez Puchol
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/MMC/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Marcel Mañas Calafí
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/PPE/CPPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Pere Josep Prior España
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/RPE/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Roberto Percuto Escrig
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/RRLL/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Rommel Romero Llumiquinga
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/RSN/cheatsheet1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Raul Simarro Navarro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud1/VATC/cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH1 - Victor Alexandru Teleanu Covaci
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ud2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch2_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch2_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch2_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch2_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch2_BO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - BO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch2_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch2_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch2_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch2_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch2_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch2_MIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - MIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch2_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch2_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch2_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    CH2 - RRLL
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - RRLL
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contenedores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contenedores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-pa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker pa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker start
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker stop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-restart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker restart
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-exec" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker exec
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-attach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker attach
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker cp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-rm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker rm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imágenes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Imágenes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker images
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker pull
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker history
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-rmi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker rmi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker save
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-load" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker load
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerhub" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerhub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dockerhub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inicio-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inicio sesión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subir-imagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subir imagen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerfile
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dockerfile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archivo-dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivo Dockerfile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      docker build
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volumenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volumenes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Volumenes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-volumenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear volumenes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listar-volumenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listar volumenes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspeccionar-volumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inspeccionar volumen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-volumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminar volumen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-volumenes-imagenes-y-contenedores-no-usados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminar volúmenes, imágenes y contenedores no usados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrar-con-contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrar con contenedores
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker-Compose
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker-Compose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archivo-docker-composeyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivo docker-compose.yaml
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos principales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch2_RSN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ch2_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH2 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud3
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ud3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - BSO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3-DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 - EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_JMJ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - JMJ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_MIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - MIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_RRL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - RRL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_RXN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud3/Ch3_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH3 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud4
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ud4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/CH4_RSN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch4 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_ACV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - ACV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - BSO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch4 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_MIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch4 - MIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_RRL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - RRL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/Ch4_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud4/ch4_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH4 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud5
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ud5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch5 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - BSO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_MIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch5 - MIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_RRL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - RRL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_RSN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud5/Ch5_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ud6
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Ud6
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_ABM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - ABM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_ACF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch6 - ACF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_AEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - AEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_ALS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - ALS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_BSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - BSO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_DGD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - DGD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_DMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - DMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_EGM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - EGM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_MCG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - MCG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_MIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH5 - MIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_MMC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - MMC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_PPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - PPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_RPE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - RPE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_RRL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - RRL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_RSN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - RSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ch6_VATC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - VATC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ud6/Ud6_EV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CH6 - EV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cheatsheet-docker-de-rommel">Cheatsheet DOCKER de Rommel</h1>
+<h2 id="instalacion">Instalación</h2>
+<p>Actualizar los paquetes existentes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+</code></pre></div>
+<p>Instalar paquetes necesarios para Docker:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apt-transport-https<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>software-properties-common
+</code></pre></div>
+<p>Agregar la clave GPG de Docker:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://download.docker.com/linux/ubuntu/gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/usr/share/keyrings/docker-archive-keyring.gpg
+</code></pre></div>
+<p>Agregar el repositorio de Docker:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg<span class="w"> </span>--print-architecture<span class="k">)</span><span class="s2"> signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu </span><span class="k">$(</span>lsb_release<span class="w"> </span>-cs<span class="k">)</span><span class="s2"> stable&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/docker.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+</code></pre></div>
+<p>Actualizar de nuevo el índice de paquetes e instalar Docker:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io
+</code></pre></div>
+<p>Verificar que Docker se haya instalado correctamente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span>sudo<span class="w"> </span>docker<span class="w"> </span>--version
+</code></pre></div>
+<h2 id="contenedores">Contenedores</h2>
+<h3 id="docker-run">Docker run</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">    </span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--name<span class="o">=</span>mi_contenedor<span class="w"> </span>ubuntu<span class="w"> </span>/bin/bash
+</code></pre></div>
+<p>Crea un contenedor interactivo y inicia la terminar <code>bash</code> al ser ejecutado.</p>
+<h3 id="docker-pa">Docker pa</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">    </span>docker<span class="w"> </span>ps
+</code></pre></div>
+<p>Muestra los contenedores que están en ejecución.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">    </span>docker<span class="w"> </span>ps<span class="w"> </span>-a
+</code></pre></div>
+<p>Muestra los contenedores que están en ejecución y los que no (detenidos).</p>
+<h3 id="docker-start">Docker start</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w">    </span>docker<span class="w"> </span>start<span class="w"> </span>contenedor
+</code></pre></div>
+<p>Inicia un contenedor</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">    </span>docker<span class="w"> </span>start<span class="w"> </span>-ai<span class="w"> </span>contenedor
+</code></pre></div>
+<p>Inicia un contenedor y nos permite ver e interactuar con su salida y entrada.</p>
+<h3 id="docker-stop">Docker stop</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">    </span>docker<span class="w"> </span>stop<span class="w"> </span>contenedor
+</code></pre></div>
+<p>Detiene el contenedor.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w">    </span>docker<span class="w"> </span>stop<span class="w"> </span><span class="k">$(</span>docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w"> </span>-q<span class="k">)</span>
+</code></pre></div>
+<p>Detiene todos los contenedores.</p>
+<h3 id="docker-restart">Docker restart</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="w">    </span>docker<span class="w"> </span>restart<span class="w"> </span>contenedor
+</code></pre></div>
+<p>Reinicia el contenedor.</p>
+<h3 id="docker-exec">Docker exec</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="w">    </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>ubuntu<span class="w"> </span>/bin/bash
+</code></pre></div>
+<p>Ejecuta el comando que pongas en el contenedor, aquí inicia un bash en un contenedor ubuntu, el contenedor tiene que estar iniciado.</p>
+<h3 id="docker-attach">Docker attach</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="w">    </span>docker<span class="w"> </span>attach<span class="w"> </span>contenedor
+</code></pre></div>
+<p>Conecta el terminal del host con el del contenedor.</p>
+<h3 id="docker-logs">Docker logs</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="w">    </span>docker<span class="w"> </span>logs<span class="w"> </span>contenedor
+</code></pre></div>
+<p>Muestra los registros generados por el contenedor.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w">    </span>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>contenedor
+</code></pre></div>
+<p>Muestra los registros generados por el contenedor en tiempo real.</p>
+<h3 id="docker-cp">Docker cp</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="w">    </span>docker<span class="w"> </span>cp<span class="w"> </span>contenedor:ruta/archivo<span class="w"> </span>ruta/destino/host
+</code></pre></div>
+<p>Copia un archivo del contenedor al host.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="w">    </span>docker<span class="w"> </span>cp<span class="w"> </span>ruta/archivo/host<span class="w"> </span>contenedor:ruta/destino/contenedor
+</code></pre></div>
+<p>Copia un archivo del host al contenedor.</p>
+<h3 id="docker-rm">Docker rm</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="w">    </span>docker<span class="w"> </span>rm<span class="w"> </span>contenedor
+</code></pre></div>
+<p>Elimina el contenedor, tiene que estar parado para eliminarlo.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="w">    </span>docker<span class="w"> </span>rm<span class="w"> </span><span class="k">$(</span>docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w"> </span>-q<span class="k">)</span>
+</code></pre></div>
+<p>Elimina todos los contenedores detenidos.</p>
+<h2 id="imagenes">Imágenes</h2>
+<h3 id="docker-images">Docker images</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="w">    </span>docker<span class="w"> </span>images
+</code></pre></div>
+<p>Lista todas las imágenes</p>
+<h3 id="docker-search">Docker search</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="w">    </span>docker<span class="w"> </span>search<span class="w"> </span>nombre_imagen
+</code></pre></div>
+<p>Busca todas las imágenes en <code>Docker hub</code> que coincidan con el nombre que de imagen que hemos puesto.</p>
+<h3 id="docker-pull">Docker pull</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="w">    </span>docker<span class="w"> </span>pull<span class="w"> </span>nombre_imagen
+</code></pre></div>
+<p>Descarga la imagen que hemos especificado.</p>
+<h3 id="docker-history">Docker history</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="w">    </span>docker<span class="w"> </span><span class="nb">history</span><span class="w"> </span>nombre_imagen
+</code></pre></div>
+<p>Muestra el historial de la imagen, es decir, todas las capas que la componen.</p>
+<h3 id="docker-rmi">Docker rmi</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="w">    </span>docker<span class="w"> </span>rmi<span class="w"> </span>nombre_imagen
+</code></pre></div>
+<p>Elimina la imagen especificada.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="w">    </span>docker<span class="w"> </span>rmi<span class="w"> </span><span class="k">$(</span>docker<span class="w"> </span>images<span class="w"> </span>-q<span class="k">)</span>
+</code></pre></div>
+<p>Elimina todas las imágenes.</p>
+<h3 id="docker-commit">Docker commit</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="w">    </span>docker<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;comentario&quot;</span><span class="w"> </span>IDCONTENEDOR<span class="w"> </span>usuario/imagen:version
+</code></pre></div>
+<p>Crea una imagen a partir de un contenedor.</p>
+<h3 id="docker-save">Docker save</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="w">    </span>docker<span class="w"> </span>save<span class="w"> </span>-o<span class="w"> </span>copiaSeguridad.tar<span class="w"> </span>nombre_imagen
+</code></pre></div>
+<p>Guarda una imagen en una archivo comprimido.</p>
+<h3 id="docker-load">Docker load</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="w">    </span>docker<span class="w"> </span>save<span class="w"> </span>-i<span class="w"> </span>copiaSeguridad.tar
+</code></pre></div>
+<p>Carga una imagen comprimida en un archivo <code>.tar</code>.</p>
+<h2 id="dockerhub">Dockerhub</h2>
+<h3 id="inicio-sesion">Inicio sesión</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="w">    </span>docker<span class="w"> </span>login
+</code></pre></div>
+<p>Inicia sesion en <code>Docker Hub</code>.</p>
+<h3 id="subir-imagen">Subir imagen</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="w">    </span>docker<span class="w"> </span>push<span class="w"> </span>usuario/imagen:<span class="o">[</span>version<span class="o">]</span>
+</code></pre></div>
+<p>Sube la imagen a <code>Docker hub</code></p>
+<h2 id="dockerfile">Dockerfile</h2>
+<h3 id="archivo-dockerfile">Archivo Dockerfile</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="w">    </span>FROM<span class="w"> </span>nombre_imagen<span class="w"> </span>#<span class="w"> </span>Definir<span class="w"> </span>la<span class="w"> </span>imagen<span class="w"> </span>que<span class="w"> </span>vamos<span class="w"> </span>a<span class="w"> </span>usar
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="w">    </span>WORKDIR<span class="w"> </span>/app<span class="w"> </span>#<span class="w"> </span>Establece<span class="w"> </span>el<span class="w"> </span>directorio<span class="w"> </span>de<span class="w"> </span>trabajo
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="w">    </span>COPY<span class="w"> </span>&lt;origen&gt;<span class="w"> </span>&lt;destino&gt;<span class="w">  </span>#<span class="w"> </span>Copia<span class="w"> </span>archivos<span class="w"> </span>del<span class="w"> </span>host<span class="w"> </span>al<span class="w"> </span>contenedor
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="w">    </span>ADD<span class="w"> </span>&lt;origen&gt;<span class="w"> </span>&lt;destino&gt;<span class="w">  </span>#<span class="w"> </span>Copia<span class="w"> </span>archivos<span class="w"> </span>y<span class="w"> </span>los<span class="w"> </span>descomprime<span class="w"> </span>si<span class="w"> </span>es<span class="w"> </span>necesario
+<a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>
+<a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a><span class="w">    </span>RUN<span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>&lt;paquete&gt;<span class="w">  </span>#<span class="w"> </span>Ejecuta<span class="w"> </span>un<span class="w"> </span>comando<span class="w"> </span>durante<span class="w"> </span>la<span class="w"> </span>construcción
+<a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a>
+<a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a><span class="w">    </span>CMD<span class="w"> </span><span class="o">[</span><span class="s2">&quot;executable&quot;</span>,<span class="w"> </span><span class="s2">&quot;param1&quot;</span>,<span class="w"> </span><span class="s2">&quot;param2&quot;</span><span class="o">]</span><span class="w">  </span>#<span class="w"> </span>Comando<span class="w"> </span>por<span class="w"> </span>defecto<span class="w"> </span>al<span class="w"> </span>iniciar<span class="w"> </span>el<span class="w"> </span>contenedor
+<a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a>
+<a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a><span class="w">    </span>ENTRYPOINT<span class="w"> </span><span class="o">[</span><span class="s2">&quot;executable&quot;</span>,<span class="w"> </span><span class="s2">&quot;param1&quot;</span><span class="o">]</span><span class="w">  </span>#<span class="w"> </span>Comando<span class="w"> </span>fijo<span class="w"> </span>que<span class="w"> </span>siempre<span class="w"> </span>se<span class="w"> </span>ejecuta<span class="w"> </span>al<span class="w"> </span>iniciar<span class="w"> </span>el<span class="w"> </span>contenedor
+<a id="__codelineno-33-14" name="__codelineno-33-14" href="#__codelineno-33-14"></a>
+<a id="__codelineno-33-15" name="__codelineno-33-15" href="#__codelineno-33-15"></a><span class="w">    </span>EXPOSE<span class="w"> </span><span class="m">8080</span><span class="w">  </span>#<span class="w"> </span>Expone<span class="w"> </span>el<span class="w"> </span>puerto<span class="w"> </span><span class="m">8080</span>
+<a id="__codelineno-33-16" name="__codelineno-33-16" href="#__codelineno-33-16"></a>
+<a id="__codelineno-33-17" name="__codelineno-33-17" href="#__codelineno-33-17"></a><span class="w">    </span>ENV<span class="w"> </span><span class="nv">VARIABLE</span><span class="o">=</span>value<span class="w">  </span>#<span class="w"> </span>Establece<span class="w"> </span>una<span class="w"> </span>variable<span class="w"> </span>de<span class="w"> </span>entorno
+<a id="__codelineno-33-18" name="__codelineno-33-18" href="#__codelineno-33-18"></a>
+<a id="__codelineno-33-19" name="__codelineno-33-19" href="#__codelineno-33-19"></a><span class="w">    </span>VOLUME<span class="w"> </span><span class="o">[</span><span class="s2">&quot;/data&quot;</span><span class="o">]</span><span class="w">  </span>#<span class="w"> </span>Crea<span class="w"> </span>un<span class="w"> </span>volumen<span class="w"> </span>en<span class="w"> </span>/data
+</code></pre></div>
+<h3 id="docker-build">docker build</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="w">    </span>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>imagen<span class="w"> </span>.
+</code></pre></div>
+<h2 id="volumenes">Volumenes</h2>
+<h3 id="crear-volumenes">Crear volumenes</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="w">    </span>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>nombre_volumen
+</code></pre></div>
+<p>Crea un volumen.</p>
+<h3 id="listar-volumenes">Listar volumenes</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="w">    </span>docker<span class="w"> </span>volume<span class="w"> </span>ls
+</code></pre></div>
+<p>Lista todos los volumenes.</p>
+<h3 id="inspeccionar-volumen">Inspeccionar volumen</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="w">    </span>docker<span class="w"> </span>volume<span class="w"> </span>inspect<span class="w"> </span>nombre_volumen
+</code></pre></div>
+<p>Inspecciona el volumen.</p>
+<h3 id="eliminar-volumen">Eliminar volumen</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="w">    </span>docker<span class="w"> </span>volume<span class="w"> </span>rm<span class="w"> </span>nombre_volumen
+</code></pre></div>
+<p>Eliminar volumen.</p>
+<h3 id="eliminar-volumenes-imagenes-y-contenedores-no-usados">Eliminar volúmenes, imágenes y contenedores no usados</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="w">    </span>docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-a
+</code></pre></div>
+<p>Elimina todos los volúmenes, imágenes y contenedores no usados.</p>
+<h3 id="integrar-con-contenedores">Integrar con contenedores</h3>
+<p>Para integrar un volumen a un contenedor hacemos lo siguiente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="w">    </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>wordpress-db<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="w">    </span>--mount<span class="w"> </span><span class="nv">type</span><span class="o">=</span>volume,source<span class="o">=</span>vol-wordpress-db,target<span class="o">=</span>/var/lib/mysql<span class="w"> </span><span class="se">\ </span><span class="w"> </span><span class="c1"># integración del volumen</span>
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>secret<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">MYSQL_DATABASE</span><span class="o">=</span>wordpress<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">MYSQL_USER</span><span class="o">=</span>manager<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">MYSQL_PASSWORD</span><span class="o">=</span>secret<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a><span class="w">    </span>mariadb:10.3.9
+</code></pre></div>
+<p>Para montar una carpeta hacemos lo mismo cambiando el <code>type</code> por <code>bind</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="w">    </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>wordpress-db<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="w">    </span>--mount<span class="w"> </span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/ruta/en/host,target<span class="o">=</span>/var/lib/mysql<span class="w"> </span><span class="se">\ </span><span class="c1"># integración de la carpeta</span>
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>secret<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">MYSQL_DATABASE</span><span class="o">=</span>wordpress<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">MYSQL_USER</span><span class="o">=</span>manager<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">MYSQL_PASSWORD</span><span class="o">=</span>secret<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a><span class="w">    </span>mariadb:10.3.9
+</code></pre></div>
+<h2 id="docker-compose">Docker-Compose</h2>
+<h3 id="archivo-docker-composeyaml">Archivo docker-compose.yaml</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>version:<span class="w"> </span><span class="s1">&#39;3.8&#39;</span><span class="w">  </span><span class="c1"># Define la versión de Docker Compose</span>
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>services:
+<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a><span class="w">  </span>apache:
+<a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a><span class="w">    </span>image:<span class="w"> </span>debian:latest<span class="w">  </span><span class="c1"># Usamos la imagen oficial de Debian</span>
+<a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a><span class="w">    </span>container_name:<span class="w"> </span>apache2<span class="w">  </span><span class="c1"># Nombre del contenedor</span>
+<a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a><span class="w">    </span>build:
+<a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a><span class="w">      </span>context:<span class="w"> </span>.<span class="w">  </span><span class="c1"># Utilizamos el Dockerfile en el directorio actual para construir la imagen</span>
+<a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a><span class="w">    </span>volumes:
+<a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a><span class="w">      </span>-<span class="w"> </span>./html:/var/www/html<span class="w">  </span><span class="c1"># Montamos la carpeta local &#39;html&#39; al directorio /var/www/html dentro del contenedor</span>
+<a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a><span class="w">    </span>ports:
+<a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a><span class="w">      </span>-<span class="w"> </span><span class="s2">&quot;8080:80&quot;</span><span class="w">  </span><span class="c1"># Mapeamos el puerto 8080 del host al puerto 80 del contenedor</span>
+<a id="__codelineno-42-13" name="__codelineno-42-13" href="#__codelineno-42-13"></a><span class="w">    </span>command:<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;apt update &amp;&amp; apt install -y apache2 &amp;&amp; apache2ctl -D FOREGROUND&quot;</span><span class="w">  </span><span class="c1"># Instalamos Apache2 y lo arrancamos</span>
+</code></pre></div>
+<h3 id="comandos-principales">Comandos principales</h3>
+<p>Iniciar los servicios del <code>docker-compose</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="w">    </span>docker-compose<span class="w"> </span>up
+</code></pre></div>
+<p>Iniciar los servicios en segundo plano:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="w">    </span>docker-compose<span class="w"> </span>up
+</code></pre></div>
+<p>Detener y eliminar los servicios del <code>docker-compose</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="w">    </span>docker-compose<span class="w"> </span>down
+</code></pre></div>
+<p>Para construir los servicios del <code>docker-compose</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="w">    </span>docker-compose<span class="w"> </span>build
+</code></pre></div>
+<p>Para mostrar los contenedores gestionados por <code>docker-compose</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="w">    </span>docker-compose<span class="w"> </span>ps
+</code></pre></div>
+<p>Para descargar los imágenes de los servicios definidos en el <code>docker-compose</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="w">    </span>docker-compose<span class="w"> </span>pull
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "toc.integrate", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
